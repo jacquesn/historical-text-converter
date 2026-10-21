@@ -156,7 +156,7 @@ historical-text-converter/
 │   │   ├── book.rb
 │   │   ├── metadata.rb
 │   │   ├── node.rb
-│   │   ├── document.rb
+│   │   ├── block.rb
 │   │   ├── section.rb
 │   │   ├── heading.rb
 │   │   ├── paragraph.rb
@@ -420,6 +420,11 @@ node.metadata
 ```
 
 where appropriate.
+
+Nodes are immutable (HTC-0014). Because unchanged subtrees are shared
+between copies, a node does not store its parent; traversal with
+`node.each_with_ancestors` supplies each node's parent and ancestors
+instead.
 
 ---
 
@@ -1155,6 +1160,10 @@ However:
 
 If immutable transformations prove practical without unreasonable
 complexity, they are preferred.
+
+Decision (HTC-0014): Document Model nodes are immutable. Changes are
+made with `node.with(...)` and `node.rewrite { ... }`, which return
+modified copies that reuse unchanged subtrees.
 
 ---
 

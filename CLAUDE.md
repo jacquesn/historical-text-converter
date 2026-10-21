@@ -54,20 +54,28 @@ bundle exec bin/historical-text-converter --help
 
 ## Current state (2026-10-21)
 
-Milestone 1 (Project Foundation) — complete and verified: rspec (19
-examples) and rubocop (with rubocop-rspec) pass. **Not yet committed.**
+Milestone 1 (Project Foundation) — committed (`3335eec`).
 
-Lint conventions: rubocop-rspec enforces one expectation per example;
-examples that check an exit code together with a message use
-`:aggregate_failures`.
+Milestone 2 (Document Model) — implemented and verified (rspec: 100
+examples; rubocop clean), **not yet committed**. Design is recorded in
+HTC-0014: immutable nodes, no stored parent (use `each_with_ancestors`),
+`Document` is a namespace, Book body/front/back matter are `Section`s.
 
-Development moved from ChatGPT to Claude Code (HTC-0013); the protocol
-rename in `prompts/` is staged.
+Conventions:
+
+- rubocop-rspec enforces one expectation per example and at most 5
+  memoized helpers per group; examples that check an exit code together
+  with a message use `:aggregate_failures`.
+- Specs mirror `lib/` (`spec/historical_text_converter/...`) and wrap
+  themselves in `module HistoricalTextConverter; module Document` so
+  class names stay short.
 
 Next steps:
 
-1. Commit Milestone 1 (all of `lib/`, `spec/`, `bin/`, `config/`, Gemfile etc. are untracked).
-2. Then begin Milestone 2 — Document Model.
+1. Review and commit Milestone 2.
+2. Then Milestone 3 — Parser Interface and EEBO Parser Foundation.
 
 Open loose ends: `profile: conservative` in config has no profile definition yet;
-`01_ARCHITECTURE.md` references a not-yet-written `05_MODERNIZATION_SPEC.md`.
+`01_ARCHITECTURE.md` references a not-yet-written `05_MODERNIZATION_SPEC.md`;
+`01_ARCHITECTURE.md` §4's tree shows `spec/document/` and `docs/`, but specs
+mirror `lib/` and docs live at the repo root.

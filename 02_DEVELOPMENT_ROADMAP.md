@@ -215,7 +215,6 @@ Implement the core objects defined by the architecture:
 ```text
 Book
 Metadata
-Document
 Section
 Heading
 Paragraph
@@ -230,6 +229,9 @@ Text
 Emphasis
 Node
 ```
+
+Per HTC-0014, `Document` is the namespace (`HistoricalTextConverter::Document`),
+not a class. A Book's front matter, body, and back matter are `Section`s.
 
 Not every class needs complex behavior initially. The objective is to establish a clean semantic representation.
 
@@ -284,7 +286,7 @@ A test can construct a small historical document entirely without HTML:
 ```text
 Book
  ├── Metadata
- └── Document
+ └── Body (Section)
       ├── Heading
       ├── Paragraph
       └── Paragraph

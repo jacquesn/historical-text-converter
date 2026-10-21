@@ -316,6 +316,55 @@ itself does not call Claude or any other AI service.
 
 ---
 
+## HTC-0014
+
+Date:
+2026-10-21
+
+Status:
+Accepted
+
+Decision:
+
+The Document Model shall have the following shape:
+
+1. A `Book` holds `metadata`, `front_matter`, `body`, and `back_matter`,
+   as described in `01_ARCHITECTURE.md` §9. Front and back matter default
+   to empty sections.
+2. `Document` is the namespace (`HistoricalTextConverter::Document`), not
+   a class. The roadmap's `Document` container is the Book's `body`, a
+   `Section`. Front matter, body, and back matter are all `Section`s,
+   distinguished by `kind`.
+3. Nodes are immutable. `with` returns a modified copy, and `rewrite`
+   rebuilds a tree bottom-up, reusing unchanged subtrees.
+
+Supporting choices:
+
+- Because subtrees are shared between copies, nodes do not store a parent
+  reference. `each_with_ancestors` reports each node's ancestors instead.
+- A `Block` base class sits beside `Inline` so containers can state which
+  kinds of children they accept. Constructors reject invalid children.
+- `PageBreak` may appear between blocks and inside running text, because
+  source page boundaries fall in both places.
+- Every node's `metadata` is a `Metadata` object, including the Book's.
+
+Reason:
+
+The architecture's Book shape anticipates title pages, dedications, and
+prefaces, which the EEBO parser will need. A class named
+`Document::Document` would be confusing. Immutable nodes satisfy the
+architecture's preference (§45), make transformations unable to change
+unrelated documents, and make before-and-after comparison for the review
+log straightforward.
+
+Consequences:
+
+Transformations return a new Book rather than modifying one in place.
+
+Code that needs a node's parent must obtain it through traversal.
+
+---
+
 # Amendment Procedure
 
 A new architectural decision may:

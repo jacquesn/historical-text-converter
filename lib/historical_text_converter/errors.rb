@@ -9,4 +9,7 @@ module HistoricalTextConverter
 
   class CLIError < Error
   end
+
+  class DocumentError < Error
+  end
 end

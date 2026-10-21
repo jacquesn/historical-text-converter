@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Semantic Document Model (`HistoricalTextConverter::Document`): `Book`,
+  `Metadata`, `Node`, `Block`, `Inline`, `Section`, `Heading`, `Paragraph`,
+  `Quotation`, `Poem`, `List`, `ListItem`, `Footnote`, `PageBreak`, `Text`,
+  and `Emphasis`. Nodes are immutable and support traversal, text access,
+  and copy-on-change with `with` and `rewrite` (HTC-0014).
+- `DocumentError` for invalid document structure.
+
 ## [0.1.0] - 2026-10-21
 
 ### Added

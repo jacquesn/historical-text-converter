@@ -279,6 +279,43 @@ Coding standards shall be enforced.
 
 ---
 
+## HTC-0013
+
+Date:
+2026-10-21
+
+Status:
+Accepted
+
+Decision:
+
+Development sessions shall use Claude through Claude Code instead of
+ChatGPT. Claude may edit files in the working tree and run the
+project's commands. The human developer controls Git: Claude does not
+commit, push, or branch unless explicitly asked.
+
+Reason:
+
+Claude Code works directly in the repository, so it can apply changes
+and run tests itself rather than handing complete files and commands
+to the human developer. Keeping Git with the human developer keeps
+every change reviewable before it is recorded.
+
+Consequences:
+
+`prompts/00_CHATGPT_DEVELOPMENT_PROTOCOL.md` is replaced by
+`prompts/00_CLAUDE_DEVELOPMENT_PROTOCOL.md`.
+
+Claude reports test results it actually observed, rather than asking
+the human developer to run and paste them.
+
+`CLAUDE.md` carries current project state between sessions.
+
+This decision concerns the development process only. The converter
+itself does not call Claude or any other AI service.
+
+---
+
 # Amendment Procedure
 
 A new architectural decision may:

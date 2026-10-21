@@ -8,13 +8,11 @@ Canonical repository:
 
 Follow:
 
-`prompts/00_CHATGPT_DEVELOPMENT_PROTOCOL.md`
+`prompts/00_CLAUDE_DEVELOPMENT_PROTOCOL.md`
 
-That document defines the rules for all Historical Text Converter development sessions, including the requirement that you operate as a **read-only development assistant**.
+That document defines the rules for all Historical Text Converter development sessions.
 
-You must provide me with the file paths, code, tests, and commands I need to make the changes manually.
-
-Do not make changes to the repository yourself.
+> **Note (2026-10-21, HTC-0013):** This prompt was written for a read-only ChatGPT workflow, so its later sections ask for complete file contents and for commands for me to run. Development now uses Claude Code, which edits files and runs commands directly. Where this prompt and the protocol disagree about workflow, follow the protocol. Make changes in the working tree, run the commands yourself, and report results as described in the protocol's section 21. Do not commit unless asked.
 
 ---
 
@@ -29,7 +27,7 @@ Before doing any implementation work, read the following documents from the repo
 00c_ARCHITECTURAL_PRINCIPLES.md
 01_ARCHITECTURE.md
 02_DEVELOPMENT_ROADMAP.md
-prompts/00_CHATGPT_DEVELOPMENT_PROTOCOL.md
+prompts/00_CLAUDE_DEVELOPMENT_PROTOCOL.md
 ```
 
 Also inspect the current contents of the GitHub repository.

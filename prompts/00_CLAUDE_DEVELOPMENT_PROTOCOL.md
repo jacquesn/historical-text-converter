@@ -1,45 +1,43 @@
 # Historical Text Converter
 
-## ChatGPT Development Session Protocol
+## Claude Development Session Protocol
 
 **Project:** Historical Text Converter
 **Repository:** `https://github.com/jacquesn/historical-text-converter`
-**Purpose:** Standard protocol for ChatGPT coding sessions
+**Purpose:** Standard protocol for Claude Code development sessions
 
 ---
 
 # 1. Purpose
 
-This document defines how ChatGPT should participate in the development of **Historical Text Converter (HTC)**.
+This document defines how Claude should participate in the development of **Historical Text Converter (HTC)**.
 
-ChatGPT is being used as a **read-only development assistant**.
+Claude is used through **Claude Code**, working directly in a local clone of the repository.
 
-ChatGPT must **not assume that it has permission to modify, commit to, or push to the GitHub repository**.
+Claude may read, create, modify, and delete files in the working tree, and may run the project's commands and tests.
 
-The human developer will manually create and modify files based on the code and instructions provided by ChatGPT.
+The human developer controls Git: Claude does not commit, push, create branches, or open pull requests unless explicitly asked.
 
 The standard workflow is:
 
 ```text
-GitHub Repository
+Local repository
        ↓
-   ChatGPT reads
+Claude reads governing documents and code
        ↓
-ChatGPT analyzes current state
+Claude reports current state and proposes a plan
        ↓
-ChatGPT proposes changes
+Human developer approves the plan
        ↓
-ChatGPT provides exact file paths
+Claude edits files
        ↓
-ChatGPT provides complete code
+Claude runs tests, lint, and the CLI
        ↓
-Human developer creates/edits files
+Claude fixes failures and reruns
        ↓
-Human developer runs commands/tests
+Claude reports results
        ↓
-Human developer reports results
-       ↓
-ChatGPT diagnoses/fixes problems
+Human developer reviews the diff and commits
 ```
 
 ---
@@ -57,7 +55,7 @@ The project documents describe the intended architecture and development plan.
 Therefore:
 
 ```text
-GitHub repository
+Repository
     = current implementation
 
 Project documents
@@ -72,7 +70,7 @@ Part of each development session is determining whether they agree.
 
 # 3. Governing Documents
 
-Before implementing a milestone, ChatGPT should read the following documents if they are available in the repository:
+Before implementing a milestone, Claude should read the following documents:
 
 ```text
 00_PROJECT_CONSTITUTION.md
@@ -86,10 +84,12 @@ Before implementing a milestone, ChatGPT should read the following documents if 
 Also read:
 
 ```text
-prompts/00_CHATGPT_DEVELOPMENT_PROTOCOL.md
+prompts/00_CLAUDE_DEVELOPMENT_PROTOCOL.md
 ```
 
 and the prompt for the specific milestone being implemented.
+
+`CLAUDE.md` is loaded automatically at the start of each session. It holds the current project state and points back to these documents; it does not replace them.
 
 The governing documents take precedence over assumptions based on general Ruby conventions.
 
@@ -97,97 +97,57 @@ However, the actual repository is authoritative regarding what code currently ex
 
 ---
 
-# 4. Read-Only Repository Rule
+# 4. Repository Permissions
 
-You are operating as a **read-only development assistant**.
+Claude **may**:
 
-Do not assume that you can:
+* create, modify, and delete files in the working tree;
+* run `bundle`, `rspec`, `rubocop`, the CLI, and similar local commands;
+* run read-only Git commands such as `git status`, `git diff`, and `git log`;
+* stage renames with `git mv` so file history is preserved.
 
-* create files in the repository;
-* modify files;
-* delete files;
+Claude **must not**, unless the human developer explicitly asks in the current session:
+
 * commit changes;
-* create branches;
+* create or switch branches;
 * push commits;
 * open pull requests;
-* modify GitHub settings;
-* modify issues;
-* modify releases.
+* modify GitHub settings, issues, or releases;
+* rewrite Git history.
 
-Even if tools technically make one of these actions possible, **do not perform it**.
-
-Instead, provide the human developer with everything necessary to make the changes manually.
+Permission given for one of these actions does not carry over to later actions or later sessions.
 
 ---
 
-# 5. Required Output for Code Changes
+# 5. Reporting Code Changes
 
-Whenever you recommend creating or modifying a file, provide its exact repository-relative path.
+Claude makes changes directly, so it does not need to reproduce complete file contents in the conversation.
 
-For example:
+Instead, when reporting changes, list every affected file by its exact repository-relative path:
 
 ```text
-Create:
+Created:
 lib/historical_text_converter/version.rb
-```
 
-Then provide the complete contents:
-
-```ruby
-# complete file contents here
-```
-
-For an existing file, use:
-
-```text
-Modify:
+Modified:
 lib/historical_text_converter.rb
+
+Deleted:
+spec/spec/
 ```
 
-Then clearly show the resulting complete file contents whenever practical.
+The human developer reviews the actual changes with `git diff`.
 
 ---
 
-# 6. Prefer Complete Files
+# 6. Keep Changes Reviewable
 
-Because the human developer will manually apply the changes, prefer providing **complete file contents** rather than ambiguous snippets.
+Because the human developer reviews every change before committing, keep diffs focused:
 
-For a new file:
-
-````text
-### Create: path/to/file.rb
-
-```ruby
-...
-````
-
-````
-
-For an existing file:
-
-```text
-### Replace: path/to/file.rb
-
-```ruby
-...
-````
-
-````
-
-If a file is very large and only a small modification is required, you may provide a precise patch instead.
-
-However, the patch must clearly identify:
-
-- the file;
-- the section being changed;
-- the old code;
-- the new code.
-
-Never say merely:
-
-> “Add this somewhere in the configuration class.”
-
-The human developer should be able to apply the change without guessing.
+* change only what the current task requires;
+* do not reformat unrelated code;
+* do not mix refactoring with new behavior unless the milestone calls for it;
+* explain any change whose purpose is not obvious from the diff.
 
 ---
 
@@ -206,7 +166,7 @@ Determine:
 - what commands are already available;
 - whether the current implementation differs from the architecture documents.
 
-Do not propose creating a file that already exists without first inspecting it.
+Do not create a file that already exists without first inspecting it.
 
 Do not assume the repository is empty.
 
@@ -226,9 +186,9 @@ Current repository state:
 - Relevant implementation already present:
 - Differences from governing documents:
 - Milestone work remaining:
-````
+```
 
-Then propose the implementation plan.
+Then propose the implementation plan and wait for the human developer to approve it before making substantial changes.
 
 Do not immediately start generating large amounts of code.
 
@@ -281,15 +241,15 @@ Instead, explain:
 4. what options are available;
 5. what you recommend and why.
 
-If a genuine architectural decision is required, ask the human developer to decide.
+If a genuine architectural decision is required, stop and ask the human developer to decide.
 
-Once a decision is made, recommend recording it in:
+Once a decision is made, record it in:
 
 ```text
 00b_DECISION_LOG.md
 ```
 
-and updating affected documentation if necessary.
+and update affected documentation.
 
 ---
 
@@ -308,6 +268,8 @@ For example, do not add:
 * elaborate plugin systems;
 * unnecessary abstractions;
 * unnecessary dependencies.
+
+Using Claude to develop HTC does not make HTC an AI application. The converter itself must not call Claude or any other AI service unless a recorded architectural decision says otherwise.
 
 The project is intended to remain:
 
@@ -355,11 +317,11 @@ The code should be understandable to a competent Ruby developer who did not writ
 
 Every new behavior should have appropriate tests.
 
-When providing code, also provide the tests required for that code.
+When writing code, also write the tests required for that code.
 
 Tests should be written using the project's established testing framework.
 
-For each new behavior, explain:
+For each new behavior, report:
 
 ```text
 Test file:
@@ -377,65 +339,48 @@ If an existing test conflicts with the intended architecture, explain the confli
 
 ---
 
-# 14. Human-Executed Commands
+# 14. Running Commands
 
-ChatGPT should distinguish between:
-
-```text
-commands to run
-```
-
-and:
-
-```text
-commands actually run
-```
-
-Because ChatGPT does not have write access to the repository, it should normally provide commands for the human developer to run.
-
-For example:
+Claude runs the project's commands itself:
 
 ```bash
 bundle install
 bundle exec rspec
 bundle exec rubocop
+bundle exec bin/historical-text-converter --help
 ```
 
-Do not claim that a command passed unless ChatGPT actually has reliable access to its output.
+Report results exactly as observed.
 
-Instead say:
+Do not claim that a command passed unless Claude ran it and saw it pass in this session.
 
-> Run the following commands and paste the output back to me.
+If a command could not be run (for example, a missing Ruby version or network access), say so, explain why, and give the human developer the command to run themselves.
 
 ---
 
 # 15. Verification Loop
 
-After providing implementation instructions, the human developer should create the files and run the tests.
-
 The normal development loop is:
 
 ```text
-ChatGPT proposes implementation
+Claude implements a change
         ↓
-Human creates/modifies files
+Claude runs tests and lint
         ↓
-Human runs tests
+Claude reads the actual output
         ↓
-Human reports output
+Claude diagnoses failures
         ↓
-ChatGPT analyzes failures
+Claude applies the smallest correction
         ↓
-ChatGPT proposes correction
-        ↓
-Human applies correction
-        ↓
-Human runs tests again
+Claude runs tests again
 ```
+
+Repeat until the suite and lint pass, or until a failure needs a decision from the human developer.
 
 When diagnosing a failure, use the actual error output.
 
-Do not guess at the error if the relevant output has not been provided.
+Do not guess at the error when the output is available to read.
 
 ---
 
@@ -456,13 +401,13 @@ Avoid vague descriptions such as:
 When multiple files are involved, list them explicitly:
 
 ```text
-Create:
+Created:
 lib/...
 
-Modify:
+Modified:
 lib/...
 
-Create:
+Created:
 spec/...
 ```
 
@@ -470,14 +415,14 @@ spec/...
 
 # 17. Dependency Discipline
 
-Before recommending a new dependency:
+Before adding a new dependency:
 
 1. determine whether the project already has an appropriate dependency;
 2. determine whether the functionality can reasonably be implemented using the Ruby standard library;
 3. consider the dependency's maintenance and complexity cost;
 4. explain why the dependency is needed.
 
-Do not add dependencies casually.
+Do not add dependencies casually. Ask the human developer before adding a new gem.
 
 The architecture explicitly values minimal dependency costs.
 
@@ -560,41 +505,41 @@ Each transformation should have one clear responsibility.
 
 # 21. Output Requirements for Each Milestone
 
-At the end of each implementation session, provide:
+At the end of each implementation session, report:
 
 ## Summary
 
-A concise description of what should now exist.
+A concise description of what now exists.
 
-## Files to Create
+## Files Created, Modified, and Deleted
 
-A complete list of new files.
-
-## Files to Modify
-
-A complete list of modified files.
-
-## Complete Code
-
-Provide the necessary code, organized by file path.
+Complete lists, by repository-relative path.
 
 ## Tests
 
-Provide all required tests.
+The tests added, by file.
 
-## Commands
+## Commands Run and Results
 
-Provide the exact commands the human developer should run.
+Each command Claude ran and its actual result.
 
-## Expected Results
+List separately any command that should be run but was not, and why.
 
-Describe what successful results should look like.
+## Architectural Decisions
 
-Do not claim that the results occurred unless they were actually observed.
+Any decisions made, and whether `00b_DECISION_LOG.md` was updated.
+
+## Unresolved Issues
+
+Anything left incomplete or uncertain.
 
 ## Manual Verification
 
-If appropriate, provide manual checks the developer should perform.
+If appropriate, checks the human developer should perform.
+
+## Suggested Commit
+
+A suggested commit message. Do not commit unless asked.
 
 ## Next Step
 
@@ -604,7 +549,7 @@ Identify the next milestone, but do not implement it.
 
 # 22. When Something Goes Wrong
 
-If the human developer reports an error:
+If a command fails, or the human developer reports a problem:
 
 1. Read the complete error message.
 2. Identify the relevant file and line.
@@ -617,12 +562,12 @@ If the human developer reports an error:
    * architecture;
    * misunderstanding.
 4. Explain the cause.
-5. Provide the smallest appropriate correction.
-6. Provide the exact file path.
-7. Provide the exact replacement code.
-8. Explain what to test afterward.
+5. Apply the smallest appropriate correction.
+6. Rerun the failing command and confirm the fix.
 
 Do not respond with a completely new architecture unless the evidence actually requires one.
+
+If the cause is environmental (for example, a missing Ruby version), explain what the human developer needs to install or configure rather than working around it in code.
 
 ---
 
@@ -630,18 +575,17 @@ Do not respond with a completely new architecture unless the evidence actually r
 
 The human developer controls Git.
 
-ChatGPT may recommend:
+Claude may run read-only commands:
 
 ```bash
 git status
 git diff
-git add ...
-git commit ...
+git log
 ```
 
-but must not assume that it has executed those commands.
+Claude does not run `git add`, `git commit`, `git push`, or branch commands unless explicitly asked.
 
-After a successful milestone, recommend a logical commit.
+After a successful milestone, suggest a logical commit.
 
 For example:
 
@@ -657,17 +601,19 @@ The human developer will decide whether and when to commit.
 
 # 24. Session Continuity
 
-Every new ChatGPT development session should assume that the repository may have changed since the previous session.
+Every new Claude session should assume that the repository may have changed since the previous session.
 
 Therefore:
 
 **Always inspect the current repository state before proposing changes.**
 
-Do not rely solely on what an earlier ChatGPT session said the repository contained.
+Do not rely solely on what an earlier session said the repository contained, including the "Current state" section of `CLAUDE.md`. Verify it against the code.
 
-The GitHub repository is the current implementation record.
+The repository is the current implementation record.
 
 The project documents are the current design record.
+
+At the end of a session, update the "Current state" section of `CLAUDE.md` so the next session starts from an accurate summary.
 
 ---
 
@@ -682,7 +628,7 @@ prompts/
 Use descriptive filenames such as:
 
 ```text
-prompts/00_CHATGPT_DEVELOPMENT_PROTOCOL.md
+prompts/00_CLAUDE_DEVELOPMENT_PROTOCOL.md
 prompts/01_MILESTONE_1_PROJECT_FOUNDATION.md
 prompts/02_MILESTONE_2_DOCUMENT_MODEL.md
 prompts/03_MILESTONE_3_EEBO_PARSER.md
@@ -744,66 +690,62 @@ Each milestone prompt should contain:
 
 ---
 
-# 27. Important Distinction: Advice vs. Implementation
+# 27. Plan Before Implementing
 
-ChatGPT should distinguish between:
+Claude should distinguish between:
 
-### Architectural advice
+### Planning
 
-Explaining what should be done.
+Assessing the current state and proposing what should be done.
 
-### Implementation instructions
+### Implementation
 
-Giving the human developer exact files and code to create.
+Making the approved changes in the working tree.
 
 ### Verification
 
-Analyzing test results supplied by the human developer.
+Running commands and analyzing their actual output.
 
-The primary purpose of these development prompts is the second and third categories.
+For any non-trivial milestone, present the plan and wait for approval before implementing it. Small, clearly scoped fixes within an approved plan do not need separate approval.
 
 ---
 
 # 28. No Hidden Work
 
+Report every change Claude made, including incidental ones such as deleted directories or fixed lint warnings.
+
 Do not say:
 
 > “I've made the changes.”
 
-unless the changes were actually made through an authorized tool.
+unless the changes were actually made.
 
-In this project, the intended workflow is manual.
+Do not say:
 
-Therefore, normally say:
+> “The tests pass.”
 
-> “Here are the changes for you to make.”
-
-or:
-
-> “Create the following file with this content.”
+unless Claude ran them and saw them pass.
 
 ---
 
 # 29. Definition of Success
 
-A successful ChatGPT development session should leave the human developer with:
+A successful Claude development session should leave the human developer with:
 
-1. a clear understanding of what changed;
-2. exact file paths;
-3. complete code where appropriate;
-4. tests;
-5. commands to run;
-6. expected results;
-7. any necessary architectural decisions;
+1. a working tree containing the milestone's changes;
+2. a clear account of what changed and why;
+3. tests for all new behavior;
+4. the actual results of running the test suite and lint;
+5. any necessary architectural decisions, recorded;
+6. an updated `CLAUDE.md`;
+7. a suggested commit;
 8. a clear stopping point.
 
 The human developer should never have to guess:
 
-* which file to edit;
-* where code belongs;
-* what code to write;
-* what tests to add;
-* what commands to run;
+* which files changed;
+* why they changed;
+* whether the tests were actually run;
 * whether the work is complete.
 
 ---
@@ -812,19 +754,17 @@ The human developer should never have to guess:
 
 **Inspect first.**
 
-**Plan second.**
+**Plan second, and get approval.**
 
 **Explain architectural conflicts before changing them.**
 
-**Provide exact file paths.**
+**Make focused, reviewable changes.**
 
-**Provide complete, usable code.**
+**Write tests.**
 
-**Provide tests.**
+**Run the commands and report what actually happened.**
 
-**Let the human developer make the changes.**
-
-**Let the human developer run the commands.**
+**Leave Git to the human developer.**
 
 **Use the resulting output to guide the next step.**
 

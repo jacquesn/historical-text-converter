@@ -1,0 +1,7 @@
+version: 0.1.0
+
+profile: conservative
+
+transformations:
+  modernization: true
+  americanization: false

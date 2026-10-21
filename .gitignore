@@ -1,0 +1,12 @@
+/.bundle/
+/vendor/bundle/
+
+/.yardoc/
+/coverage/
+/tmp/
+/log/
+
+*.gem
+*.rbc
+
+/.ruby-version.local

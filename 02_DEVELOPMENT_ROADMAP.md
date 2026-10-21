@@ -18,7 +18,7 @@ The architecture document describes what the system should look like. This roadm
 
 The project should be developed in small, independently verifiable milestones. Each milestone should leave the project in a working state.
 
-The roadmap is intentionally designed so that individual milestones can be assigned to separate ChatGPT coding sessions.
+The roadmap is intentionally designed so that individual milestones can be assigned to separate Claude Code sessions.
 
 Every implementation session should begin by reviewing:
 
@@ -1362,11 +1362,11 @@ In particular:
 
 ---
 
-# 21. Separate Chat Development Protocol
+# 21. Separate Session Development Protocol
 
-Each milestone may be implemented in a separate ChatGPT conversation.
+Each milestone may be implemented in a separate Claude Code session.
 
-At the beginning of each coding conversation, provide the governing documents:
+The detailed rules for these sessions are in `prompts/00_CLAUDE_DEVELOPMENT_PROTOCOL.md`. `CLAUDE.md` is loaded automatically and points Claude to the governing documents:
 
 ```text
 00_PROJECT_CONSTITUTION.md
@@ -1448,7 +1448,7 @@ The exact Git workflow is secondary to the important principle:
 
 During implementation, unexpected problems will arise.
 
-When a developer or ChatGPT discovers that the current architecture is inadequate, it should **not silently change the architecture**.
+When a developer or Claude discovers that the current architecture is inadequate, it should **not silently change the architecture**.
 
 Instead:
 

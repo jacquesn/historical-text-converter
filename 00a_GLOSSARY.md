@@ -137,6 +137,22 @@ It contains objects representing the meaning of the document.
 
 ---
 
+# EarlyPrint
+
+A project that publishes EEBO-TCP texts tokenized and linguistically
+annotated (lemma, part of speech, standard spelling), with some
+corrections. Not a parser input (HTC-0015); may be consulted as an aid in
+later milestones, such as suggesting dictionary entries.
+
+---
+
+# EEBO-TCP
+
+The Text Creation Partnership's transcriptions of Early English Books
+Online, published as TEI XML. The EEBO parser's input (HTC-0015).
+
+---
+
 # Footnote
 
 An authorial or editorial note associated with a location in the text.
@@ -274,6 +290,13 @@ Examples:
 - Plain text
 - Markdown
 - OCR
+
+---
+
+# TEI
+
+The Text Encoding Initiative's XML vocabulary for encoding texts. EEBO-TCP
+texts are published in TEI.
 
 ---
 

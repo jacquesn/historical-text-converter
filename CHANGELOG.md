@@ -9,6 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Parser interface (`HistoricalTextConverter::Parser`) and EEBO parser
+  (`Parsers::EEBO::Parser`) for EEBO-TCP TEI XML (HTC-0015, HTC-0016).
+  Preserves the transcription, including page breaks, margin notes,
+  gaps, line-end word breaks, and abbreviations, and identifies their
+  editorial character. XML is parsed strictly, without external entities
+  or network access.
+- `Superscript` and `NoteReference` inline Document elements.
+- `ParseError`.
+
 - Semantic Document Model (`HistoricalTextConverter::Document`): `Book`,
   `Metadata`, `Node`, `Block`, `Inline`, `Section`, `Heading`, `Paragraph`,
   `Quotation`, `Poem`, `List`, `ListItem`, `Footnote`, `PageBreak`, `Text`,

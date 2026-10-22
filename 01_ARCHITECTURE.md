@@ -5,7 +5,7 @@
 **Version:** 1.0
 **Status:** Proposed
 **Language:** Ruby
-**Primary initial source:** EEBO HTML
+**Primary initial source:** EEBO-TCP TEI XML (HTC-0015)
 **Primary initial outputs:** DOCX and RTF
 
 ---
@@ -168,15 +168,17 @@ historical-text-converter/
 │   │   ├── page_break.rb
 │   │   ├── inline.rb
 │   │   ├── text.rb
-│   │   └── emphasis.rb
+│   │   ├── emphasis.rb
+│   │   ├── superscript.rb
+│   │   └── note_reference.rb
 │   │
 │   ├── parsers/
 │   │   ├── parser.rb
 │   │   └── eebo/
 │   │       ├── parser.rb
-│   │       ├── extractor.rb
-│   │       ├── structure_detector.rb
-│   │       └── artifact_detector.rb
+│   │       ├── header_reader.rb
+│   │       ├── block_builder.rb
+│   │       └── inline_builder.rb
 │   │
 │   ├── transformations/
 │   │   ├── transformation.rb
@@ -285,13 +287,13 @@ The command-line interface is the primary user interface for Version 1.
 A basic invocation should eventually look like:
 
 ```bash
-historical-text-converter input.html
+historical-text-converter input.xml
 ```
 
 The converter should support explicit output:
 
 ```bash
-historical-text-converter input.html \
+historical-text-converter input.xml \
   --output book.docx \
   --format docx
 ```
@@ -299,21 +301,21 @@ historical-text-converter input.html \
 Configuration:
 
 ```bash
-historical-text-converter input.html \
+historical-text-converter input.xml \
   --config config.yml
 ```
 
 Profile:
 
 ```bash
-historical-text-converter input.html \
+historical-text-converter input.xml \
   --profile conservative
 ```
 
 Review report:
 
 ```bash
-historical-text-converter input.html \
+historical-text-converter input.xml \
   --report changes.csv
 ```
 
@@ -460,6 +462,8 @@ Initial inline concepts include:
 ```text
 Text
 Emphasis
+Superscript      (HTC-0016)
+NoteReference    (HTC-0016)
 ```
 
 Future inline elements may include:
@@ -467,7 +471,6 @@ Future inline elements may include:
 ```text
 Strong
 SmallCaps
-Superscript
 Subscript
 Link
 Citation
@@ -520,7 +523,7 @@ A parser receives a source and returns a Book.
 Example:
 
 ```ruby
-book = EEBO::Parser.new.parse("book.html")
+book = EEBO::Parser.new.parse("A13556.xml")
 ```
 
 The parser must not perform modernization.
@@ -531,15 +534,19 @@ The parser must not perform modernization.
 
 The EEBO parser is the first production parser.
 
+Its input is the EEBO-TCP TEI XML encoding of a text, not the HTML page
+the EEBO website renders from it (HTC-0015).
+
 It shall:
 
-1. Load the HTML.
+1. Load the XML safely (no external entities, no network access).
 2. Parse it with Nokogiri.
-3. Identify the actual book content.
-4. Ignore website navigation and surrounding interface.
-5. Detect structural elements.
+3. Read bibliographic metadata from the `<teiHeader>`.
+4. Map `<front>`, `<body>`, and `<back>` to the Book's front matter,
+   body, and back matter.
+5. Detect structural elements from the TEI encoding.
 6. Preserve formatting represented by the source.
-7. Extract footnotes where identifiable.
+7. Extract notes at their place in the text.
 8. Construct the Document Model.
 
 The EEBO parser should not:
@@ -547,32 +554,40 @@ The EEBO parser should not:
 * modernize spelling;
 * Americanize spelling;
 * correct printer errors;
+* fill gaps or resolve uncertain readings;
 * remove `∣`;
 * normalize whitespace beyond what is necessary to construct the model.
+
+TCP encodes line-end word breaks as `<g ref="char:EOLhyphen"/>` and
+`<g ref="char:EOLunhyphen"/>`. The parser renders these as `∣` and `¦`,
+as the TCP display does, so that the divider and word-boundary
+transformations (§21–22) handle them.
 
 Those operations belong to later transformations.
 
 ---
 
-# 16. EEBO Source Isolation
+# 16. EEBO Source Artifacts
 
-EEBO pages may contain material that is not part of the book.
+Because the parser reads TCP XML rather than a web page, it does not
+encounter website navigation or interface controls (HTC-0015).
 
-Examples include:
+The TCP encoding does contain material that is not the author's text:
 
 ```text
-PAGE [UNNUMBERED]
-PAGE [1]
-navigation
-website controls
-metadata
-transcription interface elements
+page breaks and printed page numbers
+illegible-text gaps (<gap reason="illegible">)
+duplicate-page placeholders (<gap reason="duplicate">)
+transcriber additions (rendition="simple:additions")
+non-Latin text omitted by transcribers (<gap reason="foreign">)
 ```
 
-The parser must distinguish source material from the book itself.
+The parser must identify such material as source artifacts rather than
+silently keeping or discarding it. Whether it appears in the output is a
+transformation or configuration decision.
 
-This distinction is a parser responsibility because it depends upon the
-source format.
+This identification is a parser responsibility because it depends upon
+the source format.
 
 ---
 
@@ -956,7 +971,7 @@ end
 
 A writer receives a completed Book.
 
-It does not inspect source HTML.
+It does not inspect source markup.
 
 It does not perform transformations.
 
@@ -1201,7 +1216,7 @@ Test complete transformation sequences.
 Example:
 
 ```text
-EEBO HTML
+EEBO-TCP XML
 → parse
 → cleanup
 → modernization
@@ -1213,7 +1228,7 @@ EEBO HTML
 Test:
 
 ```text
-input HTML
+input XML
 → output DOCX/RTF
 ```
 
@@ -1223,19 +1238,22 @@ input HTML
 
 Realistic fixtures are essential.
 
-The project should maintain small HTML samples representing:
+The project should maintain small TEI samples representing:
 
 * title pages;
 * ordinary paragraphs;
 * italic text;
 * headings;
-* footnotes;
-* page markers;
-* broken words;
+* notes;
+* page breaks, including page breaks inside paragraphs;
+* broken words (`char:EOLhyphen`, `char:EOLunhyphen`);
+* gaps;
 * quotations;
 * lists;
-* unusual typography;
-* EEBO navigation.
+* unusual typography.
+
+Small fixtures should be cut from real TCP texts rather than written from
+scratch. `spec/fixtures/eebo/A13556.xml` is the first full-text fixture.
 
 Fixtures should be small enough to understand manually.
 
@@ -1448,7 +1466,8 @@ The architecture should not prevent it.
 
 # 59. Security
 
-Source HTML must be treated as untrusted input.
+Source documents (HTML, XML, or otherwise) must be treated as untrusted
+input.
 
 The application must not:
 
@@ -1456,7 +1475,8 @@ The application must not:
 * execute embedded source code;
 * follow arbitrary commands;
 * write outside requested destinations;
-* interpret source HTML as executable application logic.
+* resolve XML external entities or fetch DTDs or schemas over the network;
+* interpret source markup as executable application logic.
 
 Generated HTML and documents must escape source content appropriately.
 
@@ -1508,13 +1528,11 @@ The parser should preserve meaningful page boundaries when identifiable.
 Whether those boundaries appear in the final output is a configuration
 decision.
 
-EEBO interface markers such as:
+Page breaks without a printed page number (TCP `<pb/>` with no `n`, which
+the EEBO website displays as "Page [unnumbered]") are still boundaries,
+but carry no page label.
 
-```text
-PAGE [UNNUMBERED]
-```
-
-are not automatically considered meaningful page boundaries.
+Duplicate-page placeholders are not meaningful page boundaries.
 
 ---
 
@@ -1641,7 +1659,7 @@ It should be possible to disable progress output for scripting.
 The architecture should permit future commands such as:
 
 ```bash
-historical-text-converter books/*.html
+historical-text-converter books/*.xml
 ```
 
 without redesigning the parser or transformation layers.
@@ -1726,7 +1744,7 @@ Convenience should not override historical integrity.
 Version 1 should focus on:
 
 * Ruby project foundation;
-* EEBO HTML parsing;
+* EEBO-TCP TEI XML parsing;
 * semantic Document Model;
 * cleanup transformations;
 * conservative spelling modernization;
@@ -1746,9 +1764,10 @@ Future formats and parsers should not delay Version 1.
 
 The architecture will be considered successful when:
 
-1. An EEBO HTML document can be parsed without writer-specific logic.
+1. An EEBO-TCP XML document can be parsed without writer-specific logic.
 
-2. The resulting Book can be transformed without reference to HTML.
+2. The resulting Book can be transformed without reference to source
+   markup.
 
 3. The same Book can be written as DOCX, RTF, Markdown, or plain text.
 
@@ -1773,7 +1792,7 @@ The architecture will be considered successful when:
 The canonical Version 1 flow is:
 
 ```text
-                 EEBO HTML
+               EEBO-TCP XML
                      │
                      ▼
               ┌─────────────┐

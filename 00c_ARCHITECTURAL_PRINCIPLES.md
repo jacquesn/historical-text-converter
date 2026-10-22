@@ -42,9 +42,9 @@ architectural priority.
 # Principle 2
 ## Parse Once
 
-HTML should be parsed exactly once.
+Source markup (HTML, XML, or otherwise) should be parsed exactly once.
 
-After parsing, no code should inspect HTML again.
+After parsing, no code should inspect source markup again.
 
 Every parser converts source documents into the Document Model.
 

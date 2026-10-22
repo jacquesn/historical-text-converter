@@ -308,29 +308,34 @@ Do not add EEBO-specific logic to the Document Model.
 
 ## Goal
 
-Create the parser architecture and begin parsing EEBO HTML.
+Create the parser architecture and begin parsing EEBO-TCP TEI XML.
+
+The input is TCP's TEI XML, not the EEBO website's HTML (HTC-0015).
 
 ## Scope
 
-Implement:
+Implement the parser interface and an EEBO parser, for example:
 
 ```text
 parsers/parser.rb
 parsers/eebo/parser.rb
-parsers/eebo/extractor.rb
-parsers/eebo/structure_detector.rb
-parsers/eebo/artifact_detector.rb
+parsers/eebo/...   (component files settled in the milestone prompt)
 ```
 
-Use Nokogiri for HTML parsing.
+The original component list (`extractor`, `structure_detector`,
+`artifact_detector`) assumed HTML input; the milestone prompt proposes
+the TEI equivalent.
+
+Use Nokogiri for XML parsing, with external entities and network access
+disabled.
 
 ## Parser Responsibilities
 
 The EEBO parser should:
 
-* load HTML;
-* inspect the document structure;
-* locate the relevant book content;
+* load XML safely;
+* read metadata from the TEI header;
+* map front matter, body, and back matter;
 * identify semantic structures;
 * create the Document Model;
 * preserve source text;
@@ -360,23 +365,26 @@ Those questions must remain separate.
 
 ## Tests
 
-Create small HTML fixtures representing:
+Create small TEI fixtures, cut from real TCP texts, representing:
 
 * headings;
 * paragraphs;
 * emphasis;
 * quotations;
-* page markers;
-* footnotes;
-* lists;
-* unusual EEBO markup;
+* page breaks, including inside paragraphs;
+* notes;
+* gaps;
+* line-end word breaks;
+* lists, if present in the sample texts;
+* unusual TCP markup;
 * malformed or unexpected markup.
 
 ## Acceptance Criteria
 
-A representative EEBO HTML file can be parsed into a `Book`.
+A representative EEBO-TCP XML file (`spec/fixtures/eebo/A13556.xml`) can
+be parsed into a `Book`.
 
-The resulting Book contains semantic elements rather than raw HTML nodes.
+The resulting Book contains semantic elements rather than raw XML nodes.
 
 ## Deliverable
 
@@ -388,32 +396,39 @@ Do not implement modernization in the parser.
 
 ---
 
-# 7. Milestone 4 — Source Isolation and Structural Extraction
+# 7. Milestone 4 — TEI Coverage and Source Artifacts
+
+This milestone was originally "Source Isolation and Structural
+Extraction": separating the book from the EEBO website. Reading TCP XML
+removes that problem (HTC-0015), so the milestone is redirected.
 
 ## Goal
 
-Make the EEBO parser reliably distinguish the actual historical text from the surrounding webpage.
+Make the EEBO parser reliable across the range of TCP texts, and make it
+identify consistently everything in the encoding that is not the
+author's text.
 
 ## Scope
 
-Improve the EEBO-specific extraction layer.
+Broaden TEI coverage using several additional TCP texts chosen to include
+structures A13556 lacks, such as:
 
-The parser should recognize and exclude material such as:
+* verse (`<lg>`, `<l>`);
+* lists;
+* letters (`<opener>`, `<closer>`, `<salute>`, `<signed>`);
+* tables and figures;
+* back matter;
+* deeply nested divisions;
+* extensive non-English text.
 
-* website navigation;
-* interface controls;
-* unrelated metadata;
-* page controls;
-* search/interface elements;
-* other webpage material that is not part of the historical text.
+Identify source and editorial artifacts, without deciding yet whether
+they should be removed:
 
-The parser should identify source-specific artifacts such as:
-
-```text
-PAGE [UNNUMBERED]
-```
-
-without deciding yet whether they should be removed.
+* illegible-text gaps;
+* duplicate-page placeholders;
+* transcriber additions (`rendition="simple:additions"`);
+* omitted non-Latin text;
+* unnumbered page breaks.
 
 ## Important Distinction
 
@@ -421,36 +436,32 @@ The parser identifies what exists.
 
 A transformation decides what should happen to it.
 
-For example:
-
-```text
-PAGE [UNNUMBERED]
-```
-
-may be represented or tagged as a source artifact before a later transformation removes it.
+For example, a duplicate-page placeholder may be represented and tagged
+as a source artifact before a later transformation removes it.
 
 ## Tests
 
-Use representative EEBO fixtures and test:
+Use representative TCP fixtures and test:
 
-* correct beginning of book;
-* correct ending of book;
-* exclusion of webpage material;
-* preservation of legitimate book text;
-* detection of source artifacts;
-* handling of page boundaries.
+* preservation of all text in each fixture;
+* each newly supported structure;
+* detection of each artifact type;
+* handling of page boundaries;
+* graceful handling of unrecognized elements (preserve and report, never
+  silently drop).
 
 ## Acceptance Criteria
 
-The parser can reliably isolate the historical text from the EEBO webpage.
+The parser handles a varied sample of TCP texts without losing text, and
+every non-authorial element it meets is identified as such.
 
 ## Deliverable
 
-A tested source-isolation layer.
+Broad, tested TEI coverage and consistent artifact identification.
 
 ## Stop Condition
 
-Do not combine source isolation with spelling modernization.
+Do not combine artifact identification with spelling modernization.
 
 ---
 
@@ -623,6 +634,50 @@ may contain YAML dictionaries.
 The code should provide the engine.
 
 The YAML files should provide the data.
+
+## External Resources
+
+No existing tool produces a conservatively modernized, reviewable edition
+from TCP texts (prior-art survey, 2026-10-22), but several resources can
+seed this milestone's dictionaries. All of them are aids, not sources of
+truth:
+
+* every suggested entry must be reviewed by a person before it enters a
+  YAML dictionary;
+* no external spelling data is ever applied directly to a text;
+* each dictionary entry taken from an external resource should record
+  that resource, so its origin stays reviewable;
+* each resource's license must be checked before its data is copied into
+  this MIT-licensed project.
+
+Candidates:
+
+* **EarlyPrint** (HTC-0015): EEBO-TCP texts with a standard spelling
+  (`@reg`) for many words, produced by MorphAdorner. These can be mined
+  across texts for candidate entries. They contain errors (A13556
+  regularizes "Aldermanbury" to "Aldermanburic") and may modernize
+  further than this project's conservative rules allow.
+* **MorphAdorner** (Northwestern): the tool behind EarlyPrint's standard
+  spellings. Its spelling data may be usable directly. Availability and
+  license not yet checked.
+* **VARD 2** (Lancaster, `ucrel.lancs.ac.uk/vard`): an Early Modern
+  English variant-spelling list and normalization tool. Free for
+  non-commercial use only, so its data probably cannot be copied into
+  this project; it may still be used to cross-check candidate entries.
+* **eMOP word list** (Texas A&M, `emop.tamu.edu/node/97`): about 144,000
+  words from the TCP transcriptions combined with VARD's variant list.
+  License not yet checked.
+* **VEP standardizer dictionary** (UW–Madison,
+  `github.com/uwgraphics/VEP-pipeline`, compiled by Deidre Stuffer): a
+  standardization dictionary for TCP texts. The repository has been
+  inactive since 2017 and states no license.
+
+For scale: Digital Puritan modernizes EEBO texts for readers with a list
+of about 3,000 replacements, still reviewed by hand. Their list is not
+published.
+
+Neural or AI normalization models are not used to change text: they are
+not deterministic and do not produce reviewable rules.
 
 ## Tests
 
@@ -875,6 +930,17 @@ A known correction can be applied and recorded without introducing speculative c
 
 A conservative correction transformation.
 
+## External Resources
+
+EarlyPrint (HTC-0015) corrects some TCP readings, including filling some
+illegible-text gaps, without marking where it did so. Comparing an
+EarlyPrint text with the TCP text it derives from would reveal those
+changes, and they could become candidate corrections.
+
+Such candidates are suggestions only: each must be reviewed by a person
+before it enters the corrections dictionary, and must be recorded as
+EarlyPrint's reading, never presented as the source's.
+
 ## Stop Condition
 
 Do not create an AI-based guessing or reconstruction system.
@@ -915,13 +981,37 @@ The writer should support the semantic structures actually implemented by the Do
 
 The writer must consume the Document Model.
 
-It should not parse HTML.
+It should not parse source markup.
 
 It should not perform modernization.
 
 It should not perform Americanization.
 
 It should not contain historical-text transformation rules.
+
+## Existing Tools to Evaluate First
+
+Before writing RTF and DOCX writers by hand, evaluate existing converters
+(prior-art survey, 2026-10-22):
+
+* **pandoc**: converts Markdown and other formats to DOCX and RTF. The
+  converter could write Markdown (or another intermediate format) from the
+  Book and hand it to pandoc.
+* **TEI Stylesheets** (`tei-c.org`): XSLT 2.0 transformations from TEI to
+  DOCX, EPUB, and other formats. Requires Saxon (Java). The converter
+  would write simple TEI from the Book.
+* **TEI Garage / OxGarage**: a conversion service built on the TEI
+  Stylesheets, available as a Docker image. The publicly hosted instance
+  is not supported for production use.
+* **Oxford Text Archive EPUBs**: original-spelling EPUBs of each TCP Phase
+  I text. A useful reference for how TCP texts can be laid out, not a
+  writer.
+
+Any of these would still consume the Document Model, through an
+intermediate format the converter writes. Each adds an external
+dependency, which the architecture asks to keep minimal, so adopting one
+requires a decision log entry weighing output quality and control over
+footnotes, page breaks, and Unicode against that cost.
 
 ## RTF Escaping
 
@@ -974,13 +1064,16 @@ using the selected Ruby DOCX library or a deliberately chosen alternative.
 
 The dependency should be evaluated rather than adopted merely because it is popular.
 
+The existing converters listed under Milestone 10 (pandoc, TEI
+Stylesheets, TEI Garage) are alternatives to evaluate here as well.
+
 ## Requirements
 
 The DOCX writer must consume the Document Model.
 
 It must not depend on:
 
-* EEBO HTML;
+* source markup;
 * transformation classes;
 * source-specific cleanup logic.
 
@@ -1029,7 +1122,7 @@ Connect the complete application flow.
 The canonical data flow should now be:
 
 ```text
-EEBO HTML
+EEBO-TCP XML
     ↓
 EEBO Parser
     ↓
@@ -1075,7 +1168,7 @@ Exact command-line syntax should be established during implementation and docume
 
 ```bash
 historical-text-converter \
-  --input source.html \
+  --input source.xml \
   --output book.rtf \
   --format rtf \
   --profile conservative
@@ -1087,8 +1180,8 @@ This is illustrative; the final CLI syntax should be determined by the implement
 
 Create an end-to-end fixture that exercises:
 
-* HTML parsing;
-* source isolation;
+* XML parsing;
+* artifact identification;
 * artifact removal;
 * `∣` removal;
 * whitespace cleanup;
@@ -1099,7 +1192,7 @@ Create an end-to-end fixture that exercises:
 
 ## Acceptance Criteria
 
-A single command can transform a supported EEBO HTML source into a finished RTF or DOCX document.
+A single command can transform a supported EEBO-TCP XML source into a finished RTF or DOCX document.
 
 ---
 
@@ -1279,7 +1372,7 @@ Review:
 
 Verify that:
 
-* untrusted HTML is handled safely;
+* untrusted source markup is handled safely, including XML external entities;
 * JavaScript is not executed;
 * arbitrary shell commands are not executed;
 * output paths are controlled;
@@ -1494,11 +1587,11 @@ Historical Text Converter should eventually satisfy the following:
 
 ### Input
 
-A supported EEBO HTML document can be processed reliably.
+A supported EEBO-TCP XML document can be processed reliably.
 
 ### Parsing
 
-The historical text is isolated from the surrounding webpage.
+Source and editorial artifacts are identified rather than silently kept or discarded.
 
 ### Structure
 

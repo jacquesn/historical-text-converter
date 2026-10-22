@@ -145,7 +145,8 @@ Writer
 
 Output
 
-No transformation shall operate directly on HTML.
+No transformation shall operate directly on HTML, XML, or any other source
+markup.
 
 ---
 
@@ -173,7 +174,7 @@ Future parsers should require minimal work.
 
 Writers shall receive only the Document Model.
 
-They shall never inspect HTML.
+They shall never inspect source markup.
 
 Supported writers may include:
 - DOCX

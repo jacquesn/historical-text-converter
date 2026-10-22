@@ -12,4 +12,7 @@ module HistoricalTextConverter
 
   class DocumentError < Error
   end
+
+  class ParseError < Error
+  end
 end

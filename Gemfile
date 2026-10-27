@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby ">= 3.1"
+ruby ">= 4.0"
 
 gem "nokogiri", "~> 1.18"
 gem "standard", ">= 1.35.1"

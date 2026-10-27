@@ -19,7 +19,7 @@ place. Historical-text conversion is not yet implemented. See
 
 ## Requirements
 
-- Ruby 3.1 or later
+- Ruby 4.0 or later
 - Bundler
 
 ## Installation

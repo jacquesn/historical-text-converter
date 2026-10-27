@@ -2,8 +2,8 @@
 
 module HistoricalTextConverter
   module Document
-    # Verse. Its children are blocks, typically one per line; finer line
-    # and stanza structure will be added when a source requires it.
+    # Verse: a group of Lines, with any nested Poems (stanzas), headings,
+    # and page breaks (HTC-0018 D2).
     class Poem < Block
     end
   end

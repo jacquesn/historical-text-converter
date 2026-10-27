@@ -28,6 +28,9 @@ Examples include:
 
 Artifacts are removed by transformations.
 
+In the Document Model, every artifact node carries an `artifact:`
+metadata key naming its kind (HTC-0018).
+
 ---
 
 # Americanization

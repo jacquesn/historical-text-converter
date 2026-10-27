@@ -84,8 +84,8 @@ module HistoricalTextConverter
             expect(division.children.last.metadata[:role]).to eq(:trailer)
           end
 
-          it "keeps unrecognized block elements as flagged paragraphs" do
-            expect(parse_tei("<lg><l>A line</l></lg>").body.children.first.metadata[:unrecognized]).to eq("lg")
+          it "keeps unrecognized elements as flagged text" do
+            expect(parse_tei("<foo>A line</foo>").body.children.first.children.first.metadata[:unrecognized]).to eq("foo")
           end
         end
 

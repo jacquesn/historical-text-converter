@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "nokogiri"
+require_relative "glyph_table"
 require_relative "header_reader"
 require_relative "inline_builder"
 require_relative "block_builder"
@@ -8,20 +9,25 @@ require_relative "block_builder"
 module HistoricalTextConverter
   module Parsers
     module EEBO
-      # Parses EEBO-TCP TEI XML into a Book (HTC-0015, HTC-0016).
+      # Parses EEBO-TCP TEI XML into a Book (HTC-0015, HTC-0016, HTC-0018).
       class Parser < HistoricalTextConverter::Parser
         def parse_string(source)
+          parse_string_with_report(source).first
+        end
+
+        def parse_string_with_report(source)
           tei = load(source)
           text = tei.at_xpath("/TEI/text") || raise(ParseError, "No TEI <text> element found")
-          body = text.at_xpath("body") || raise(ParseError, "No TEI <body> element found")
-          blocks = BlockBuilder.new
+          report = ParseReport.new
+          blocks = BlockBuilder.new(report: report)
 
-          Document::Book.new(
+          book = Document::Book.new(
             metadata: HeaderReader.new(tei.at_xpath("/TEI/teiHeader")).metadata,
             front_matter: blocks.matter(text.at_xpath("front"), :front_matter),
-            body: blocks.matter(body, :body),
+            body: blocks.body(text),
             back_matter: blocks.matter(text.at_xpath("back"), :back_matter)
           )
+          [book, report]
         end
 
         private

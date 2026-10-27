@@ -12,6 +12,7 @@ The governing docs are authoritative; read them before non-trivial work:
 - `00c_ARCHITECTURAL_PRINCIPLES.md`
 - `01_ARCHITECTURE.md` — technical blueprint
 - `02_DEVELOPMENT_ROADMAP.md` — milestones, acceptance criteria, stop conditions
+- `03_EEBO_TCP_ENCODING.md` — what EEBO-TCP P5 files contain; TCP docs; parser handling
 - `prompts/00_CLAUDE_DEVELOPMENT_PROTOCOL.md` — how Claude sessions run
   (plan → approval → edit → run tests → report; human controls Git)
 - `prompts/NN_MILESTONE_*.md` — per-milestone prompts
@@ -52,7 +53,7 @@ bundle exec rubocop
 bundle exec bin/historical-text-converter --help
 ```
 
-## Current state (2026-10-22)
+## Current state (2026-10-26)
 
 Milestone 1 (Project Foundation) — committed (`3335eec`).
 
@@ -60,13 +61,11 @@ Milestone 2 (Document Model) — committed (`17e6ed6`). Design is recorded in
 HTC-0014: immutable nodes, no stored parent (use `each_with_ancestors`),
 `Document` is a namespace, Book body/front/back matter are `Section`s.
 
-Milestone 3 (EEBO Parser) — implemented and verified (rspec: 162
-examples; rubocop clean), **not yet committed**. Input is EEBO-TCP TEI
+Milestone 3 (EEBO Parser) — committed (`09863bc`). Input is EEBO-TCP TEI
 XML, not HTML (HTC-0015); TEI→model mapping is HTC-0016. Fixture:
-`spec/fixtures/eebo/A13556.xml` (Taylor, *Regula vitæ*, 1631; CC0);
-`A13556.html` is a reference copy only. The acceptance spec
-(`parser_parse_a13556_spec.rb`) checks counts and that every source word
-survives parsing.
+`spec/fixtures/eebo/A13556.xml` (Taylor, *Regula vitæ*, 1631; CC0). The
+acceptance spec (`parser_parse_a13556_spec.rb`) checks counts and that
+every source word survives parsing.
 
 Conventions:
 
@@ -83,9 +82,23 @@ Conventions:
 
 Next steps:
 
-1. Review and commit Milestone 3.
-2. Milestone 4 — TEI coverage (verse, lists, letters, tables, back matter)
-   and source artifacts; needs several more TCP texts as fixtures.
+1. Milestone 4 — TEI Coverage and Source Artifacts: implemented and
+   verified, **not yet committed**. HTC-0017 (glyph table) and HTC-0018
+   (D1–D13). rspec 264 examples, rubocop clean. All 9 fixtures and the
+   2,300-text sample parse with no errors, empty parse report, every
+   word kept (`spec/support/source_words.rb`). Review and commit, then
+   Milestone 5 — Transformation Pipeline and Basic Cleanup.
+
+Ruby: the Gemfile requires Ruby >= 4.0, so 3.2+/4.0 APIs are fine.
+
+TCP encoding documentation (SGML-era names; P5 files use TEI P5 names, and
+no TCP P5 schema is published): keying spec
+`textpartnership.net/docs/dox/instruct2.html`; production DTD (86
+elements) `…/docs/code/eebo2prf.dtd.txt`; per-structure guides
+`…/docs/oxdox/encoding/` and `…/oxdox/transcription/`; character table
+(1,624 `char:` glyphs with display forms) `…/docs/code/TCP_chars.html`.
+EarlyPrint's P5-derived RelaxNG schema:
+`schemata.earlyprint.org/schemata/tei_earlyprint.rng`.
 
 EarlyPrint XML (`bitbucket.org/eads004/<prefix>/raw/master/<ID>.xml`) is a
 later aid, never an input: e.g. mining `@reg` for candidate M6 dictionary
@@ -104,4 +117,6 @@ Open loose ends: `profile: conservative` in config has no profile definition yet
 `01_ARCHITECTURE.md` references a not-yet-written `05_MODERNIZATION_SPEC.md`;
 `01_ARCHITECTURE.md` §4's tree shows `spec/document/` and `docs/`, but specs
 mirror `lib/` and docs live at the repo root; two A13556 paragraphs keep a
-doubled line break from XML formatting (HTC-0016) for Milestone 5 to normalize.
+doubled line break from XML formatting (HTC-0016) for Milestone 5 to normalize;
+TCP glyph table license unconfirmed (HTC-0017 note: CC0 `tcpchars.xml` covers
+42 of 44 glyphs used).

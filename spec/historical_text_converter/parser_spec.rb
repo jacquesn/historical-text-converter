@@ -22,6 +22,13 @@ module HistoricalTextConverter
         .to raise_error(ParseError, %r{Cannot read source file: /nonexistent/source.xml})
     end
 
+    it "returns an empty report by default" do
+      Dir.mktmpdir do |dir|
+        File.write(File.join(dir, "source.txt"), "text")
+        expect(recording_parser.new.parse_with_report(File.join(dir, "source.txt")).last).to be_empty
+      end
+    end
+
     it "requires subclasses to implement #parse_string" do
       expect { described_class.new.parse_string("") }.to raise_error(NotImplementedError)
     end

@@ -442,6 +442,9 @@ interface, if a text is available only as a web page.
 `spec/fixtures/eebo/A13556.html` is retained as a reference copy of the
 HTML form; the parser fixture is `spec/fixtures/eebo/A13556.xml`.
 
+Note (2026-10-22): the reference HTML copy was removed before Milestone 3
+was committed. Only `A13556.xml` is kept.
+
 ---
 
 ## HTC-0016
@@ -510,6 +513,142 @@ Two paragraphs of A13556 still contain a doubled line break where the
 XML formatter moved a closing `</hi>` onto its own indented line. No
 words are joined; the Milestone 5 whitespace transformation will
 normalize these.
+
+---
+
+## HTC-0017
+
+Date:
+2026-10-22
+
+Status:
+Accepted
+
+Decision:
+
+The TCP character table (`TCP_chars.html`, 1,624 glyphs) is kept as data
+in `config/tcp_glyphs.yml`: each glyph name with its Unicode code point,
+TCP mapping type, and display form, with the source and retrieval date
+in the file header.
+
+When a `<g>` element is empty and is not a line-end break, the EEBO
+parser emits the table's display form as a `Text` tagged `glyph: <ref>`.
+A glyph the table lacks becomes an empty `Text` tagged `glyph` and
+`unrecognized: "g"`, never silently dropped. Glyphs with their own text
+keep it.
+
+Reason:
+
+Some P5 glyphs are empty elements whose printed form exists only in the
+TCP table (for example `char:abquam`, `char:abrum`, `char:aber`). In a
+2,300-text sample every such glyph sat inside `<expan>`, so no text was
+lost, but the parser would otherwise drop one met elsewhere.
+
+The table agrees with HTC-0015's line-end glyphs (`∣` U+2223, `¦` U+00A6).
+
+Consequences:
+
+The TCP documentation states no license for the table. It is factual
+character-mapping data for CC0 texts, kept with attribution. Before
+publishing the project, confirm its terms with the TCP
+(tcp-info@umich.edu) or replace it.
+
+The file is generated, not edited by hand.
+
+Note (2026-10-23): every TCP file's header points `char:` refs to
+`tcpchars.xml` in the CC0-licensed `textcreationpartnership/Texts`
+repository. It defines 42 of the 44 glyphs used in a 2,300-text sample;
+`abrum` and `abur` (standard Unicode characters) appear only in
+`TCP_chars.html`. Either a CC0 subset or a combination could replace the
+current table if its license cannot be confirmed.
+
+---
+
+## HTC-0018
+
+Date:
+2026-10-23
+
+Status:
+Accepted
+
+Decision:
+
+The EEBO parser handles every element observed in a 2,300-text survey of
+EEBO-TCP P5 files (`03_EEBO_TCP_ENCODING.md`), as proposed in
+`prompts/04_MILESTONE_4_TEI_COVERAGE.md`:
+
+- D1. A `group` volume's outer front and back matter are the Book's; each
+  inner `text` is a `Section(kind: :text)` holding its own
+  front-matter, body, and back-matter sections. `floatingText` is a
+  `Section` of its `type` (default `:floating_text`), built the same way.
+- D2. New block `Line`; `lg` is a `Poem` of lines, nested poems, headings,
+  and page breaks. This supersedes HTC-0014's provisional `Poem`.
+- D3. `opener`, `closer`, `epigraph`, `postscript` are `Section`s of those
+  kinds; `salute`, `signed`, `dateline`, `byline` are `Paragraph`s with
+  that `role`.
+- D4. `list` is a `List` with its headings before it; `item` is a
+  `ListItem`; a `label` joins the item it precedes.
+- D5. New blocks `Table`, `TableRow`, `TableCell`; a table's headings come
+  before it.
+- D6. New block `Figure`; its `figDesc` is a `Paragraph(role:
+  :description)`, an artifact.
+- D7. New inline `Span` with a `role` for `q`, `bibl`, `date`, `stage`,
+  `label`, `ref`, `ptr`, `unclear`, `add`, and a lone `abbr`; `choice`
+  with `expan` gives the expansion (HTC-0016 decision 8); new inline
+  `Subscript` for `hi rend="sub"`.
+- D8. New block `Speech`: a `Paragraph(role: :speaker)` then the speech;
+  `stage` between blocks is a `Paragraph(role: :stage_direction)`.
+- D9. A block inside running text splits its container: the text before,
+  the block, then the text after tagged `continued: true`.
+- D10. `lb` is a newline; `milestone` is an empty `Span(:milestone)`, or an
+  empty `Paragraph` with the same tags between blocks.
+- D11. Every non-authorial node carries `artifact:` (`:gap`,
+  `:duplicate_page`, `:transcriber_addition`, `:description`,
+  `:expansion`, `:glyph`, `:milestone`, `:forme_work`, `:supplied`).
+- D12. `Parser#parse_with_report` returns the Book and a `ParseReport` of
+  unrecognized elements, glyphs missing from the TCP table, and
+  documented-but-unobserved elements, with their paths.
+- D13. Documented but unobserved elements are handled deliberately and
+  reported: `ab`, `fw` (artifact), `headnote`, `tailnote`, `sic`/`corr`,
+  `del`, `supplied` (artifact), `subst`, `above`, `below`. `lang` is kept
+  in metadata wherever it occurs.
+
+Supporting choices made in implementation:
+
+- Running text met directly between blocks (in a division, note, cell,
+  list item, opener, and so on) is gathered into a `Paragraph`, as D3–D5
+  do for their elements. It is no longer flagged as unrecognized.
+- A page break, gap, milestone, or note stands alone only when no running
+  text follows it before the next block; otherwise it opens the
+  paragraph. (Without this, `<note><gap/>.</note>` split the full stop
+  from the gap.)
+- A duplicate-page gap is folded into its page break inside running text
+  as well as between blocks (HTC-0016 decision 5).
+- A note between blocks becomes a `Footnote` in place, with no
+  reference.
+- Content inside a `list`, `table`, or `row` that is not an item, row, or
+  cell is wrapped in one, so nothing is dropped.
+- A heading of verse, a list, a table, or a figure is one level below its
+  division's.
+- A standalone `sic` or `corr` is a `Span` of that role.
+
+Reason:
+
+The survey found 53 elements in use, of which Milestone 3 handled 20. In
+a 300-text run, 13 texts failed to parse and 143 lost structure, though
+none lost characters.
+
+Consequences:
+
+All nine fixtures and all 2,300 sampled texts parse with no errors, an
+empty parse report, and every word kept.
+
+The Document Model gains `Line`, `Table`, `TableRow`, `TableCell`,
+`Figure`, `Speech`, `Span`, and `Subscript`.
+
+Writers must handle `continued` pieces and artifacts; a transformation
+may rejoin or remove them.
 
 ---
 

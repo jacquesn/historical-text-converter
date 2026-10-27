@@ -1,0 +1,6507 @@
+# TCP character table: display forms for glyphs that EEBO-TCP TEI P5 files
+# encode as <g ref="char:NAME"/>, keyed by NAME.
+#
+# Source: Text Creation Partnership, "TCP_chars.html",
+#   https://www.textpartnership.net/docs/code/TCP_chars.html
+# Retrieved 2026-10-22 (1624 entries). Columns kept: Unicode code point,
+# TCP mapping type (unicode-exact, display-equiv, search-equiv), and the
+# TCP display form. No license is stated for this table (HTC-0017).
+#
+# Data only: do not edit by hand. Regenerate from the source if it changes.
+glyphs:
+  AElig:
+    unicode: U+00C6
+    mapping: unicode-exact
+    display: Æ
+  Aacugr:
+    unicode: U+1FBB
+    mapping: unicode-exact
+    display: Ά
+  Aacute:
+    unicode: U+00C1
+    mapping: unicode-exact
+    display: Á
+  Aaigr:
+    unicode: U+E07F
+    mapping: unicode-exact
+    display: Άͅ
+  Abreve:
+    unicode: U+0102
+    mapping: unicode-exact
+    display: Ă
+  Acirc:
+    unicode: U+00C2
+    mapping: unicode-exact
+    display: Â
+  Acirgr:
+    unicode: U+E084
+    mapping: unicode-exact
+    display: Α͂
+  Acy:
+    unicode: U+0410
+    mapping: unicode-exact
+    display: А
+  Agr:
+    unicode: U+0391
+    mapping: unicode-exact
+    display: Α
+  Agragr:
+    unicode: U+1FBA
+    mapping: unicode-exact
+    display: Ὰ
+  Agrave:
+    unicode: U+00C0
+    mapping: unicode-exact
+    display: À
+  Aiotgr:
+    unicode: U+1FBC
+    mapping: unicode-exact
+    display: ᾼ
+  Amacr:
+    unicode: U+0100
+    mapping: unicode-exact
+    display: Ā
+  Aogon:
+    unicode: U+0104
+    mapping: unicode-exact
+    display: Ą
+  Aquar:
+    unicode: U+2652
+    mapping: unicode-exact
+    display: "♒︎"
+  Aragr:
+    unicode: U+1F0D
+    mapping: unicode-exact
+    display: Ἅ
+  Araigr:
+    unicode: U+1F8D
+    mapping: unicode-exact
+    display: ᾍ
+  Arcgr:
+    unicode: U+1F0F
+    mapping: unicode-exact
+    display: Ἇ
+  Arcigr:
+    unicode: U+1F8F
+    mapping: unicode-exact
+    display: ᾏ
+  Arggr:
+    unicode: U+1F0B
+    mapping: unicode-exact
+    display: Ἃ
+  Argigr:
+    unicode: U+1F8B
+    mapping: unicode-exact
+    display: ᾋ
+  Aries:
+    unicode: U+2648
+    mapping: unicode-exact
+    display: "♈︎"
+  Arigr:
+    unicode: U+1F89
+    mapping: unicode-exact
+    display: ᾉ
+  Aring:
+    unicode: U+00C5
+    mapping: unicode-exact
+    display: Å
+  Arougr:
+    unicode: U+1F09
+    mapping: unicode-exact
+    display: Ἁ
+  Asagr:
+    unicode: U+1F0C
+    mapping: unicode-exact
+    display: Ἄ
+  Asaigr:
+    unicode: U+1F8C
+    mapping: unicode-exact
+    display: ᾌ
+  Ascgr:
+    unicode: U+1F0E
+    mapping: unicode-exact
+    display: Ἆ
+  Ascigr:
+    unicode: U+1F8E
+    mapping: unicode-exact
+    display: ᾎ
+  Asggr:
+    unicode: U+1F0A
+    mapping: unicode-exact
+    display: Ἂ
+  Asgigr:
+    unicode: U+1F8A
+    mapping: unicode-exact
+    display: ᾊ
+  Asigr:
+    unicode: U+1F88
+    mapping: unicode-exact
+    display: ᾈ
+  Asmogr:
+    unicode: U+1F08
+    mapping: unicode-exact
+    display: Ἀ
+  Atilde:
+    unicode: U+00C3
+    mapping: unicode-exact
+    display: Ã
+  Auml:
+    unicode: U+00C4
+    mapping: unicode-exact
+    display: Ä
+  Barline:
+    unicode: U+1D101
+    mapping: unicode-exact
+    display: "\U0001D101"
+  Bcy:
+    unicode: U+0411
+    mapping: unicode-exact
+    display: Б
+  Bgr:
+    unicode: U+0392
+    mapping: unicode-exact
+    display: Β
+  CH:
+    unicode: U+E0B9
+    mapping: display-equiv
+    display: ℂℍ
+  CHcy:
+    unicode: U+0427
+    mapping: unicode-exact
+    display: Ч
+  Cacute:
+    unicode: U+0106
+    mapping: unicode-exact
+    display: Ć
+  Cancer:
+    unicode: U+264B
+    mapping: unicode-exact
+    display: "♋︎"
+  Capri:
+    unicode: U+2651
+    mapping: unicode-exact
+    display: "♑︎"
+  Ccaron:
+    unicode: U+010C
+    mapping: unicode-exact
+    display: Č
+  Ccedil:
+    unicode: U+00C7
+    mapping: unicode-exact
+    display: Ç
+  Ccirc:
+    unicode: U+0108
+    mapping: unicode-exact
+    display: Ĉ
+  Cdot:
+    unicode: U+010A
+    mapping: unicode-exact
+    display: Ċ
+  DD:
+    unicode: U+E0B8
+    mapping: display-equiv
+    display: "\U0001D53B"
+  DIGgr:
+    unicode: U+03DC
+    mapping: unicode-exact
+    display: Ϝ
+  Dagger:
+    unicode: U+2021
+    mapping: unicode-exact
+    display: "‡"
+  Dcaron:
+    unicode: U+010E
+    mapping: unicode-exact
+    display: Ď
+  Dcy:
+    unicode: U+0414
+    mapping: unicode-exact
+    display: Д
+  Ddotb:
+    unicode: U+1E0C
+    mapping: unicode-exact
+    display: Ḍ
+  Dgr:
+    unicode: U+0394
+    mapping: unicode-exact
+    display: Δ
+  Dstrok:
+    unicode: U+0110
+    mapping: unicode-exact
+    display: Đ
+  EEacugr:
+    unicode: U+1FCB
+    mapping: unicode-exact
+    display: Ή
+  EEcirgr:
+    unicode: U+E0AB
+    mapping: unicode-exact
+    display: Η͂
+  EEgr:
+    unicode: U+0397
+    mapping: unicode-exact
+    display: Η
+  EEgragr:
+    unicode: U+1FCA
+    mapping: unicode-exact
+    display: Ὴ
+  EEiotgr:
+    unicode: U+1FCC
+    mapping: unicode-exact
+    display: ῌ
+  EEragr:
+    unicode: U+1F2D
+    mapping: unicode-exact
+    display: Ἥ
+  EEraigr:
+    unicode: U+1F9D
+    mapping: unicode-exact
+    display: ᾝ
+  EErcgr:
+    unicode: U+1F2F
+    mapping: unicode-exact
+    display: Ἧ
+  EErcigr:
+    unicode: U+1F9F
+    mapping: unicode-exact
+    display: ᾟ
+  EErggr:
+    unicode: U+1F2B
+    mapping: unicode-exact
+    display: Ἣ
+  EErgigr:
+    unicode: U+1F9B
+    mapping: unicode-exact
+    display: ᾛ
+  EErigr:
+    unicode: U+1F99
+    mapping: unicode-exact
+    display: ᾙ
+  EErougr:
+    unicode: U+1F29
+    mapping: unicode-exact
+    display: Ἡ
+  EEsagr:
+    unicode: U+1F2C
+    mapping: unicode-exact
+    display: Ἤ
+  EEsaigr:
+    unicode: U+1F9C
+    mapping: unicode-exact
+    display: ᾜ
+  EEscgr:
+    unicode: U+1F2E
+    mapping: unicode-exact
+    display: Ἦ
+  EEscigr:
+    unicode: U+1F9E
+    mapping: unicode-exact
+    display: ᾞ
+  EEsggr:
+    unicode: U+1F2A
+    mapping: unicode-exact
+    display: Ἢ
+  EEsgigr:
+    unicode: U+1F9A
+    mapping: unicode-exact
+    display: ᾚ
+  EEsigr:
+    unicode: U+1F98
+    mapping: unicode-exact
+    display: ᾘ
+  EEsmogr:
+    unicode: U+1F28
+    mapping: unicode-exact
+    display: Ἠ
+  ENG:
+    unicode: U+014A
+    mapping: unicode-exact
+    display: Ŋ
+  EOLhyphen:
+    unicode: U+2223
+    mapping: unicode-exact
+    display: "∣"
+  EOLunhyphen:
+    unicode: U+00A6
+    mapping: unicode-exact
+    display: "¦"
+  ETH:
+    unicode: U+00D0
+    mapping: unicode-exact
+    display: Ð
+  ETHIOPIC-BA:
+    unicode: U+1260
+    mapping: unicode-exact
+    display: በ
+  ETHIOPIC-BAA:
+    unicode: U+1263
+    mapping: unicode-exact
+    display: ባ
+  ETHIOPIC-BE:
+    unicode: U+1265
+    mapping: unicode-exact
+    display: ብ
+  ETHIOPIC-BEE:
+    unicode: U+1264
+    mapping: unicode-exact
+    display: ቤ
+  ETHIOPIC-BI:
+    unicode: U+1262
+    mapping: unicode-exact
+    display: ቢ
+  ETHIOPIC-BO:
+    unicode: U+1266
+    mapping: unicode-exact
+    display: ቦ
+  ETHIOPIC-BU:
+    unicode: U+1261
+    mapping: unicode-exact
+    display: ቡ
+  ETHIOPIC-BWA:
+    unicode: U+1267
+    mapping: unicode-exact
+    display: ቧ
+  ETHIOPIC-CA:
+    unicode: U+1278
+    mapping: unicode-exact
+    display: ቸ
+  ETHIOPIC-CAA:
+    unicode: U+127B
+    mapping: unicode-exact
+    display: ቻ
+  ETHIOPIC-CE:
+    unicode: U+127D
+    mapping: unicode-exact
+    display: ች
+  ETHIOPIC-CEE:
+    unicode: U+127C
+    mapping: unicode-exact
+    display: ቼ
+  ETHIOPIC-CHA:
+    unicode: U+1328
+    mapping: unicode-exact
+    display: ጨ
+  ETHIOPIC-CHAA:
+    unicode: U+132B
+    mapping: unicode-exact
+    display: ጫ
+  ETHIOPIC-CHE:
+    unicode: U+132D
+    mapping: unicode-exact
+    display: ጭ
+  ETHIOPIC-CHEE:
+    unicode: U+132C
+    mapping: unicode-exact
+    display: ጬ
+  ETHIOPIC-CHI:
+    unicode: U+132A
+    mapping: unicode-exact
+    display: ጪ
+  ETHIOPIC-CHO:
+    unicode: U+132E
+    mapping: unicode-exact
+    display: ጮ
+  ETHIOPIC-CHU:
+    unicode: U+1329
+    mapping: unicode-exact
+    display: ጩ
+  ETHIOPIC-CHWA:
+    unicode: U+132F
+    mapping: unicode-exact
+    display: ጯ
+  ETHIOPIC-CI:
+    unicode: U+127A
+    mapping: unicode-exact
+    display: ቺ
+  ETHIOPIC-CO:
+    unicode: U+127E
+    mapping: unicode-exact
+    display: ቾ
+  ETHIOPIC-COLON:
+    unicode: U+1365
+    mapping: unicode-exact
+    display: "፥"
+  ETHIOPIC-COMMA:
+    unicode: U+1363
+    mapping: unicode-exact
+    display: "፣"
+  ETHIOPIC-CU:
+    unicode: U+1279
+    mapping: unicode-exact
+    display: ቹ
+  ETHIOPIC-CWA:
+    unicode: U+127F
+    mapping: unicode-exact
+    display: ቿ
+  ETHIOPIC-DA:
+    unicode: U+12F0
+    mapping: unicode-exact
+    display: ደ
+  ETHIOPIC-DAA:
+    unicode: U+12F3
+    mapping: unicode-exact
+    display: ዳ
+  ETHIOPIC-DDA:
+    unicode: U+12F8
+    mapping: unicode-exact
+    display: ዸ
+  ETHIOPIC-DDAA:
+    unicode: U+12FB
+    mapping: unicode-exact
+    display: ዻ
+  ETHIOPIC-DDE:
+    unicode: U+12FD
+    mapping: unicode-exact
+    display: ዽ
+  ETHIOPIC-DDEE:
+    unicode: U+12FC
+    mapping: unicode-exact
+    display: ዼ
+  ETHIOPIC-DDI:
+    unicode: U+12FA
+    mapping: unicode-exact
+    display: ዺ
+  ETHIOPIC-DDO:
+    unicode: U+12FE
+    mapping: unicode-exact
+    display: ዾ
+  ETHIOPIC-DDU:
+    unicode: U+12F9
+    mapping: unicode-exact
+    display: ዹ
+  ETHIOPIC-DDWA:
+    unicode: U+12FF
+    mapping: unicode-exact
+    display: ዿ
+  ETHIOPIC-DE:
+    unicode: U+12F5
+    mapping: unicode-exact
+    display: ድ
+  ETHIOPIC-DEE:
+    unicode: U+12F4
+    mapping: unicode-exact
+    display: ዴ
+  ETHIOPIC-DI:
+    unicode: U+12F2
+    mapping: unicode-exact
+    display: ዲ
+  ETHIOPIC-DIGIT-EIGHT:
+    unicode: U+1370
+    mapping: unicode-exact
+    display: "፰"
+  ETHIOPIC-DIGIT-FIVE:
+    unicode: U+136D
+    mapping: unicode-exact
+    display: "፭"
+  ETHIOPIC-DIGIT-FOUR:
+    unicode: U+136C
+    mapping: unicode-exact
+    display: "፬"
+  ETHIOPIC-DIGIT-NINE:
+    unicode: U+1371
+    mapping: unicode-exact
+    display: "፱"
+  ETHIOPIC-DIGIT-ONE:
+    unicode: U+1369
+    mapping: unicode-exact
+    display: "፩"
+  ETHIOPIC-DIGIT-SEVEN:
+    unicode: U+136F
+    mapping: unicode-exact
+    display: "፯"
+  ETHIOPIC-DIGIT-SIX:
+    unicode: U+136E
+    mapping: unicode-exact
+    display: "፮"
+  ETHIOPIC-DIGIT-THREE:
+    unicode: U+136B
+    mapping: unicode-exact
+    display: "፫"
+  ETHIOPIC-DIGIT-TWO:
+    unicode: U+136A
+    mapping: unicode-exact
+    display: "፪"
+  ETHIOPIC-DO:
+    unicode: U+12F6
+    mapping: unicode-exact
+    display: ዶ
+  ETHIOPIC-DU:
+    unicode: U+12F1
+    mapping: unicode-exact
+    display: ዱ
+  ETHIOPIC-DWA:
+    unicode: U+12F7
+    mapping: unicode-exact
+    display: ዷ
+  ETHIOPIC-FA:
+    unicode: U+1348
+    mapping: unicode-exact
+    display: ፈ
+  ETHIOPIC-FAA:
+    unicode: U+134B
+    mapping: unicode-exact
+    display: ፋ
+  ETHIOPIC-FE:
+    unicode: U+134D
+    mapping: unicode-exact
+    display: ፍ
+  ETHIOPIC-FEE:
+    unicode: U+134C
+    mapping: unicode-exact
+    display: ፌ
+  ETHIOPIC-FI:
+    unicode: U+134A
+    mapping: unicode-exact
+    display: ፊ
+  ETHIOPIC-FO:
+    unicode: U+134E
+    mapping: unicode-exact
+    display: ፎ
+  ETHIOPIC-FU:
+    unicode: U+1349
+    mapping: unicode-exact
+    display: ፉ
+  ETHIOPIC-FWA:
+    unicode: U+134F
+    mapping: unicode-exact
+    display: ፏ
+  ETHIOPIC-FYA:
+    unicode: U+135A
+    mapping: unicode-exact
+    display: ፚ
+  ETHIOPIC-GA:
+    unicode: U+1308
+    mapping: unicode-exact
+    display: ገ
+  ETHIOPIC-GAA:
+    unicode: U+130B
+    mapping: unicode-exact
+    display: ጋ
+  ETHIOPIC-GE:
+    unicode: U+130D
+    mapping: unicode-exact
+    display: ግ
+  ETHIOPIC-GEE:
+    unicode: U+130C
+    mapping: unicode-exact
+    display: ጌ
+  ETHIOPIC-GEM-MRK:
+    unicode: U+135F
+    mapping: unicode-exact
+    display: ፟
+  ETHIOPIC-GGA:
+    unicode: U+1318
+    mapping: unicode-exact
+    display: ጘ
+  ETHIOPIC-GGAA:
+    unicode: U+131B
+    mapping: unicode-exact
+    display: ጛ
+  ETHIOPIC-GGE:
+    unicode: U+131D
+    mapping: unicode-exact
+    display: ጝ
+  ETHIOPIC-GGEE:
+    unicode: U+131C
+    mapping: unicode-exact
+    display: ጜ
+  ETHIOPIC-GGI:
+    unicode: U+131A
+    mapping: unicode-exact
+    display: ጚ
+  ETHIOPIC-GGO:
+    unicode: U+131E
+    mapping: unicode-exact
+    display: ጞ
+  ETHIOPIC-GGU:
+    unicode: U+1319
+    mapping: unicode-exact
+    display: ጙ
+  ETHIOPIC-GGWAA:
+    unicode: U+131F
+    mapping: unicode-exact
+    display: ጟ
+  ETHIOPIC-GI:
+    unicode: U+130A
+    mapping: unicode-exact
+    display: ጊ
+  ETHIOPIC-GLOTL-A:
+    unicode: U+12A0
+    mapping: unicode-exact
+    display: አ
+  ETHIOPIC-GLOTL-AA:
+    unicode: U+12A3
+    mapping: unicode-exact
+    display: ኣ
+  ETHIOPIC-GLOTL-E:
+    unicode: U+12A5
+    mapping: unicode-exact
+    display: እ
+  ETHIOPIC-GLOTL-EE:
+    unicode: U+12A4
+    mapping: unicode-exact
+    display: ኤ
+  ETHIOPIC-GLOTL-I:
+    unicode: U+12A2
+    mapping: unicode-exact
+    display: ኢ
+  ETHIOPIC-GLOTL-O:
+    unicode: U+12A6
+    mapping: unicode-exact
+    display: ኦ
+  ETHIOPIC-GLOTL-U:
+    unicode: U+12A1
+    mapping: unicode-exact
+    display: ኡ
+  ETHIOPIC-GLOTL-WA:
+    unicode: U+12A7
+    mapping: unicode-exact
+    display: ኧ
+  ETHIOPIC-GO:
+    unicode: U+130E
+    mapping: unicode-exact
+    display: ጎ
+  ETHIOPIC-GOA:
+    unicode: U+130F
+    mapping: unicode-exact
+    display: ጏ
+  ETHIOPIC-GU:
+    unicode: U+1309
+    mapping: unicode-exact
+    display: ጉ
+  ETHIOPIC-GWA:
+    unicode: U+1310
+    mapping: unicode-exact
+    display: ጐ
+  ETHIOPIC-GWAA:
+    unicode: U+1313
+    mapping: unicode-exact
+    display: ጓ
+  ETHIOPIC-GWE:
+    unicode: U+1315
+    mapping: unicode-exact
+    display: ጕ
+  ETHIOPIC-GWEE:
+    unicode: U+1314
+    mapping: unicode-exact
+    display: ጔ
+  ETHIOPIC-GWI:
+    unicode: U+1312
+    mapping: unicode-exact
+    display: ጒ
+  ETHIOPIC-HA:
+    unicode: U+1200
+    mapping: unicode-exact
+    display: ሀ
+  ETHIOPIC-HAA:
+    unicode: U+1203
+    mapping: unicode-exact
+    display: ሃ
+  ETHIOPIC-HE:
+    unicode: U+1205
+    mapping: unicode-exact
+    display: ህ
+  ETHIOPIC-HEE:
+    unicode: U+1204
+    mapping: unicode-exact
+    display: ሄ
+  ETHIOPIC-HHA:
+    unicode: U+1210
+    mapping: unicode-exact
+    display: ሐ
+  ETHIOPIC-HHAA:
+    unicode: U+1213
+    mapping: unicode-exact
+    display: ሓ
+  ETHIOPIC-HHE:
+    unicode: U+1215
+    mapping: unicode-exact
+    display: ሕ
+  ETHIOPIC-HHEE:
+    unicode: U+1214
+    mapping: unicode-exact
+    display: ሔ
+  ETHIOPIC-HHI:
+    unicode: U+1212
+    mapping: unicode-exact
+    display: ሒ
+  ETHIOPIC-HHO:
+    unicode: U+1216
+    mapping: unicode-exact
+    display: ሖ
+  ETHIOPIC-HHU:
+    unicode: U+1211
+    mapping: unicode-exact
+    display: ሑ
+  ETHIOPIC-HHWA:
+    unicode: U+1217
+    mapping: unicode-exact
+    display: ሗ
+  ETHIOPIC-HI:
+    unicode: U+1202
+    mapping: unicode-exact
+    display: ሂ
+  ETHIOPIC-HO:
+    unicode: U+1206
+    mapping: unicode-exact
+    display: ሆ
+  ETHIOPIC-HOA:
+    unicode: U+1207
+    mapping: unicode-exact
+    display: ሇ
+  ETHIOPIC-HU:
+    unicode: U+1201
+    mapping: unicode-exact
+    display: ሁ
+  ETHIOPIC-JA:
+    unicode: U+1300
+    mapping: unicode-exact
+    display: ጀ
+  ETHIOPIC-JAA:
+    unicode: U+1303
+    mapping: unicode-exact
+    display: ጃ
+  ETHIOPIC-JE:
+    unicode: U+1305
+    mapping: unicode-exact
+    display: ጅ
+  ETHIOPIC-JEE:
+    unicode: U+1304
+    mapping: unicode-exact
+    display: ጄ
+  ETHIOPIC-JI:
+    unicode: U+1302
+    mapping: unicode-exact
+    display: ጂ
+  ETHIOPIC-JO:
+    unicode: U+1306
+    mapping: unicode-exact
+    display: ጆ
+  ETHIOPIC-JU:
+    unicode: U+1301
+    mapping: unicode-exact
+    display: ጁ
+  ETHIOPIC-JWA:
+    unicode: U+1307
+    mapping: unicode-exact
+    display: ጇ
+  ETHIOPIC-KA:
+    unicode: U+12A8
+    mapping: unicode-exact
+    display: ከ
+  ETHIOPIC-KAA:
+    unicode: U+12AB
+    mapping: unicode-exact
+    display: ካ
+  ETHIOPIC-KE:
+    unicode: U+12AD
+    mapping: unicode-exact
+    display: ክ
+  ETHIOPIC-KEE:
+    unicode: U+12AC
+    mapping: unicode-exact
+    display: ኬ
+  ETHIOPIC-KI:
+    unicode: U+12AA
+    mapping: unicode-exact
+    display: ኪ
+  ETHIOPIC-KO:
+    unicode: U+12AE
+    mapping: unicode-exact
+    display: ኮ
+  ETHIOPIC-KOA:
+    unicode: U+12AF
+    mapping: unicode-exact
+    display: ኯ
+  ETHIOPIC-KU:
+    unicode: U+12A9
+    mapping: unicode-exact
+    display: ኩ
+  ETHIOPIC-KWA:
+    unicode: U+12B0
+    mapping: unicode-exact
+    display: ኰ
+  ETHIOPIC-KWAA:
+    unicode: U+12B3
+    mapping: unicode-exact
+    display: ኳ
+  ETHIOPIC-KWE:
+    unicode: U+12B5
+    mapping: unicode-exact
+    display: ኵ
+  ETHIOPIC-KWEE:
+    unicode: U+12B4
+    mapping: unicode-exact
+    display: ኴ
+  ETHIOPIC-KWI:
+    unicode: U+12B2
+    mapping: unicode-exact
+    display: ኲ
+  ETHIOPIC-KXA:
+    unicode: U+12B8
+    mapping: unicode-exact
+    display: ኸ
+  ETHIOPIC-KXAA:
+    unicode: U+12BB
+    mapping: unicode-exact
+    display: ኻ
+  ETHIOPIC-KXE:
+    unicode: U+12BD
+    mapping: unicode-exact
+    display: ኽ
+  ETHIOPIC-KXEE:
+    unicode: U+12BC
+    mapping: unicode-exact
+    display: ኼ
+  ETHIOPIC-KXI:
+    unicode: U+12BA
+    mapping: unicode-exact
+    display: ኺ
+  ETHIOPIC-KXO:
+    unicode: U+12BE
+    mapping: unicode-exact
+    display: ኾ
+  ETHIOPIC-KXU:
+    unicode: U+12B9
+    mapping: unicode-exact
+    display: ኹ
+  ETHIOPIC-KXWA:
+    unicode: U+12C0
+    mapping: unicode-exact
+    display: ዀ
+  ETHIOPIC-KXWAA:
+    unicode: U+12C3
+    mapping: unicode-exact
+    display: ዃ
+  ETHIOPIC-KXWE:
+    unicode: U+12C5
+    mapping: unicode-exact
+    display: ዅ
+  ETHIOPIC-KXWEE:
+    unicode: U+12C4
+    mapping: unicode-exact
+    display: ዄ
+  ETHIOPIC-KXWI:
+    unicode: U+12C2
+    mapping: unicode-exact
+    display: ዂ
+  ETHIOPIC-LA:
+    unicode: U+1208
+    mapping: unicode-exact
+    display: ለ
+  ETHIOPIC-LAA:
+    unicode: U+120B
+    mapping: unicode-exact
+    display: ላ
+  ETHIOPIC-LE:
+    unicode: U+120D
+    mapping: unicode-exact
+    display: ል
+  ETHIOPIC-LEE:
+    unicode: U+120C
+    mapping: unicode-exact
+    display: ሌ
+  ETHIOPIC-LI:
+    unicode: U+120A
+    mapping: unicode-exact
+    display: ሊ
+  ETHIOPIC-LO:
+    unicode: U+120E
+    mapping: unicode-exact
+    display: ሎ
+  ETHIOPIC-LU:
+    unicode: U+1209
+    mapping: unicode-exact
+    display: ሉ
+  ETHIOPIC-LWA:
+    unicode: U+120F
+    mapping: unicode-exact
+    display: ሏ
+  ETHIOPIC-MA:
+    unicode: U+1218
+    mapping: unicode-exact
+    display: መ
+  ETHIOPIC-MAA:
+    unicode: U+121B
+    mapping: unicode-exact
+    display: ማ
+  ETHIOPIC-ME:
+    unicode: U+121D
+    mapping: unicode-exact
+    display: ም
+  ETHIOPIC-MEE:
+    unicode: U+121C
+    mapping: unicode-exact
+    display: ሜ
+  ETHIOPIC-MI:
+    unicode: U+121A
+    mapping: unicode-exact
+    display: ሚ
+  ETHIOPIC-MO:
+    unicode: U+121E
+    mapping: unicode-exact
+    display: ሞ
+  ETHIOPIC-MU:
+    unicode: U+1219
+    mapping: unicode-exact
+    display: ሙ
+  ETHIOPIC-MWA:
+    unicode: U+121F
+    mapping: unicode-exact
+    display: ሟ
+  ETHIOPIC-MYA:
+    unicode: U+1359
+    mapping: unicode-exact
+    display: ፙ
+  ETHIOPIC-NA:
+    unicode: U+1290
+    mapping: unicode-exact
+    display: ነ
+  ETHIOPIC-NAA:
+    unicode: U+1293
+    mapping: unicode-exact
+    display: ና
+  ETHIOPIC-NE:
+    unicode: U+1295
+    mapping: unicode-exact
+    display: ን
+  ETHIOPIC-NEE:
+    unicode: U+1294
+    mapping: unicode-exact
+    display: ኔ
+  ETHIOPIC-NI:
+    unicode: U+1292
+    mapping: unicode-exact
+    display: ኒ
+  ETHIOPIC-NO:
+    unicode: U+1296
+    mapping: unicode-exact
+    display: ኖ
+  ETHIOPIC-NU:
+    unicode: U+1291
+    mapping: unicode-exact
+    display: ኑ
+  ETHIOPIC-NUM-EIGHTY:
+    unicode: U+1379
+    mapping: unicode-exact
+    display: "፹"
+  ETHIOPIC-NUM-FIFTY:
+    unicode: U+1376
+    mapping: unicode-exact
+    display: "፶"
+  ETHIOPIC-NUM-FORTY:
+    unicode: U+1375
+    mapping: unicode-exact
+    display: "፵"
+  ETHIOPIC-NUM-HUNDRED:
+    unicode: U+137B
+    mapping: unicode-exact
+    display: "፻"
+  ETHIOPIC-NUM-NINETY:
+    unicode: U+137A
+    mapping: unicode-exact
+    display: "፺"
+  ETHIOPIC-NUM-SEVENTY:
+    unicode: U+1378
+    mapping: unicode-exact
+    display: "፸"
+  ETHIOPIC-NUM-SIXTY:
+    unicode: U+1377
+    mapping: unicode-exact
+    display: "፷"
+  ETHIOPIC-NUM-TEN:
+    unicode: U+1372
+    mapping: unicode-exact
+    display: "፲"
+  ETHIOPIC-NUM-TEN-THOUSAND:
+    unicode: U+137C
+    mapping: unicode-exact
+    display: "፼"
+  ETHIOPIC-NUM-THIRTY:
+    unicode: U+1374
+    mapping: unicode-exact
+    display: "፴"
+  ETHIOPIC-NUM-TWENTY:
+    unicode: U+1373
+    mapping: unicode-exact
+    display: "፳"
+  ETHIOPIC-NWA:
+    unicode: U+1297
+    mapping: unicode-exact
+    display: ኗ
+  ETHIOPIC-NYA:
+    unicode: U+1298
+    mapping: unicode-exact
+    display: ኘ
+  ETHIOPIC-NYAA:
+    unicode: U+129B
+    mapping: unicode-exact
+    display: ኛ
+  ETHIOPIC-NYE:
+    unicode: U+129D
+    mapping: unicode-exact
+    display: ኝ
+  ETHIOPIC-NYEE:
+    unicode: U+129C
+    mapping: unicode-exact
+    display: ኜ
+  ETHIOPIC-NYI:
+    unicode: U+129A
+    mapping: unicode-exact
+    display: ኚ
+  ETHIOPIC-NYO:
+    unicode: U+129E
+    mapping: unicode-exact
+    display: ኞ
+  ETHIOPIC-NYU:
+    unicode: U+1299
+    mapping: unicode-exact
+    display: ኙ
+  ETHIOPIC-NYWA:
+    unicode: U+129F
+    mapping: unicode-exact
+    display: ኟ
+  ETHIOPIC-PA:
+    unicode: U+1350
+    mapping: unicode-exact
+    display: ፐ
+  ETHIOPIC-PAA:
+    unicode: U+1353
+    mapping: unicode-exact
+    display: ፓ
+  ETHIOPIC-PARAGRAPH:
+    unicode: U+1368
+    mapping: unicode-exact
+    display: "፨"
+  ETHIOPIC-PE:
+    unicode: U+1355
+    mapping: unicode-exact
+    display: ፕ
+  ETHIOPIC-PEE:
+    unicode: U+1354
+    mapping: unicode-exact
+    display: ፔ
+  ETHIOPIC-PHA:
+    unicode: U+1330
+    mapping: unicode-exact
+    display: ጰ
+  ETHIOPIC-PHAA:
+    unicode: U+1333
+    mapping: unicode-exact
+    display: ጳ
+  ETHIOPIC-PHARGL-A:
+    unicode: U+12D0
+    mapping: unicode-exact
+    display: ዐ
+  ETHIOPIC-PHARGL-AA:
+    unicode: U+12D3
+    mapping: unicode-exact
+    display: ዓ
+  ETHIOPIC-PHARGL-E:
+    unicode: U+12D5
+    mapping: unicode-exact
+    display: ዕ
+  ETHIOPIC-PHARGL-EE:
+    unicode: U+12D4
+    mapping: unicode-exact
+    display: ዔ
+  ETHIOPIC-PHARGL-I:
+    unicode: U+12D2
+    mapping: unicode-exact
+    display: ዒ
+  ETHIOPIC-PHARGL-O:
+    unicode: U+12D6
+    mapping: unicode-exact
+    display: ዖ
+  ETHIOPIC-PHARGL-U:
+    unicode: U+12D1
+    mapping: unicode-exact
+    display: ዑ
+  ETHIOPIC-PHE:
+    unicode: U+1335
+    mapping: unicode-exact
+    display: ጵ
+  ETHIOPIC-PHEE:
+    unicode: U+1334
+    mapping: unicode-exact
+    display: ጴ
+  ETHIOPIC-PHI:
+    unicode: U+1332
+    mapping: unicode-exact
+    display: ጲ
+  ETHIOPIC-PHO:
+    unicode: U+1336
+    mapping: unicode-exact
+    display: ጶ
+  ETHIOPIC-PHU:
+    unicode: U+1331
+    mapping: unicode-exact
+    display: ጱ
+  ETHIOPIC-PHWA:
+    unicode: U+1337
+    mapping: unicode-exact
+    display: ጷ
+  ETHIOPIC-PI:
+    unicode: U+1352
+    mapping: unicode-exact
+    display: ፒ
+  ETHIOPIC-PO:
+    unicode: U+1356
+    mapping: unicode-exact
+    display: ፖ
+  ETHIOPIC-PREF-COLON:
+    unicode: U+1366
+    mapping: unicode-exact
+    display: "፦"
+  ETHIOPIC-PU:
+    unicode: U+1351
+    mapping: unicode-exact
+    display: ፑ
+  ETHIOPIC-PWA:
+    unicode: U+1357
+    mapping: unicode-exact
+    display: ፗ
+  ETHIOPIC-QA:
+    unicode: U+1240
+    mapping: unicode-exact
+    display: ቀ
+  ETHIOPIC-QAA:
+    unicode: U+1243
+    mapping: unicode-exact
+    display: ቃ
+  ETHIOPIC-QE:
+    unicode: U+1245
+    mapping: unicode-exact
+    display: ቅ
+  ETHIOPIC-QEE:
+    unicode: U+1244
+    mapping: unicode-exact
+    display: ቄ
+  ETHIOPIC-QHA:
+    unicode: U+1250
+    mapping: unicode-exact
+    display: ቐ
+  ETHIOPIC-QHAA:
+    unicode: U+1253
+    mapping: unicode-exact
+    display: ቓ
+  ETHIOPIC-QHE:
+    unicode: U+1255
+    mapping: unicode-exact
+    display: ቕ
+  ETHIOPIC-QHEE:
+    unicode: U+1254
+    mapping: unicode-exact
+    display: ቔ
+  ETHIOPIC-QHI:
+    unicode: U+1252
+    mapping: unicode-exact
+    display: ቒ
+  ETHIOPIC-QHO:
+    unicode: U+1256
+    mapping: unicode-exact
+    display: ቖ
+  ETHIOPIC-QHU:
+    unicode: U+1251
+    mapping: unicode-exact
+    display: ቑ
+  ETHIOPIC-QHWA:
+    unicode: U+1258
+    mapping: unicode-exact
+    display: ቘ
+  ETHIOPIC-QHWAA:
+    unicode: U+125B
+    mapping: unicode-exact
+    display: ቛ
+  ETHIOPIC-QHWE:
+    unicode: U+125D
+    mapping: unicode-exact
+    display: ቝ
+  ETHIOPIC-QHWEE:
+    unicode: U+125C
+    mapping: unicode-exact
+    display: ቜ
+  ETHIOPIC-QHWI:
+    unicode: U+125A
+    mapping: unicode-exact
+    display: ቚ
+  ETHIOPIC-QI:
+    unicode: U+1242
+    mapping: unicode-exact
+    display: ቂ
+  ETHIOPIC-QO:
+    unicode: U+1246
+    mapping: unicode-exact
+    display: ቆ
+  ETHIOPIC-QOA:
+    unicode: U+1247
+    mapping: unicode-exact
+    display: ቇ
+  ETHIOPIC-QU:
+    unicode: U+1241
+    mapping: unicode-exact
+    display: ቁ
+  ETHIOPIC-QUESTION-MRK:
+    unicode: U+1367
+    mapping: unicode-exact
+    display: "፧"
+  ETHIOPIC-QWA:
+    unicode: U+1248
+    mapping: unicode-exact
+    display: ቈ
+  ETHIOPIC-QWAA:
+    unicode: U+124B
+    mapping: unicode-exact
+    display: ቋ
+  ETHIOPIC-QWE:
+    unicode: U+124D
+    mapping: unicode-exact
+    display: ቍ
+  ETHIOPIC-QWEE:
+    unicode: U+124C
+    mapping: unicode-exact
+    display: ቌ
+  ETHIOPIC-QWI:
+    unicode: U+124A
+    mapping: unicode-exact
+    display: ቊ
+  ETHIOPIC-RA:
+    unicode: U+1228
+    mapping: unicode-exact
+    display: ረ
+  ETHIOPIC-RAA:
+    unicode: U+122B
+    mapping: unicode-exact
+    display: ራ
+  ETHIOPIC-RE:
+    unicode: U+122D
+    mapping: unicode-exact
+    display: ር
+  ETHIOPIC-REE:
+    unicode: U+122C
+    mapping: unicode-exact
+    display: ሬ
+  ETHIOPIC-RI:
+    unicode: U+122A
+    mapping: unicode-exact
+    display: ሪ
+  ETHIOPIC-RO:
+    unicode: U+122E
+    mapping: unicode-exact
+    display: ሮ
+  ETHIOPIC-RU:
+    unicode: U+1229
+    mapping: unicode-exact
+    display: ሩ
+  ETHIOPIC-RWA:
+    unicode: U+122F
+    mapping: unicode-exact
+    display: ሯ
+  ETHIOPIC-RYA:
+    unicode: U+1358
+    mapping: unicode-exact
+    display: ፘ
+  ETHIOPIC-SA:
+    unicode: U+1230
+    mapping: unicode-exact
+    display: ሰ
+  ETHIOPIC-SAA:
+    unicode: U+1233
+    mapping: unicode-exact
+    display: ሳ
+  ETHIOPIC-SE:
+    unicode: U+1235
+    mapping: unicode-exact
+    display: ስ
+  ETHIOPIC-SECTION-MRK:
+    unicode: U+1360
+    mapping: unicode-exact
+    display: "፠"
+  ETHIOPIC-SEE:
+    unicode: U+1234
+    mapping: unicode-exact
+    display: ሴ
+  ETHIOPIC-SEMICOLON:
+    unicode: U+1364
+    mapping: unicode-exact
+    display: "፤"
+  ETHIOPIC-SHA:
+    unicode: U+1238
+    mapping: unicode-exact
+    display: ሸ
+  ETHIOPIC-SHAA:
+    unicode: U+123B
+    mapping: unicode-exact
+    display: ሻ
+  ETHIOPIC-SHE:
+    unicode: U+123D
+    mapping: unicode-exact
+    display: ሽ
+  ETHIOPIC-SHEE:
+    unicode: U+123C
+    mapping: unicode-exact
+    display: ሼ
+  ETHIOPIC-SHI:
+    unicode: U+123A
+    mapping: unicode-exact
+    display: ሺ
+  ETHIOPIC-SHO:
+    unicode: U+123E
+    mapping: unicode-exact
+    display: ሾ
+  ETHIOPIC-SHU:
+    unicode: U+1239
+    mapping: unicode-exact
+    display: ሹ
+  ETHIOPIC-SHWA:
+    unicode: U+123F
+    mapping: unicode-exact
+    display: ሿ
+  ETHIOPIC-SI:
+    unicode: U+1232
+    mapping: unicode-exact
+    display: ሲ
+  ETHIOPIC-SO:
+    unicode: U+1236
+    mapping: unicode-exact
+    display: ሶ
+  ETHIOPIC-STOP:
+    unicode: U+1362
+    mapping: unicode-exact
+    display: "።"
+  ETHIOPIC-SU:
+    unicode: U+1231
+    mapping: unicode-exact
+    display: ሱ
+  ETHIOPIC-SWA:
+    unicode: U+1237
+    mapping: unicode-exact
+    display: ሷ
+  ETHIOPIC-SZA:
+    unicode: U+1220
+    mapping: unicode-exact
+    display: ሠ
+  ETHIOPIC-SZAA:
+    unicode: U+1223
+    mapping: unicode-exact
+    display: ሣ
+  ETHIOPIC-SZE:
+    unicode: U+1225
+    mapping: unicode-exact
+    display: ሥ
+  ETHIOPIC-SZEE:
+    unicode: U+1224
+    mapping: unicode-exact
+    display: ሤ
+  ETHIOPIC-SZI:
+    unicode: U+1222
+    mapping: unicode-exact
+    display: ሢ
+  ETHIOPIC-SZO:
+    unicode: U+1226
+    mapping: unicode-exact
+    display: ሦ
+  ETHIOPIC-SZU:
+    unicode: U+1221
+    mapping: unicode-exact
+    display: ሡ
+  ETHIOPIC-SZWA:
+    unicode: U+1227
+    mapping: unicode-exact
+    display: ሧ
+  ETHIOPIC-TA:
+    unicode: U+1270
+    mapping: unicode-exact
+    display: ተ
+  ETHIOPIC-TAA:
+    unicode: U+1273
+    mapping: unicode-exact
+    display: ታ
+  ETHIOPIC-TE:
+    unicode: U+1275
+    mapping: unicode-exact
+    display: ት
+  ETHIOPIC-TEE:
+    unicode: U+1274
+    mapping: unicode-exact
+    display: ቴ
+  ETHIOPIC-THA:
+    unicode: U+1320
+    mapping: unicode-exact
+    display: ጠ
+  ETHIOPIC-THAA:
+    unicode: U+1323
+    mapping: unicode-exact
+    display: ጣ
+  ETHIOPIC-THE:
+    unicode: U+1325
+    mapping: unicode-exact
+    display: ጥ
+  ETHIOPIC-THEE:
+    unicode: U+1324
+    mapping: unicode-exact
+    display: ጤ
+  ETHIOPIC-THI:
+    unicode: U+1322
+    mapping: unicode-exact
+    display: ጢ
+  ETHIOPIC-THO:
+    unicode: U+1326
+    mapping: unicode-exact
+    display: ጦ
+  ETHIOPIC-THU:
+    unicode: U+1321
+    mapping: unicode-exact
+    display: ጡ
+  ETHIOPIC-THWA:
+    unicode: U+1327
+    mapping: unicode-exact
+    display: ጧ
+  ETHIOPIC-TI:
+    unicode: U+1272
+    mapping: unicode-exact
+    display: ቲ
+  ETHIOPIC-TO:
+    unicode: U+1276
+    mapping: unicode-exact
+    display: ቶ
+  ETHIOPIC-TSA:
+    unicode: U+1338
+    mapping: unicode-exact
+    display: ጸ
+  ETHIOPIC-TSAA:
+    unicode: U+133B
+    mapping: unicode-exact
+    display: ጻ
+  ETHIOPIC-TSE:
+    unicode: U+133D
+    mapping: unicode-exact
+    display: ጽ
+  ETHIOPIC-TSEE:
+    unicode: U+133C
+    mapping: unicode-exact
+    display: ጼ
+  ETHIOPIC-TSI:
+    unicode: U+133A
+    mapping: unicode-exact
+    display: ጺ
+  ETHIOPIC-TSO:
+    unicode: U+133E
+    mapping: unicode-exact
+    display: ጾ
+  ETHIOPIC-TSU:
+    unicode: U+1339
+    mapping: unicode-exact
+    display: ጹ
+  ETHIOPIC-TSWA:
+    unicode: U+133F
+    mapping: unicode-exact
+    display: ጿ
+  ETHIOPIC-TU:
+    unicode: U+1271
+    mapping: unicode-exact
+    display: ቱ
+  ETHIOPIC-TWA:
+    unicode: U+1277
+    mapping: unicode-exact
+    display: ቷ
+  ETHIOPIC-TZA:
+    unicode: U+1340
+    mapping: unicode-exact
+    display: ፀ
+  ETHIOPIC-TZAA:
+    unicode: U+1343
+    mapping: unicode-exact
+    display: ፃ
+  ETHIOPIC-TZE:
+    unicode: U+1345
+    mapping: unicode-exact
+    display: ፅ
+  ETHIOPIC-TZEE:
+    unicode: U+1344
+    mapping: unicode-exact
+    display: ፄ
+  ETHIOPIC-TZI:
+    unicode: U+1342
+    mapping: unicode-exact
+    display: ፂ
+  ETHIOPIC-TZO:
+    unicode: U+1346
+    mapping: unicode-exact
+    display: ፆ
+  ETHIOPIC-TZOA:
+    unicode: U+1347
+    mapping: unicode-exact
+    display: ፇ
+  ETHIOPIC-TZU:
+    unicode: U+1341
+    mapping: unicode-exact
+    display: ፁ
+  ETHIOPIC-VA:
+    unicode: U+1268
+    mapping: unicode-exact
+    display: ቨ
+  ETHIOPIC-VAA:
+    unicode: U+126B
+    mapping: unicode-exact
+    display: ቫ
+  ETHIOPIC-VE:
+    unicode: U+126D
+    mapping: unicode-exact
+    display: ቭ
+  ETHIOPIC-VEE:
+    unicode: U+126C
+    mapping: unicode-exact
+    display: ቬ
+  ETHIOPIC-VI:
+    unicode: U+126A
+    mapping: unicode-exact
+    display: ቪ
+  ETHIOPIC-VO:
+    unicode: U+126E
+    mapping: unicode-exact
+    display: ቮ
+  ETHIOPIC-VU:
+    unicode: U+1269
+    mapping: unicode-exact
+    display: ቩ
+  ETHIOPIC-VWA:
+    unicode: U+126F
+    mapping: unicode-exact
+    display: ቯ
+  ETHIOPIC-WA:
+    unicode: U+12C8
+    mapping: unicode-exact
+    display: ወ
+  ETHIOPIC-WAA:
+    unicode: U+12CB
+    mapping: unicode-exact
+    display: ዋ
+  ETHIOPIC-WE:
+    unicode: U+12CD
+    mapping: unicode-exact
+    display: ው
+  ETHIOPIC-WEE:
+    unicode: U+12CC
+    mapping: unicode-exact
+    display: ዌ
+  ETHIOPIC-WI:
+    unicode: U+12CA
+    mapping: unicode-exact
+    display: ዊ
+  ETHIOPIC-WO:
+    unicode: U+12CE
+    mapping: unicode-exact
+    display: ዎ
+  ETHIOPIC-WOA:
+    unicode: U+12CF
+    mapping: unicode-exact
+    display: ዏ
+  ETHIOPIC-WORDSPACE:
+    unicode: U+1361
+    mapping: unicode-exact
+    display: "፡"
+  ETHIOPIC-WU:
+    unicode: U+12C9
+    mapping: unicode-exact
+    display: ዉ
+  ETHIOPIC-XA:
+    unicode: U+1280
+    mapping: unicode-exact
+    display: ኀ
+  ETHIOPIC-XAA:
+    unicode: U+1283
+    mapping: unicode-exact
+    display: ኃ
+  ETHIOPIC-XE:
+    unicode: U+1285
+    mapping: unicode-exact
+    display: ኅ
+  ETHIOPIC-XEE:
+    unicode: U+1284
+    mapping: unicode-exact
+    display: ኄ
+  ETHIOPIC-XI:
+    unicode: U+1282
+    mapping: unicode-exact
+    display: ኂ
+  ETHIOPIC-XO:
+    unicode: U+1286
+    mapping: unicode-exact
+    display: ኆ
+  ETHIOPIC-XOA:
+    unicode: U+1287
+    mapping: unicode-exact
+    display: ኇ
+  ETHIOPIC-XU:
+    unicode: U+1281
+    mapping: unicode-exact
+    display: ኁ
+  ETHIOPIC-XWA:
+    unicode: U+1288
+    mapping: unicode-exact
+    display: ኈ
+  ETHIOPIC-XWAA:
+    unicode: U+128B
+    mapping: unicode-exact
+    display: ኋ
+  ETHIOPIC-XWE:
+    unicode: U+128D
+    mapping: unicode-exact
+    display: ኍ
+  ETHIOPIC-XWEE:
+    unicode: U+128C
+    mapping: unicode-exact
+    display: ኌ
+  ETHIOPIC-XWI:
+    unicode: U+128A
+    mapping: unicode-exact
+    display: ኊ
+  ETHIOPIC-YA:
+    unicode: U+12E8
+    mapping: unicode-exact
+    display: የ
+  ETHIOPIC-YAA:
+    unicode: U+12EB
+    mapping: unicode-exact
+    display: ያ
+  ETHIOPIC-YE:
+    unicode: U+12ED
+    mapping: unicode-exact
+    display: ይ
+  ETHIOPIC-YEE:
+    unicode: U+12EC
+    mapping: unicode-exact
+    display: ዬ
+  ETHIOPIC-YI:
+    unicode: U+12EA
+    mapping: unicode-exact
+    display: ዪ
+  ETHIOPIC-YO:
+    unicode: U+12EE
+    mapping: unicode-exact
+    display: ዮ
+  ETHIOPIC-YOA:
+    unicode: U+12EF
+    mapping: unicode-exact
+    display: ዯ
+  ETHIOPIC-YU:
+    unicode: U+12E9
+    mapping: unicode-exact
+    display: ዩ
+  ETHIOPIC-ZA:
+    unicode: U+12D8
+    mapping: unicode-exact
+    display: ዘ
+  ETHIOPIC-ZAA:
+    unicode: U+12DB
+    mapping: unicode-exact
+    display: ዛ
+  ETHIOPIC-ZE:
+    unicode: U+12DD
+    mapping: unicode-exact
+    display: ዝ
+  ETHIOPIC-ZEE:
+    unicode: U+12DC
+    mapping: unicode-exact
+    display: ዜ
+  ETHIOPIC-ZHA:
+    unicode: U+12E0
+    mapping: unicode-exact
+    display: ዠ
+  ETHIOPIC-ZHAA:
+    unicode: U+12E3
+    mapping: unicode-exact
+    display: ዣ
+  ETHIOPIC-ZHE:
+    unicode: U+12E5
+    mapping: unicode-exact
+    display: ዥ
+  ETHIOPIC-ZHEE:
+    unicode: U+12E4
+    mapping: unicode-exact
+    display: ዤ
+  ETHIOPIC-ZHI:
+    unicode: U+12E2
+    mapping: unicode-exact
+    display: ዢ
+  ETHIOPIC-ZHO:
+    unicode: U+12E6
+    mapping: unicode-exact
+    display: ዦ
+  ETHIOPIC-ZHU:
+    unicode: U+12E1
+    mapping: unicode-exact
+    display: ዡ
+  ETHIOPIC-ZHWA:
+    unicode: U+12E7
+    mapping: unicode-exact
+    display: ዧ
+  ETHIOPIC-ZI:
+    unicode: U+12DA
+    mapping: unicode-exact
+    display: ዚ
+  ETHIOPIC-ZO:
+    unicode: U+12DE
+    mapping: unicode-exact
+    display: ዞ
+  ETHIOPIC-ZU:
+    unicode: U+12D9
+    mapping: unicode-exact
+    display: ዙ
+  ETHIOPIC-ZWA:
+    unicode: U+12DF
+    mapping: unicode-exact
+    display: ዟ
+  Eacugr:
+    unicode: U+1FC9
+    mapping: unicode-exact
+    display: Έ
+  Eacute:
+    unicode: U+00C9
+    mapping: unicode-exact
+    display: É
+  Earth:
+    unicode: U+2641
+    mapping: unicode-exact
+    display: "♁"
+  Ecaron:
+    unicode: U+011A
+    mapping: unicode-exact
+    display: Ě
+  Ecirc:
+    unicode: U+00CA
+    mapping: unicode-exact
+    display: Ê
+  Ecy:
+    unicode: U+042D
+    mapping: unicode-exact
+    display: Э
+  Edot:
+    unicode: U+0116
+    mapping: unicode-exact
+    display: Ė
+  Egr:
+    unicode: U+0395
+    mapping: unicode-exact
+    display: Ε
+  Egragr:
+    unicode: U+1FC8
+    mapping: unicode-exact
+    display: Ὲ
+  Egrave:
+    unicode: U+00C8
+    mapping: unicode-exact
+    display: È
+  Emacr:
+    unicode: U+0112
+    mapping: unicode-exact
+    display: Ē
+  Eogon:
+    unicode: U+0118
+    mapping: unicode-exact
+    display: Ę
+  Eragr:
+    unicode: U+1F1D
+    mapping: unicode-exact
+    display: Ἕ
+  Erggr:
+    unicode: U+1F1B
+    mapping: unicode-exact
+    display: Ἓ
+  Erougr:
+    unicode: U+1F19
+    mapping: unicode-exact
+    display: Ἑ
+  Esagr:
+    unicode: U+1F1C
+    mapping: unicode-exact
+    display: Ἔ
+  Esggr:
+    unicode: U+1F1A
+    mapping: unicode-exact
+    display: Ἒ
+  Esmogr:
+    unicode: U+1F18
+    mapping: unicode-exact
+    display: Ἐ
+  Euml:
+    unicode: U+00CB
+    mapping: unicode-exact
+    display: Ë
+  FF:
+    unicode: U+E0BA
+    mapping: display-equiv
+    display: "\U0001D53D"
+  Fcy:
+    unicode: U+0424
+    mapping: unicode-exact
+    display: Ф
+  Flemish:
+    unicode: U+E05F
+    mapping: display-equiv
+    display: ℱℓ.
+  Gbreve:
+    unicode: U+011E
+    mapping: unicode-exact
+    display: Ğ
+  Gcedil:
+    unicode: U+0122
+    mapping: unicode-exact
+    display: Ģ
+  Gcirc:
+    unicode: U+011C
+    mapping: unicode-exact
+    display: Ĝ
+  Gcy:
+    unicode: U+0413
+    mapping: unicode-exact
+    display: Г
+  Gdot:
+    unicode: U+0120
+    mapping: unicode-exact
+    display: Ġ
+  Gemini:
+    unicode: U+264A
+    mapping: unicode-exact
+    display: "♊︎"
+  Ggr:
+    unicode: U+0393
+    mapping: unicode-exact
+    display: Γ
+  Ggr-rev:
+    unicode: U+E09E
+    mapping: display-equiv
+    display: Γ
+  Ghacek:
+    unicode: U+01E6
+    mapping: unicode-exact
+    display: Ǧ
+  HARDcy:
+    unicode: U+042A
+    mapping: unicode-exact
+    display: Ъ
+  Hcirc:
+    unicode: U+0124
+    mapping: unicode-exact
+    display: Ĥ
+  Hstrok:
+    unicode: U+0126
+    mapping: unicode-exact
+    display: Ħ
+  IEcy:
+    unicode: U+0415
+    mapping: unicode-exact
+    display: Е
+  IJlig:
+    unicode: U+0132
+    mapping: unicode-exact
+    display: Ĳ
+  IOcy:
+    unicode: U+0401
+    mapping: unicode-exact
+    display: Ё
+  Iacugr:
+    unicode: U+1FDB
+    mapping: unicode-exact
+    display: Ί
+  Iacute:
+    unicode: U+00CD
+    mapping: unicode-exact
+    display: Í
+  Ibreve:
+    unicode: U+012C
+    mapping: unicode-exact
+    display: Ĭ
+  Icirc:
+    unicode: U+00CE
+    mapping: unicode-exact
+    display: Î
+  Icy:
+    unicode: U+0418
+    mapping: unicode-exact
+    display: И
+  Idot:
+    unicode: U+0130
+    mapping: unicode-exact
+    display: İ
+  Igr:
+    unicode: U+0399
+    mapping: unicode-exact
+    display: Ι
+  Igragr:
+    unicode: U+1FDA
+    mapping: unicode-exact
+    display: Ὶ
+  Igrave:
+    unicode: U+00CC
+    mapping: unicode-exact
+    display: Ì
+  Imacr:
+    unicode: U+012A
+    mapping: unicode-exact
+    display: Ī
+  Iogon:
+    unicode: U+012E
+    mapping: unicode-exact
+    display: Į
+  Iragr:
+    unicode: U+1F3D
+    mapping: unicode-exact
+    display: Ἵ
+  Ircgr:
+    unicode: U+1F3F
+    mapping: unicode-exact
+    display: Ἷ
+  Irggr:
+    unicode: U+1F3B
+    mapping: unicode-exact
+    display: Ἳ
+  Irougr:
+    unicode: U+1F39
+    mapping: unicode-exact
+    display: Ἱ
+  Isagr:
+    unicode: U+1F3C
+    mapping: unicode-exact
+    display: Ἴ
+  Iscgr:
+    unicode: U+1F3E
+    mapping: unicode-exact
+    display: Ἶ
+  Isggr:
+    unicode: U+1F3A
+    mapping: unicode-exact
+    display: Ἲ
+  Ismogr:
+    unicode: U+1F38
+    mapping: unicode-exact
+    display: Ἰ
+  Itilde:
+    unicode: U+0128
+    mapping: unicode-exact
+    display: Ĩ
+  Iuml:
+    unicode: U+00CF
+    mapping: unicode-exact
+    display: Ï
+  Jcirc:
+    unicode: U+0134
+    mapping: unicode-exact
+    display: Ĵ
+  Jcy:
+    unicode: U+0419
+    mapping: unicode-exact
+    display: Й
+  Jupit:
+    unicode: U+2643
+    mapping: unicode-exact
+    display: "♃"
+  KHcy:
+    unicode: U+0425
+    mapping: unicode-exact
+    display: Х
+  KHgr:
+    unicode: U+03A7
+    mapping: unicode-exact
+    display: Χ
+  KOgr:
+    unicode: U+03DE
+    mapping: unicode-exact
+    display: Ϟ
+  Kcedil:
+    unicode: U+0136
+    mapping: unicode-exact
+    display: Ķ
+  Kcy:
+    unicode: U+041A
+    mapping: unicode-exact
+    display: К
+  Kgr:
+    unicode: U+039A
+    mapping: unicode-exact
+    display: Κ
+  LL:
+    unicode: U+1EFA
+    mapping: unicode-exact
+    display: Ỻ
+  Lacute:
+    unicode: U+0139
+    mapping: unicode-exact
+    display: Ĺ
+  Lbar:
+    unicode: U+2C62
+    mapping: unicode-exact
+    display: ɫ
+  Lcaron:
+    unicode: U+013D
+    mapping: unicode-exact
+    display: Ľ
+  Lcedil:
+    unicode: U+013B
+    mapping: unicode-exact
+    display: Ļ
+  Lcy:
+    unicode: U+041B
+    mapping: unicode-exact
+    display: Л
+  Ldotb:
+    unicode: U+1E36
+    mapping: unicode-exact
+    display: Ḷ
+  Leo:
+    unicode: U+264C
+    mapping: unicode-exact
+    display: "♌︎"
+  Lgr:
+    unicode: U+039B
+    mapping: unicode-exact
+    display: Λ
+  Libra:
+    unicode: U+264E
+    mapping: unicode-exact
+    display: "♎︎"
+  Lmidot:
+    unicode: U+013F
+    mapping: unicode-exact
+    display: Ŀ
+  Lstrok:
+    unicode: U+0141
+    mapping: unicode-exact
+    display: Ł
+  Mars:
+    unicode: U+2642
+    mapping: unicode-exact
+    display: "♂"
+  Mcy:
+    unicode: U+041C
+    mapping: unicode-exact
+    display: М
+  Merc:
+    unicode: U+263F
+    mapping: unicode-exact
+    display: "☿"
+  Mgr:
+    unicode: U+039C
+    mapping: unicode-exact
+    display: Μ
+  Moon:
+    unicode: U+263D
+    mapping: unicode-exact
+    display: "☽"
+  Moonfirst:
+    unicode: U+1F312
+    mapping: unicode-exact
+    display: "\U0001F312︎"
+  Moonlast:
+    unicode: U+1F318
+    mapping: unicode-exact
+    display: "\U0001F318︎"
+  Moonnew:
+    unicode: U+1F31A
+    mapping: unicode-exact
+    display: "\U0001F31A︎"
+  Moonround:
+    unicode: U+1F31D
+    mapping: unicode-exact
+    display: "\U0001F31D︎"
+  NG:
+    unicode: U+E0BB
+    mapping: display-equiv
+    display: Ǥ
+  Nacute:
+    unicode: U+0143
+    mapping: unicode-exact
+    display: Ń
+  Ncaron:
+    unicode: U+0147
+    mapping: unicode-exact
+    display: Ň
+  Ncedil:
+    unicode: U+0145
+    mapping: unicode-exact
+    display: Ņ
+  Ncy:
+    unicode: U+041D
+    mapping: unicode-exact
+    display: Н
+  Neptune:
+    unicode: U+2646
+    mapping: unicode-exact
+    display: "♆"
+  Ngr:
+    unicode: U+039D
+    mapping: unicode-exact
+    display: Ν
+  Ntilde:
+    unicode: U+00D1
+    mapping: unicode-exact
+    display: Ñ
+  OElig:
+    unicode: U+0152
+    mapping: unicode-exact
+    display: Œ
+  OHacugr:
+    unicode: U+1FFB
+    mapping: unicode-exact
+    display: Ώ
+  OHcirgr:
+    unicode: U+E0B5
+    mapping: unicode-exact
+    display: Ω͂
+  OHgr:
+    unicode: U+03A9
+    mapping: unicode-exact
+    display: Ω
+  OHgragr:
+    unicode: U+1FFA
+    mapping: unicode-exact
+    display: Ὼ
+  OHigr:
+    unicode: U+1FFC
+    mapping: unicode-exact
+    display: ῼ
+  OHragr:
+    unicode: U+1F6D
+    mapping: unicode-exact
+    display: Ὥ
+  OHraigr:
+    unicode: U+1FAD
+    mapping: unicode-exact
+    display: ᾭ
+  OHrcgr:
+    unicode: U+1F6F
+    mapping: unicode-exact
+    display: Ὧ
+  OHrcigr:
+    unicode: U+1FAF
+    mapping: unicode-exact
+    display: ᾯ
+  OHrggr:
+    unicode: U+1F6B
+    mapping: unicode-exact
+    display: Ὣ
+  OHrgigr:
+    unicode: U+1FAB
+    mapping: unicode-exact
+    display: ᾫ
+  OHrigr:
+    unicode: U+1FA9
+    mapping: unicode-exact
+    display: ᾩ
+  OHrougr:
+    unicode: U+1F69
+    mapping: unicode-exact
+    display: Ὡ
+  OHsagr:
+    unicode: U+1F6C
+    mapping: unicode-exact
+    display: Ὤ
+  OHsaigr:
+    unicode: U+1FAC
+    mapping: unicode-exact
+    display: ᾬ
+  OHscgr:
+    unicode: U+1F6E
+    mapping: unicode-exact
+    display: Ὦ
+  OHscigr:
+    unicode: U+1FAE
+    mapping: unicode-exact
+    display: ᾮ
+  OHsggr:
+    unicode: U+1F6A
+    mapping: unicode-exact
+    display: Ὢ
+  OHsgigr:
+    unicode: U+1FAA
+    mapping: unicode-exact
+    display: ᾪ
+  OHsigr:
+    unicode: U+1FA8
+    mapping: unicode-exact
+    display: ᾨ
+  OHsmogr:
+    unicode: U+1F68
+    mapping: unicode-exact
+    display: Ὠ
+  Oacugr:
+    unicode: U+1FF9
+    mapping: unicode-exact
+    display: Ό
+  Oacute:
+    unicode: U+00D3
+    mapping: unicode-exact
+    display: Ó
+  Ocirc:
+    unicode: U+00D4
+    mapping: unicode-exact
+    display: Ô
+  Ocy:
+    unicode: U+041E
+    mapping: unicode-exact
+    display: О
+  Odblac:
+    unicode: U+0150
+    mapping: unicode-exact
+    display: Ő
+  Ogr:
+    unicode: U+039F
+    mapping: unicode-exact
+    display: Ο
+  Ogragr:
+    unicode: U+1FF8
+    mapping: unicode-exact
+    display: Ὸ
+  Ograve:
+    unicode: U+00D2
+    mapping: unicode-exact
+    display: Ò
+  Omacr:
+    unicode: U+014C
+    mapping: unicode-exact
+    display: Ō
+  Oragr:
+    unicode: U+1F4D
+    mapping: unicode-exact
+    display: Ὅ
+  Orggr:
+    unicode: U+1F4B
+    mapping: unicode-exact
+    display: Ὃ
+  Orougr:
+    unicode: U+1F49
+    mapping: unicode-exact
+    display: Ὁ
+  Osagr:
+    unicode: U+1F4C
+    mapping: unicode-exact
+    display: Ὄ
+  Osggr:
+    unicode: U+1F4A
+    mapping: unicode-exact
+    display: Ὂ
+  Oslash:
+    unicode: U+00D8
+    mapping: unicode-exact
+    display: Ø
+  Osmogr:
+    unicode: U+1F48
+    mapping: unicode-exact
+    display: Ὀ
+  Otilde:
+    unicode: U+00D5
+    mapping: unicode-exact
+    display: Õ
+  Ouml:
+    unicode: U+00D6
+    mapping: unicode-exact
+    display: Ö
+  PHgr:
+    unicode: U+03A6
+    mapping: unicode-exact
+    display: Φ
+  PSgr:
+    unicode: U+03A8
+    mapping: unicode-exact
+    display: Ψ
+  Pcy:
+    unicode: U+041F
+    mapping: unicode-exact
+    display: П
+  Pgr:
+    unicode: U+03A0
+    mapping: unicode-exact
+    display: Π
+  Pisces:
+    unicode: U+2653
+    mapping: unicode-exact
+    display: "♓︎"
+  Prime:
+    unicode: U+2033
+    mapping: unicode-exact
+    display: "″"
+  Qbar:
+    unicode: U+A756
+    mapping: unicode-exact
+    display: Ꝗ
+  R:
+    unicode: U+A75A
+    mapping: unicode-exact
+    display: Ꝛ
+  Racute:
+    unicode: U+0154
+    mapping: unicode-exact
+    display: Ŕ
+  Rcaron:
+    unicode: U+0158
+    mapping: unicode-exact
+    display: Ř
+  Rcedil:
+    unicode: U+0156
+    mapping: unicode-exact
+    display: Ŗ
+  Rcy:
+    unicode: U+0420
+    mapping: unicode-exact
+    display: Р
+  Rgr:
+    unicode: U+03A1
+    mapping: unicode-exact
+    display: Ρ
+  Rgr-rev:
+    unicode: U+E09F
+    mapping: display-equiv
+    display: Ρ
+  Rrougr:
+    unicode: U+1FEC
+    mapping: unicode-exact
+    display: Ῥ
+  SAMgr:
+    unicode: U+03E0
+    mapping: unicode-exact
+    display: Ϡ
+  SHCHcy:
+    unicode: U+0429
+    mapping: unicode-exact
+    display: Щ
+  SHcy:
+    unicode: U+0428
+    mapping: unicode-exact
+    display: Ш
+  SOFTcy:
+    unicode: U+042C
+    mapping: unicode-exact
+    display: Ь
+  STgr:
+    unicode: U+03DA
+    mapping: unicode-exact
+    display: Ϛ
+  Sacute:
+    unicode: U+015A
+    mapping: unicode-exact
+    display: Ś
+  Sagitt:
+    unicode: U+2650
+    mapping: unicode-exact
+    display: "♐︎"
+  Saturn:
+    unicode: U+2644
+    mapping: unicode-exact
+    display: "♄"
+  Scaron:
+    unicode: U+0160
+    mapping: unicode-exact
+    display: Š
+  Scedil:
+    unicode: U+015E
+    mapping: unicode-exact
+    display: Ş
+  Scirc:
+    unicode: U+015C
+    mapping: unicode-exact
+    display: Ŝ
+  Scorp:
+    unicode: U+264F
+    mapping: unicode-exact
+    display: "♏︎"
+  Scy:
+    unicode: U+0421
+    mapping: unicode-exact
+    display: С
+  Sgr:
+    unicode: U+03A3
+    mapping: unicode-exact
+    display: Σ
+  Sgr-rev:
+    unicode: U+E09D
+    mapping: display-equiv
+    display: Σ
+  Slungr:
+    unicode: U+03F9
+    mapping: unicode-exact
+    display: Ϲ
+  Sun:
+    unicode: U+2609
+    mapping: unicode-exact
+    display: "☉"
+  THAT:
+    unicode: U+A766
+    mapping: unicode-exact
+    display: Ꝧ
+  THORN:
+    unicode: U+00DE
+    mapping: unicode-exact
+    display: Þ
+  THgr:
+    unicode: U+0398
+    mapping: unicode-exact
+    display: Θ
+  TScy:
+    unicode: U+0426
+    mapping: unicode-exact
+    display: Ц
+  Taurus:
+    unicode: U+2649
+    mapping: unicode-exact
+    display: "♉︎"
+  Tcaron:
+    unicode: U+0164
+    mapping: unicode-exact
+    display: Ť
+  Tcedil:
+    unicode: U+0162
+    mapping: unicode-exact
+    display: Ţ
+  Tcy:
+    unicode: U+0422
+    mapping: unicode-exact
+    display: Т
+  Tgr:
+    unicode: U+03A4
+    mapping: unicode-exact
+    display: Τ
+  Tstrok:
+    unicode: U+0166
+    mapping: unicode-exact
+    display: Ŧ
+  Uacugr:
+    unicode: U+1FEB
+    mapping: unicode-exact
+    display: Ύ
+  Uacute:
+    unicode: U+00DA
+    mapping: unicode-exact
+    display: Ú
+  Ubreve:
+    unicode: U+016C
+    mapping: unicode-exact
+    display: Ŭ
+  Ucirc:
+    unicode: U+00DB
+    mapping: unicode-exact
+    display: Û
+  Ucirgr:
+    unicode: U+E03F
+    mapping: unicode-exact
+    display: Υ͂
+  Ucy:
+    unicode: U+0423
+    mapping: unicode-exact
+    display: У
+  Udblac:
+    unicode: U+0170
+    mapping: unicode-exact
+    display: Ű
+  Udotb:
+    unicode: U+1EE4
+    mapping: unicode-exact
+    display: Ụ
+  Ugr:
+    unicode: U+03A5
+    mapping: unicode-exact
+    display: Υ
+  Ugragr:
+    unicode: U+1FEA
+    mapping: unicode-exact
+    display: Ὺ
+  Ugrave:
+    unicode: U+00D9
+    mapping: unicode-exact
+    display: Ù
+  Umacr:
+    unicode: U+016A
+    mapping: unicode-exact
+    display: Ū
+  Uogon:
+    unicode: U+0172
+    mapping: unicode-exact
+    display: Ų
+  Uragr:
+    unicode: U+1F5D
+    mapping: unicode-exact
+    display: Ὕ
+  Urcgr:
+    unicode: U+1F5F
+    mapping: unicode-exact
+    display: Ὗ
+  Urggr:
+    unicode: U+1F5B
+    mapping: unicode-exact
+    display: Ὓ
+  Uring:
+    unicode: U+016E
+    mapping: unicode-exact
+    display: Ů
+  Urougr:
+    unicode: U+1F59
+    mapping: unicode-exact
+    display: Ὑ
+  Utilde:
+    unicode: U+0168
+    mapping: unicode-exact
+    display: Ũ
+  Uuml:
+    unicode: U+00DC
+    mapping: unicode-exact
+    display: Ü
+  V:
+    unicode: U+E07A
+    mapping: display-equiv
+    display: Ʋ
+  Vcy:
+    unicode: U+0412
+    mapping: unicode-exact
+    display: В
+  Venus:
+    unicode: U+2640
+    mapping: unicode-exact
+    display: "♀"
+  Verbar:
+    unicode: U+2016
+    mapping: unicode-exact
+    display: "‖"
+  Virgo:
+    unicode: U+264D
+    mapping: unicode-exact
+    display: "♍︎"
+  Vstroke:
+    unicode: U+A75E
+    mapping: unicode-exact
+    display: Ꝟ
+  W:
+    unicode: U+1EFC
+    mapping: unicode-exact
+    display: Ỽ
+  WYN:
+    unicode: U+01F7
+    mapping: unicode-exact
+    display: Ƿ
+  Wcirc:
+    unicode: U+0174
+    mapping: unicode-exact
+    display: Ŵ
+  Xbar:
+    unicode: U+10196
+    mapping: display-equiv
+    display: X̶
+  Xgr:
+    unicode: U+039E
+    mapping: unicode-exact
+    display: Ξ
+  "Y":
+    unicode: U+1EFE
+    mapping: unicode-exact
+    display: Ỿ
+  YAcy:
+    unicode: U+042F
+    mapping: unicode-exact
+    display: Я
+  YOGH:
+    unicode: U+021C
+    mapping: unicode-exact
+    display: Ȝ
+  YUcy:
+    unicode: U+042E
+    mapping: unicode-exact
+    display: Ю
+  Yacute:
+    unicode: U+00DD
+    mapping: unicode-exact
+    display: Ý
+  Ycirc:
+    unicode: U+0176
+    mapping: unicode-exact
+    display: Ŷ
+  Ycy:
+    unicode: U+042B
+    mapping: unicode-exact
+    display: Ы
+  Ydot:
+    unicode: U+1E8E
+    mapping: unicode-exact
+    display: Ẏ
+  Yhook:
+    unicode: U+01B3
+    mapping: unicode-exact
+    display: Ƴ
+  Yuml:
+    unicode: U+0178
+    mapping: unicode-exact
+    display: Ÿ
+  ZHcy:
+    unicode: U+0416
+    mapping: unicode-exact
+    display: Ж
+  Zacute:
+    unicode: U+0179
+    mapping: unicode-exact
+    display: Ź
+  Zcaron:
+    unicode: U+017D
+    mapping: unicode-exact
+    display: Ž
+  Zcy:
+    unicode: U+0417
+    mapping: unicode-exact
+    display: З
+  Zdot:
+    unicode: U+017B
+    mapping: unicode-exact
+    display: Ż
+  Zgr:
+    unicode: U+0396
+    mapping: unicode-exact
+    display: Ζ
+  aacugr:
+    unicode: U+1F71
+    mapping: unicode-exact
+    display: ά
+  aacute:
+    unicode: U+00E1
+    mapping: unicode-exact
+    display: á
+  aaigr:
+    unicode: U+1FB4
+    mapping: unicode-exact
+    display: ᾴ
+  abCON:
+    unicode: U+A76E
+    mapping: unicode-exact
+    display: Ꝯ
+  abPER:
+    unicode: U+A750
+    mapping: unicode-exact
+    display: Ꝑ
+  abPRI:
+    unicode: U+E0AF
+    mapping: display-equiv
+    display: P̾
+  abPRO:
+    unicode: U+A752
+    mapping: unicode-exact
+    display: Ꝓ
+  abQUE:
+    unicode: U+E087
+    mapping: display-equiv
+    display: Qʓ
+  abQUOD:
+    unicode: U+A758
+    mapping: unicode-exact
+    display: Ꝙ
+  abRUM:
+    unicode: U+A776
+    mapping: search-equiv
+    display: "{RUM}"
+  abUS:
+    unicode: U+A770
+    mapping: unicode-exact
+    display: ꝰ
+  abbrapo:
+    unicode: U+E088
+    mapping: display-equiv
+    display: ʼ
+  abbus:
+    unicode: U+E005
+    mapping: display-equiv
+    display: bʓ
+  abcon:
+    unicode: U+A76F
+    mapping: unicode-exact
+    display: ꝯ
+  aber:
+    unicode: U+E007
+    mapping: display-equiv
+    display: "˞"
+  abis:
+    unicode: U+A76D
+    mapping: unicode-exact
+    display: ꝭ
+  abper:
+    unicode: U+A751
+    mapping: unicode-exact
+    display: ꝑ
+  abpr:
+    unicode: U+214C
+    mapping: unicode-exact
+    display: "⅌"
+  abpre:
+    unicode: U+E0AE
+    mapping: display-equiv
+    display: p̚
+  abprecipi:
+    unicode: U+1F75F
+    mapping: unicode-exact
+    display: "\U0001F75F"
+  abpri:
+    unicode: U+E082
+    mapping: display-equiv
+    display: p̾
+  abpro:
+    unicode: U+A753
+    mapping: unicode-exact
+    display: ꝓ
+  abqu:
+    unicode: U+E083
+    mapping: display-equiv
+    display: ʠ
+  abquam:
+    unicode: U+E00B
+    mapping: display-equiv
+    display: ꝗ
+  abque:
+    unicode: U+E00C
+    mapping: display-equiv
+    display: qʓ
+  abqui:
+    unicode: U+E00D
+    mapping: display-equiv
+    display: q̾
+  abquod:
+    unicode: U+A759
+    mapping: unicode-exact
+    display: ꝙ
+  abreve:
+    unicode: U+0103
+    mapping: unicode-exact
+    display: ă
+  abris:
+    unicode: U+E081
+    mapping: display-equiv
+    display: r̕
+  abrum:
+    unicode: U+A75D
+    mapping: unicode-exact
+    display: ꝝ
+  absed:
+    unicode: U+E011
+    mapping: display-equiv
+    display: ſꝫ
+  abser:
+    unicode: U+E012
+    mapping: display-equiv
+    display: ſ˞
+  absubli:
+    unicode: U+1F75E
+    mapping: unicode-exact
+    display: "\U0001F75E"
+  abur:
+    unicode: U+1DD1
+    mapping: display-equiv
+    display: ͛
+  abus:
+    unicode: U+A770
+    mapping: unicode-exact
+    display: ꝰ
+  acigr:
+    unicode: U+1FB7
+    mapping: unicode-exact
+    display: ᾷ
+  acirc:
+    unicode: U+00E2
+    mapping: unicode-exact
+    display: â
+  acirgr:
+    unicode: U+1FB6
+    mapping: unicode-exact
+    display: ᾶ
+  acy:
+    unicode: U+0430
+    mapping: unicode-exact
+    display: а
+  aelig:
+    unicode: U+00E6
+    mapping: unicode-exact
+    display: æ
+  afortis:
+    unicode: U+1F705
+    mapping: unicode-exact
+    display: "\U0001F705"
+  agigr:
+    unicode: U+1FB2
+    mapping: unicode-exact
+    display: ᾲ
+  agr:
+    unicode: U+03B1
+    mapping: unicode-exact
+    display: α
+  agragr:
+    unicode: U+1F70
+    mapping: unicode-exact
+    display: ὰ
+  agrave:
+    unicode: U+00E0
+    mapping: unicode-exact
+    display: à
+  ahacek:
+    unicode: U+01CE
+    mapping: unicode-exact
+    display: ǎ
+  aiotgr:
+    unicode: U+1FB3
+    mapping: unicode-exact
+    display: ᾳ
+  air:
+    unicode: U+1F701
+    mapping: unicode-exact
+    display: "\U0001F701"
+  alef:
+    unicode: U+05D0
+    mapping: unicode-exact
+    display: א
+  alembic:
+    unicode: U+1F76A
+    mapping: unicode-exact
+    display: "\U0001F76A"
+  aleph:
+    unicode: U+2135
+    mapping: unicode-exact
+    display: ℵ
+  alum:
+    unicode: U+E092
+    mapping: display-equiv
+    display: "⭘"
+  alum2:
+    unicode: U+E1A0
+    mapping: display-equiv
+    display: "{alum}"
+  amacr:
+    unicode: U+0101
+    mapping: unicode-exact
+    display: ā
+  anchor:
+    unicode: U+2693
+    mapping: unicode-exact
+    display: "⚓︎"
+  and:
+    unicode: U+2227
+    mapping: unicode-exact
+    display: "∧"
+  ang:
+    unicode: U+2220
+    mapping: unicode-exact
+    display: "∠"
+  ang90:
+    unicode: U+221F
+    mapping: unicode-exact
+    display: "∟"
+  angsph:
+    unicode: U+2222
+    mapping: unicode-exact
+    display: "∢"
+  angst:
+    unicode: U+212B
+    mapping: unicode-exact
+    display: Å
+  angulum:
+    unicode: U+E046
+    mapping: display-equiv
+    display: "∡"
+  antimony:
+    unicode: U+E03B
+    mapping: display-equiv
+    display: "{antimony}"
+  aogon:
+    unicode: U+0105
+    mapping: unicode-exact
+    display: ą
+  ap:
+    unicode: U+2248
+    mapping: unicode-exact
+    display: "≈"
+  arab-qaf:
+    unicode: U+066F
+    mapping: unicode-exact
+    display: ٯ
+  aragr:
+    unicode: U+1F05
+    mapping: unicode-exact
+    display: ἅ
+  araigr:
+    unicode: U+1F85
+    mapping: unicode-exact
+    display: ᾅ
+  arc:
+    unicode: U+2312
+    mapping: unicode-exact
+    display: "⌒"
+  arcgr:
+    unicode: U+1F07
+    mapping: unicode-exact
+    display: ἇ
+  arcigr:
+    unicode: U+1F87
+    mapping: unicode-exact
+    display: ᾇ
+  aregis:
+    unicode: U+1F706
+    mapping: unicode-exact
+    display: "\U0001F706"
+  arggr:
+    unicode: U+1F03
+    mapping: unicode-exact
+    display: ἃ
+  argigr:
+    unicode: U+1F83
+    mapping: unicode-exact
+    display: ᾃ
+  arigr:
+    unicode: U+1F81
+    mapping: unicode-exact
+    display: ᾁ
+  aring:
+    unicode: U+00E5
+    mapping: unicode-exact
+    display: å
+  arougr:
+    unicode: U+1F01
+    mapping: unicode-exact
+    display: ἁ
+  arsenic:
+    unicode: U+1F73A
+    mapping: unicode-exact
+    display: "\U0001F73A"
+  arsenic2:
+    unicode: U+E042
+    mapping: display-equiv
+    display: "\U0001F73A"
+  asagr:
+    unicode: U+1F04
+    mapping: unicode-exact
+    display: ἄ
+  asaigr:
+    unicode: U+1F84
+    mapping: unicode-exact
+    display: ᾄ
+  ascgr:
+    unicode: U+1F06
+    mapping: unicode-exact
+    display: ἆ
+  ascigr:
+    unicode: U+1F86
+    mapping: unicode-exact
+    display: ᾆ
+  asggr:
+    unicode: U+1F02
+    mapping: unicode-exact
+    display: ἂ
+  asgigr:
+    unicode: U+1F82
+    mapping: unicode-exact
+    display: ᾂ
+  ashes:
+    unicode: U+1F757
+    mapping: unicode-exact
+    display: "\U0001F757"
+  asigr:
+    unicode: U+1F80
+    mapping: unicode-exact
+    display: ᾀ
+  asmogr:
+    unicode: U+1F00
+    mapping: unicode-exact
+    display: ἀ
+  ast:
+    unicode: U+002A
+    mapping: unicode-exact
+    display: "*"
+  asterisc:
+    unicode: U+070D
+    mapping: display-equiv
+    display: "⁜"
+  atilde:
+    unicode: U+00E3
+    mapping: unicode-exact
+    display: ã
+  auml:
+    unicode: U+00E4
+    mapping: unicode-exact
+    display: ä
+  ayin:
+    unicode: U+05E2
+    mapping: unicode-exact
+    display: ע
+  barline:
+    unicode: U+1D100
+    mapping: unicode-exact
+    display: "\U0001D100"
+  barlinef:
+    unicode: U+1D102
+    mapping: unicode-exact
+    display: "\U0001D102"
+  bcy:
+    unicode: U+0431
+    mapping: unicode-exact
+    display: б
+  becaus:
+    unicode: U+2235
+    mapping: unicode-exact
+    display: "∵"
+  bell:
+    unicode: U+1F514
+    mapping: unicode-exact
+    display: "\U0001F514︎"
+  bernou:
+    unicode: U+212C
+    mapping: unicode-exact
+    display: ℬ
+  bet:
+    unicode: U+05D1
+    mapping: unicode-exact
+    display: ב
+  bezoarMin:
+    unicode: U+E0B6
+    mapping: display-equiv
+    display: "♌︎"
+  bgr:
+    unicode: U+03B2
+    mapping: unicode-exact
+    display: β
+  biglsquo:
+    unicode: U+275B
+    mapping: unicode-exact
+    display: "❛"
+  blank:
+    unicode: U+2423
+    mapping: unicode-exact
+    display: "␣"
+  blk12:
+    unicode: U+2592
+    mapping: unicode-exact
+    display: "▒"
+  blk14:
+    unicode: U+2591
+    mapping: unicode-exact
+    display: "░"
+  blk34:
+    unicode: U+2593
+    mapping: unicode-exact
+    display: "▓"
+  block:
+    unicode: U+2588
+    mapping: unicode-exact
+    display: "█"
+  blood:
+    unicode: U+E09A
+    mapping: display-equiv
+    display: "{blood}"
+  bsol:
+    unicode: U+005C
+    mapping: unicode-exact
+    display: "\\"
+  bstrok:
+    unicode: U+0180
+    mapping: unicode-exact
+    display: ƀ
+  bull:
+    unicode: U+2022
+    mapping: unicode-exact
+    display: "•"
+  cacute:
+    unicode: U+0107
+    mapping: unicode-exact
+    display: ć
+  cap:
+    unicode: U+2229
+    mapping: unicode-exact
+    display: "∩"
+  caret:
+    unicode: U+2041
+    mapping: unicode-exact
+    display: "⁁"
+  ccaron:
+    unicode: U+010D
+    mapping: unicode-exact
+    display: č
+  ccedil:
+    unicode: U+00E7
+    mapping: unicode-exact
+    display: ç
+  ccirc:
+    unicode: U+0109
+    mapping: unicode-exact
+    display: ĉ
+  cclef:
+    unicode: U+1D121
+    mapping: unicode-exact
+    display: "\U0001D121"
+  cdot:
+    unicode: U+010B
+    mapping: unicode-exact
+    display: ċ
+  cent:
+    unicode: U+00A2
+    mapping: unicode-exact
+    display: "¢"
+  chcy:
+    unicode: U+0447
+    mapping: unicode-exact
+    display: ч
+  check:
+    unicode: U+2713
+    mapping: unicode-exact
+    display: "✓"
+  chirho:
+    unicode: U+2627
+    mapping: unicode-exact
+    display: "☧"
+  cinnabar1:
+    unicode: U+1F713
+    mapping: unicode-exact
+    display: "\U0001F713"
+  cinnabar2:
+    unicode: U+E1A3
+    mapping: display-equiv
+    display: "{cinnabar}"
+  cinnabar3:
+    unicode: U+1F72D
+    mapping: unicode-exact
+    display: "\U0001F72D"
+  cir:
+    unicode: U+25CB
+    mapping: unicode-exact
+    display: "○"
+  circdot:
+    unicode: U+E01D
+    mapping: display-equiv
+    display: "⊙"
+  circle:
+    unicode: U+25EF
+    mapping: unicode-exact
+    display: "◯"
+  circled-0:
+    unicode: U+24EA
+    mapping: unicode-exact
+    display: "⓪"
+  circled-1:
+    unicode: U+2460
+    mapping: unicode-exact
+    display: "①"
+  circled-10:
+    unicode: U+2469
+    mapping: unicode-exact
+    display: "⑩"
+  circled-11:
+    unicode: U+246A
+    mapping: unicode-exact
+    display: "⑪"
+  circled-12:
+    unicode: U+246B
+    mapping: unicode-exact
+    display: "⑫"
+  circled-2:
+    unicode: U+2461
+    mapping: unicode-exact
+    display: "②"
+  circled-3:
+    unicode: U+2462
+    mapping: unicode-exact
+    display: "③"
+  circled-4:
+    unicode: U+2463
+    mapping: unicode-exact
+    display: "④"
+  circled-5:
+    unicode: U+2464
+    mapping: unicode-exact
+    display: "⑤"
+  circled-6:
+    unicode: U+2465
+    mapping: unicode-exact
+    display: "⑥"
+  circled-7:
+    unicode: U+2466
+    mapping: unicode-exact
+    display: "⑦"
+  circled-8:
+    unicode: U+2467
+    mapping: unicode-exact
+    display: "⑧"
+  circled-9:
+    unicode: U+2468
+    mapping: unicode-exact
+    display: "⑨"
+  circledcircle:
+    unicode: U+29BE
+    mapping: unicode-exact
+    display: "⦾"
+  circledplus:
+    unicode: U+2295
+    mapping: unicode-exact
+    display: "⊕"
+  circledtimes:
+    unicode: U+2297
+    mapping: unicode-exact
+    display: "⊗"
+  closeup:
+    unicode: U+2050
+    mapping: unicode-exact
+    display: "⁐"
+  clubs:
+    unicode: U+2663
+    mapping: unicode-exact
+    display: "♣"
+  cmacr:
+    unicode: U+E000
+    mapping: unicode-exact
+    display: c̄
+  cmb3dota:
+    unicode: U+20DB
+    mapping: unicode-exact
+    display: o⃛
+  cmb4dota:
+    unicode: U+20DC
+    mapping: unicode-exact
+    display: o⃜
+  cmbAbbrStroke:
+    unicode: U+E00E
+    mapping: display-equiv
+    display: o᷉
+  cmbSTROKEover:
+    unicode: U+0336
+    mapping: unicode-exact
+    display: o̶
+  cmbVIRGULEover:
+    unicode: U+0338
+    mapping: unicode-exact
+    display: o̸
+  cmbVLINEover:
+    unicode: U+20D2
+    mapping: unicode-exact
+    display: o⃒
+  cmba2a:
+    unicode: U+1DD3
+    mapping: unicode-exact
+    display: oᷓ
+  cmbaa:
+    unicode: U+0363
+    mapping: unicode-exact
+    display: oͣ
+  cmbacute:
+    unicode: U+0301
+    mapping: unicode-exact
+    display: ó
+  cmbbreve:
+    unicode: U+0306
+    mapping: unicode-exact
+    display: ŏ
+  cmbbslashover:
+    unicode: U+20E5
+    mapping: unicode-exact
+    display: o⃥
+  cmbcaron:
+    unicode: U+030C
+    mapping: unicode-exact
+    display: ǒ
+  cmbcedil:
+    unicode: U+0327
+    mapping: unicode-exact
+    display: o̧
+  cmbcirc:
+    unicode: U+0302
+    mapping: unicode-exact
+    display: ô
+  cmbcommaa:
+    unicode: U+0313
+    mapping: unicode-exact
+    display: o̓
+  cmbdblac:
+    unicode: U+030B
+    mapping: unicode-exact
+    display: ő
+  cmbdblvlineover:
+    unicode: U+20E6
+    mapping: unicode-exact
+    display: o⃦
+  cmbddotb:
+    unicode: U+0324
+    mapping: unicode-exact
+    display: o̤
+  cmbdot:
+    unicode: U+0307
+    mapping: unicode-exact
+    display: ȯ
+  cmbdotb:
+    unicode: U+0323
+    mapping: unicode-exact
+    display: ọ
+  cmbenclcirover:
+    unicode: U+20DD
+    mapping: unicode-exact
+    display: o⃝
+  cmbenclsquover:
+    unicode: U+20DE
+    mapping: unicode-exact
+    display: o⃞
+  cmbencltriover:
+    unicode: U+20E4
+    mapping: unicode-exact
+    display: o⃤
+  cmbgrave:
+    unicode: U+0300
+    mapping: unicode-exact
+    display: ò
+  cmbia:
+    unicode: U+0365
+    mapping: unicode-exact
+    display: oͥ
+  cmbibreve:
+    unicode: U+0311
+    mapping: unicode-exact
+    display: ȏ
+  cmbibreveb:
+    unicode: U+032F
+    mapping: unicode-exact
+    display: o̯
+  cmblowvertline:
+    unicode: U+0329
+    mapping: unicode-exact
+    display: o̩
+  cmbmacr:
+    unicode: U+0304
+    mapping: unicode-exact
+    display: ō
+  cmbogon:
+    unicode: U+0328
+    mapping: unicode-exact
+    display: ǫ
+  cmbogona:
+    unicode: U+1DCE
+    mapping: unicode-exact
+    display: o᷎
+  cmboverline:
+    unicode: U+0305
+    mapping: unicode-exact
+    display: o̅
+  cmbperispo:
+    unicode: U+0342
+    mapping: unicode-exact
+    display: o͂
+  cmbrcomma:
+    unicode: U+0314
+    mapping: unicode-exact
+    display: o̔
+  cmbring:
+    unicode: U+030A
+    mapping: unicode-exact
+    display: o̊
+  cmbringb:
+    unicode: U+0325
+    mapping: unicode-exact
+    display: o̥
+  cmbstrokeover:
+    unicode: U+0335
+    mapping: unicode-exact
+    display: o̵
+  cmbtilde:
+    unicode: U+0303
+    mapping: unicode-exact
+    display: õ
+  cmbtildeover:
+    unicode: U+0334
+    mapping: unicode-exact
+    display: o̴
+  cmbuml:
+    unicode: U+0308
+    mapping: unicode-exact
+    display: ö
+  cmbunderline:
+    unicode: U+0332
+    mapping: unicode-exact
+    display: o̲
+  cmbvirguleover:
+    unicode: U+0337
+    mapping: unicode-exact
+    display: o̷
+  cmbvlineover:
+    unicode: U+20D3
+    mapping: unicode-exact
+    display: o⃓
+  cmbx:
+    unicode: U+033D
+    mapping: unicode-exact
+    display: o̽
+  colon:
+    unicode: U+003A
+    mapping: unicode-exact
+    display: ":"
+  comma:
+    unicode: U+002C
+    mapping: unicode-exact
+    display: ","
+  commat:
+    unicode: U+0040
+    mapping: unicode-exact
+    display: "@"
+  commonTime-adagio:
+    unicode: U+1D134
+    mapping: unicode-exact
+    display: "\U0001D134"
+  commonTime-allegro:
+    unicode: U+E0B0
+    mapping: display-equiv
+    display: "⊅"
+  commonTime-largo:
+    unicode: U+1D135
+    mapping: unicode-exact
+    display: "\U0001D135"
+  compfn:
+    unicode: U+2218
+    mapping: unicode-exact
+    display: "∘"
+  cong:
+    unicode: U+2245
+    mapping: unicode-exact
+    display: "≅"
+  conint:
+    unicode: U+222E
+    mapping: unicode-exact
+    display: "∮"
+  conjunction:
+    unicode: U+260C
+    mapping: unicode-exact
+    display: "☌"
+  copy:
+    unicode: U+00A9
+    mapping: unicode-exact
+    display: "©"
+  copysr:
+    unicode: U+2117
+    mapping: unicode-exact
+    display: "℗"
+  creditor:
+    unicode: U+E006
+    mapping: display-equiv
+    display: Cᵗʳ
+  cross:
+    unicode: U+E01E
+    mapping: display-equiv
+    display: "✚"
+  crossjerus:
+    unicode: U+2629
+    mapping: unicode-exact
+    display: "☩"
+  crown:
+    unicode: U+1F451
+    mapping: unicode-exact
+    display: "♕"
+  cup:
+    unicode: U+222A
+    mapping: unicode-exact
+    display: "∪"
+  curren:
+    unicode: U+00A4
+    mapping: unicode-exact
+    display: "¤"
+  d:
+    unicode: U+E028
+    mapping: display-equiv
+    display: "\U0001D4B9"
+  dagger:
+    unicode: U+2020
+    mapping: unicode-exact
+    display: "†"
+  dalet:
+    unicode: U+05D3
+    mapping: unicode-exact
+    display: ד
+  darga:
+    unicode: U+05A7
+    mapping: unicode-exact
+    display: ֧
+  darr:
+    unicode: U+2193
+    mapping: unicode-exact
+    display: "↓"
+  dash:
+    unicode: U+2010
+    mapping: unicode-exact
+    display: "‐"
+  day:
+    unicode: U+E09B
+    mapping: unicode-exact
+    display: "☌"
+  dcaron:
+    unicode: U+010F
+    mapping: unicode-exact
+    display: ď
+  dcy:
+    unicode: U+0434
+    mapping: unicode-exact
+    display: д
+  ddiple:
+    unicode: U+2E16
+    mapping: unicode-exact
+    display: "⸖"
+  ddotb:
+    unicode: U+1E0D
+    mapping: unicode-exact
+    display: ḍ
+  debitor:
+    unicode: U+E008
+    mapping: display-equiv
+    display: Dᵗʳ
+  decimalL:
+    unicode: U+E090
+    mapping: display-equiv
+    display: "˪"
+  decimalc:
+    unicode: U+E048
+    mapping: display-equiv
+    display: "˓"
+  deg:
+    unicode: U+00B0
+    mapping: unicode-exact
+    display: "°"
+  delta:
+    unicode: U+1E9F
+    mapping: unicode-exact
+    display: ẟ
+  dgr:
+    unicode: U+03B4
+    mapping: unicode-exact
+    display: δ
+  dhook:
+    unicode: U+E0AC
+    mapping: display-equiv
+    display: d̔
+  diamond:
+    unicode: U+25C6
+    mapping: unicode-exact
+    display: "◆"
+  diams:
+    unicode: U+2666
+    mapping: unicode-exact
+    display: "♦"
+  die1:
+    unicode: U+2680
+    mapping: unicode-exact
+    display: "⚀"
+  die2:
+    unicode: U+2681
+    mapping: unicode-exact
+    display: "⚁"
+  die3:
+    unicode: U+2682
+    mapping: unicode-exact
+    display: "⚂"
+  die4:
+    unicode: U+2683
+    mapping: unicode-exact
+    display: "⚃"
+  die5:
+    unicode: U+2684
+    mapping: unicode-exact
+    display: "⚄"
+  die6:
+    unicode: U+2685
+    mapping: unicode-exact
+    display: "⚅"
+  diggr:
+    unicode: U+03DD
+    mapping: display-equiv
+    display: Ϝ
+  digisepQ:
+    unicode: U+E0B2
+    mapping: display-equiv
+    display: "\U00010433ᵒ"
+  digisepU:
+    unicode: U+E025
+    mapping: display-equiv
+    display: ᴗ
+  dindx:
+    unicode: U+261F
+    mapping: unicode-exact
+    display: "☟"
+  direct:
+    unicode: U+E064
+    mapping: display-equiv
+    display: "⍻"
+  divide:
+    unicode: U+00F7
+    mapping: unicode-exact
+    display: "÷"
+  divisor:
+    unicode: U+E049
+    mapping: display-equiv
+    display: "⫍"
+  dlcrop:
+    unicode: U+230D
+    mapping: unicode-exact
+    display: "⌍"
+  dnc-female:
+    unicode: U+E010
+    mapping: display-equiv
+    display: "\U0001F31E︎"
+  dnc-male:
+    unicode: U+E09C
+    mapping: display-equiv
+    display: "\U0001F31C︎"
+  dnc-repeat:
+    unicode: U+E039
+    mapping: display-equiv
+    display: "∸"
+  dnc-repeat2:
+    unicode: U+E038
+    mapping: display-equiv
+    display: "⸚"
+  dnc-repeat3:
+    unicode: U+E099
+    mapping: display-equiv
+    display: "⫶̱"
+  dnc-startover:
+    unicode: U+E009
+    mapping: display-equiv
+    display: "⁜"
+  dollar:
+    unicode: U+0024
+    mapping: unicode-exact
+    display: "$"
+  dram:
+    unicode: U+E037
+    mapping: display-equiv
+    display: ʒ
+  drcrop:
+    unicode: U+230C
+    mapping: unicode-exact
+    display: "⌌"
+  dstrok:
+    unicode: U+0111
+    mapping: unicode-exact
+    display: đ
+  dtri:
+    unicode: U+25BF
+    mapping: unicode-exact
+    display: "▿"
+  dtridot:
+    unicode: U+2E2A
+    mapping: unicode-exact
+    display: "⸪"
+  dtrif:
+    unicode: U+25BE
+    mapping: unicode-exact
+    display: "▾"
+  dtristar:
+    unicode: U+E020
+    mapping: display-equiv
+    display: "*⁎*"
+  ducat:
+    unicode: U+E06D
+    mapping: display-equiv
+    display: ᵭᵗ
+  eacugr:
+    unicode: U+1F73
+    mapping: unicode-exact
+    display: έ
+  eacute:
+    unicode: U+00E9
+    mapping: unicode-exact
+    display: é
+  earth:
+    unicode: U+1F703
+    mapping: unicode-exact
+    display: "\U0001F703"
+  ebreve:
+    unicode: U+0115
+    mapping: unicode-exact
+    display: ĕ
+  ecaron:
+    unicode: U+011B
+    mapping: unicode-exact
+    display: ě
+  ecirc:
+    unicode: U+00EA
+    mapping: unicode-exact
+    display: ê
+  ecy:
+    unicode: U+044D
+    mapping: unicode-exact
+    display: э
+  edot:
+    unicode: U+0117
+    mapping: unicode-exact
+    display: ė
+  eeacugr:
+    unicode: U+1F75
+    mapping: unicode-exact
+    display: ή
+  eeaigr:
+    unicode: U+1FC4
+    mapping: unicode-exact
+    display: ῄ
+  eecigr:
+    unicode: U+1FC7
+    mapping: unicode-exact
+    display: ῇ
+  eecirgr:
+    unicode: U+1FC6
+    mapping: unicode-exact
+    display: ῆ
+  eegigr:
+    unicode: U+1FC2
+    mapping: unicode-exact
+    display: ῂ
+  eegr:
+    unicode: U+03B7
+    mapping: unicode-exact
+    display: η
+  eegragr:
+    unicode: U+1F74
+    mapping: unicode-exact
+    display: ὴ
+  eeiotgr:
+    unicode: U+1FC3
+    mapping: unicode-exact
+    display: ῃ
+  eeragr:
+    unicode: U+1F25
+    mapping: unicode-exact
+    display: ἥ
+  eeraigr:
+    unicode: U+1F95
+    mapping: unicode-exact
+    display: ᾕ
+  eercgr:
+    unicode: U+1F27
+    mapping: unicode-exact
+    display: ἧ
+  eercigr:
+    unicode: U+1F97
+    mapping: unicode-exact
+    display: ᾗ
+  eerggr:
+    unicode: U+1F23
+    mapping: unicode-exact
+    display: ἣ
+  eergigr:
+    unicode: U+1F93
+    mapping: unicode-exact
+    display: ᾓ
+  eerigr:
+    unicode: U+1F91
+    mapping: unicode-exact
+    display: ᾑ
+  eerougr:
+    unicode: U+1F21
+    mapping: unicode-exact
+    display: ἡ
+  eesagr:
+    unicode: U+1F24
+    mapping: unicode-exact
+    display: ἤ
+  eesaigr:
+    unicode: U+1F94
+    mapping: unicode-exact
+    display: ᾔ
+  eescgr:
+    unicode: U+1F26
+    mapping: unicode-exact
+    display: ἦ
+  eescigr:
+    unicode: U+1F96
+    mapping: unicode-exact
+    display: ᾖ
+  eesggr:
+    unicode: U+1F22
+    mapping: unicode-exact
+    display: ἢ
+  eesgigr:
+    unicode: U+1F92
+    mapping: unicode-exact
+    display: ᾒ
+  eesigr:
+    unicode: U+1F90
+    mapping: unicode-exact
+    display: ᾐ
+  eesmogr:
+    unicode: U+1F20
+    mapping: unicode-exact
+    display: ἠ
+  egr:
+    unicode: U+03B5
+    mapping: unicode-exact
+    display: ε
+  egragr:
+    unicode: U+1F72
+    mapping: unicode-exact
+    display: ὲ
+  egrave:
+    unicode: U+00E8
+    mapping: unicode-exact
+    display: è
+  emacr:
+    unicode: U+0113
+    mapping: unicode-exact
+    display: ē
+  emsp:
+    unicode: U+2003
+    mapping: unicode-exact
+    display: " "
+  emsp13:
+    unicode: U+2004
+    mapping: unicode-exact
+    display: " "
+  emsp14:
+    unicode: U+2005
+    mapping: unicode-exact
+    display: " "
+  endq:
+    unicode: U+E02B
+    mapping: display-equiv
+    display: "❞"
+  eng:
+    unicode: U+014B
+    mapping: unicode-exact
+    display: ŋ
+  ensp:
+    unicode: U+2002
+    mapping: unicode-exact
+    display: " "
+  eogon:
+    unicode: U+0119
+    mapping: unicode-exact
+    display: ę
+  equals:
+    unicode: U+003D
+    mapping: unicode-exact
+    display: "="
+  equiv:
+    unicode: U+2261
+    mapping: unicode-exact
+    display: "≡"
+  eragr:
+    unicode: U+1F15
+    mapping: unicode-exact
+    display: ἕ
+  erggr:
+    unicode: U+1F13
+    mapping: unicode-exact
+    display: ἓ
+  erougr:
+    unicode: U+1F11
+    mapping: unicode-exact
+    display: ἑ
+  es:
+    unicode: U+E015
+    mapping: display-equiv
+    display: Ꝭ
+  esagr:
+    unicode: U+1F14
+    mapping: unicode-exact
+    display: ἔ
+  esggr:
+    unicode: U+1F12
+    mapping: unicode-exact
+    display: ἒ
+  esmogr:
+    unicode: U+1F10
+    mapping: unicode-exact
+    display: ἐ
+  etc:
+    unicode: U+E016
+    mapping: display-equiv
+    display: "&ɕ"
+  eth:
+    unicode: U+00F0
+    mapping: unicode-exact
+    display: ð
+  etnahta:
+    unicode: U+0591
+    mapping: unicode-exact
+    display: ֑
+  euml:
+    unicode: U+00EB
+    mapping: unicode-exact
+    display: ë
+  excl:
+    unicode: U+0021
+    mapping: unicode-exact
+    display: "!"
+  exist:
+    unicode: U+2203
+    mapping: unicode-exact
+    display: "∃"
+  fclef:
+    unicode: U+1D122
+    mapping: unicode-exact
+    display: "\U0001D122"
+  fcrown:
+    unicode: U+E013
+    mapping: display-equiv
+    display: "\U0001F451︎"
+  fcy:
+    unicode: U+0444
+    mapping: unicode-exact
+    display: ф
+  female:
+    unicode: U+E045
+    mapping: display-equiv
+    display: "♀"
+  fermata:
+    unicode: U+1D110
+    mapping: unicode-exact
+    display: "\U0001D110"
+  fermatab:
+    unicode: U+1D111
+    mapping: unicode-exact
+    display: "\U0001D111"
+  ffilig:
+    unicode: U+FB03
+    mapping: unicode-exact
+    display: ﬃ
+  fflig:
+    unicode: U+FB00
+    mapping: unicode-exact
+    display: ﬀ
+  ffllig:
+    unicode: U+FB04
+    mapping: unicode-exact
+    display: ﬄ
+  filig:
+    unicode: U+FB01
+    mapping: unicode-exact
+    display: ﬁ
+  finalkaf:
+    unicode: U+05DA
+    mapping: unicode-exact
+    display: ך
+  finallamed:
+    unicode: U+E063
+    mapping: display-equiv
+    display: ﬥ
+  finalmem:
+    unicode: U+05DD
+    mapping: unicode-exact
+    display: ם
+  finalnun:
+    unicode: U+05DF
+    mapping: unicode-exact
+    display: ן
+  finalpe:
+    unicode: U+05E3
+    mapping: unicode-exact
+    display: ף
+  finaltsadi:
+    unicode: U+05E5
+    mapping: unicode-exact
+    display: ץ
+  fire:
+    unicode: U+1F702
+    mapping: unicode-exact
+    display: "\U0001F702"
+  fivedash:
+    unicode: U+E021
+    mapping: display-equiv
+    display: "☵"
+  fivedot:
+    unicode: U+2059
+    mapping: unicode-exact
+    display: "⁙"
+  fjlig:
+    unicode: U+E07D
+    mapping: display-equiv
+    display: "{fj}"
+  flag:
+    unicode: U+2690
+    mapping: unicode-exact
+    display: "⚐"
+  flame:
+    unicode: U+1F525
+    mapping: unicode-exact
+    display: "\U0001F525︎"
+  flat:
+    unicode: U+266D
+    mapping: unicode-exact
+    display: "♭"
+  fleurdelys:
+    unicode: U+269C
+    mapping: unicode-exact
+    display: "⚜"
+  fllig:
+    unicode: U+FB02
+    mapping: unicode-exact
+    display: ﬂ
+  florin:
+    unicode: U+E02C
+    mapping: display-equiv
+    display: "\U0001D4D5"
+  flower:
+    unicode: U+2740
+    mapping: unicode-exact
+    display: "❀"
+  flowerf:
+    unicode: U+273F
+    mapping: unicode-exact
+    display: "✿"
+  fnof:
+    unicode: U+0192
+    mapping: unicode-exact
+    display: ƒ
+  forall:
+    unicode: U+2200
+    mapping: unicode-exact
+    display: "∀"
+  foursq:
+    unicode: U+229E
+    mapping: unicode-exact
+    display: "⊞"
+  frac12:
+    unicode: U+00BD
+    mapping: unicode-exact
+    display: "½"
+  frac13:
+    unicode: U+2153
+    mapping: unicode-exact
+    display: "⅓"
+  frac14:
+    unicode: U+00BC
+    mapping: unicode-exact
+    display: "¼"
+  frac15:
+    unicode: U+2155
+    mapping: unicode-exact
+    display: "⅕"
+  frac16:
+    unicode: U+2159
+    mapping: unicode-exact
+    display: "⅙"
+  frac18:
+    unicode: U+215B
+    mapping: unicode-exact
+    display: "⅛"
+  frac23:
+    unicode: U+2154
+    mapping: unicode-exact
+    display: "⅔"
+  frac25:
+    unicode: U+2156
+    mapping: unicode-exact
+    display: "⅖"
+  frac34:
+    unicode: U+00BE
+    mapping: unicode-exact
+    display: "¾"
+  frac35:
+    unicode: U+2157
+    mapping: unicode-exact
+    display: "⅗"
+  frac38:
+    unicode: U+215C
+    mapping: unicode-exact
+    display: "⅜"
+  frac45:
+    unicode: U+2158
+    mapping: unicode-exact
+    display: "⅘"
+  frac56:
+    unicode: U+215A
+    mapping: unicode-exact
+    display: "⅚"
+  frac58:
+    unicode: U+215D
+    mapping: unicode-exact
+    display: "⅝"
+  frac78:
+    unicode: U+215E
+    mapping: unicode-exact
+    display: "⅞"
+  franc:
+    unicode: U+20A3
+    mapping: unicode-exact
+    display: "₣"
+  gacute:
+    unicode: U+01F5
+    mapping: unicode-exact
+    display: ǵ
+  gbreve:
+    unicode: U+011F
+    mapping: unicode-exact
+    display: ğ
+  gcirc:
+    unicode: U+011D
+    mapping: unicode-exact
+    display: ĝ
+  gclef:
+    unicode: U+1D11E
+    mapping: unicode-exact
+    display: "\U0001D11E"
+  gcy:
+    unicode: U+0433
+    mapping: unicode-exact
+    display: г
+  gdot:
+    unicode: U+0121
+    mapping: unicode-exact
+    display: ġ
+  ge:
+    unicode: U+2265
+    mapping: unicode-exact
+    display: "≥"
+  geoprop:
+    unicode: U+223A
+    mapping: unicode-exact
+    display: "∺"
+  geresh:
+    unicode: U+059C
+    mapping: unicode-exact
+    display: ֜
+  ggr:
+    unicode: U+03B3
+    mapping: unicode-exact
+    display: γ
+  ghacek:
+    unicode: U+01E7
+    mapping: unicode-exact
+    display: ǧ
+  gimel:
+    unicode: U+05D2
+    mapping: unicode-exact
+    display: ג
+  glass:
+    unicode: U+E0A6
+    mapping: display-equiv
+    display: "{glass}"
+  hDagger:
+    unicode: U+E08E
+    mapping: display-equiv
+    display: horizontal ‡
+  hairsp:
+    unicode: U+200A
+    mapping: unicode-exact
+    display: " "
+  half:
+    unicode: U+E01B
+    mapping: display-equiv
+    display: dᵐ
+  halfcross:
+    unicode: U+2E50
+    mapping: unicode-exact
+    display: "⹐"
+  hamilt:
+    unicode: U+210B
+    mapping: unicode-exact
+    display: ℋ
+  hardcy:
+    unicode: U+044A
+    mapping: unicode-exact
+    display: ъ
+  hcirc:
+    unicode: U+0125
+    mapping: unicode-exact
+    display: ĥ
+  hcolon:
+    unicode: U+05C3
+    mapping: unicode-exact
+    display: "׃"
+  he:
+    unicode: U+05D4
+    mapping: unicode-exact
+    display: ה
+  heart:
+    unicode: U+E022
+    mapping: display-equiv
+    display: "♡"
+  hearts:
+    unicode: U+2665
+    mapping: unicode-exact
+    display: "♥"
+  hellip:
+    unicode: U+2026
+    mapping: unicode-exact
+    display: "…"
+  het:
+    unicode: U+05D7
+    mapping: unicode-exact
+    display: ח
+  higherterm:
+    unicode: U+E04A
+    mapping: display-equiv
+    display: "⧋"
+  higherthan:
+    unicode: U+E04B
+    mapping: display-equiv
+    display: "∆"
+  hogshead:
+    unicode: U+E023
+    mapping: display-equiv
+    display: hʼhʼ
+  horbar:
+    unicode: U+2015
+    mapping: unicode-exact
+    display: "―"
+  hstrok:
+    unicode: U+0127
+    mapping: unicode-exact
+    display: ħ
+  hundred:
+    unicode: U+E01F
+    mapping: display-equiv
+    display: cᵐ
+  hybull:
+    unicode: U+2043
+    mapping: unicode-exact
+    display: "⁃"
+  hyperlemnisc:
+    unicode: U+E03E
+    mapping: display-equiv
+    display: "⸞"
+  hyphen:
+    unicode: U+002D
+    mapping: unicode-exact
+    display: "-"
+  hypolemnisc:
+    unicode: U+E0A7
+    mapping: display-equiv
+    display: "⸟"
+  iacugr:
+    unicode: U+1F77
+    mapping: unicode-exact
+    display: ί
+  iacute:
+    unicode: U+00ED
+    mapping: unicode-exact
+    display: í
+  iadgr:
+    unicode: U+1FD3
+    mapping: unicode-exact
+    display: ΐ
+  ibreve:
+    unicode: U+012D
+    mapping: unicode-exact
+    display: ĭ
+  icdgr:
+    unicode: U+1FD7
+    mapping: unicode-exact
+    display: ῗ
+  icirc:
+    unicode: U+00EE
+    mapping: unicode-exact
+    display: î
+  icirgr:
+    unicode: U+1FD6
+    mapping: unicode-exact
+    display: ῖ
+  icy:
+    unicode: U+0438
+    mapping: unicode-exact
+    display: и
+  idagger:
+    unicode: U+2E38
+    mapping: unicode-exact
+    display: "⸸"
+  idiaagr:
+    unicode: U+1FD3
+    mapping: unicode-exact
+    display: ΐ
+  idiagr:
+    unicode: U+03CA
+    mapping: unicode-exact
+    display: ϊ
+  iecy:
+    unicode: U+0435
+    mapping: unicode-exact
+    display: е
+  iexcl:
+    unicode: U+00A1
+    mapping: unicode-exact
+    display: "¡"
+  iff:
+    unicode: U+21D4
+    mapping: unicode-exact
+    display: "⇔"
+  igdgr:
+    unicode: U+1FD2
+    mapping: unicode-exact
+    display: ῒ
+  igr:
+    unicode: U+03B9
+    mapping: unicode-exact
+    display: ι
+  igragr:
+    unicode: U+1F76
+    mapping: unicode-exact
+    display: ὶ
+  igrave:
+    unicode: U+00EC
+    mapping: unicode-exact
+    display: ì
+  ijlig:
+    unicode: U+0133
+    mapping: unicode-exact
+    display: ĳ
+  imacr:
+    unicode: U+012B
+    mapping: unicode-exact
+    display: ī
+  incare:
+    unicode: U+2105
+    mapping: unicode-exact
+    display: "℅"
+  infin:
+    unicode: U+221E
+    mapping: unicode-exact
+    display: "∞"
+  inodot:
+    unicode: U+0131
+    mapping: unicode-exact
+    display: ı
+  insul-D:
+    unicode: U+A779
+    mapping: unicode-exact
+    display: Ꝺ
+  insul-F:
+    unicode: U+A77B
+    mapping: unicode-exact
+    display: Ꝼ
+  insul-G:
+    unicode: U+A77D
+    mapping: unicode-exact
+    display: Ᵹ
+  insul-R:
+    unicode: U+A782
+    mapping: unicode-exact
+    display: Ꞃ
+  insul-S:
+    unicode: U+A784
+    mapping: unicode-exact
+    display: Ꞅ
+  insul-T:
+    unicode: U+A786
+    mapping: unicode-exact
+    display: Ꞇ
+  insul-d:
+    unicode: U+A77A
+    mapping: unicode-exact
+    display: ꝺ
+  insul-f:
+    unicode: U+A77C
+    mapping: unicode-exact
+    display: ꝼ
+  insul-g:
+    unicode: U+1D79
+    mapping: unicode-exact
+    display: ᵹ
+  insul-r:
+    unicode: U+A783
+    mapping: unicode-exact
+    display: ꞃ
+  insul-s:
+    unicode: U+A785
+    mapping: unicode-exact
+    display: ꞅ
+  insul-t:
+    unicode: U+A787
+    mapping: unicode-exact
+    display: ꞇ
+  int:
+    unicode: U+222B
+    mapping: unicode-exact
+    display: "∫"
+  iocy:
+    unicode: U+0451
+    mapping: unicode-exact
+    display: ё
+  iogon:
+    unicode: U+012F
+    mapping: unicode-exact
+    display: į
+  ipara:
+    unicode: U+E00A
+    mapping: display-equiv
+    display: "{inverted ¶}"
+  iquest:
+    unicode: U+00BF
+    mapping: unicode-exact
+    display: "¿"
+  iragr:
+    unicode: U+1F35
+    mapping: unicode-exact
+    display: ἵ
+  ircgr:
+    unicode: U+1F37
+    mapping: unicode-exact
+    display: ἷ
+  irggr:
+    unicode: U+1F33
+    mapping: unicode-exact
+    display: ἳ
+  irougr:
+    unicode: U+1F31
+    mapping: unicode-exact
+    display: ἱ
+  isagr:
+    unicode: U+1F34
+    mapping: unicode-exact
+    display: ἴ
+  iscgr:
+    unicode: U+1F36
+    mapping: unicode-exact
+    display: ἶ
+  isggr:
+    unicode: U+1F32
+    mapping: unicode-exact
+    display: ἲ
+  isin:
+    unicode: U+220A
+    mapping: unicode-exact
+    display: "∊"
+  ismogr:
+    unicode: U+1F30
+    mapping: unicode-exact
+    display: ἰ
+  itilde:
+    unicode: U+0129
+    mapping: unicode-exact
+    display: ĩ
+  iuml:
+    unicode: U+00EF
+    mapping: unicode-exact
+    display: ï
+  jcirc:
+    unicode: U+0135
+    mapping: unicode-exact
+    display: ĵ
+  jcy:
+    unicode: U+0439
+    mapping: unicode-exact
+    display: й
+  kaf:
+    unicode: U+05DB
+    mapping: unicode-exact
+    display: כ
+  kcedil:
+    unicode: U+0137
+    mapping: unicode-exact
+    display: ķ
+  kcy:
+    unicode: U+043A
+    mapping: unicode-exact
+    display: к
+  keraia:
+    unicode: U+0374
+    mapping: unicode-exact
+    display: ʹ
+  kgr:
+    unicode: U+03BA
+    mapping: unicode-exact
+    display: κ
+  kgreen:
+    unicode: U+0138
+    mapping: unicode-exact
+    display: ĸ
+  khcy:
+    unicode: U+0445
+    mapping: unicode-exact
+    display: х
+  khgr:
+    unicode: U+03C7
+    mapping: unicode-exact
+    display: χ
+  kintal:
+    unicode: U+E075
+    mapping: display-equiv
+    display: "\U0001D4C0ᵒ"
+  kogr:
+    unicode: U+03DF
+    mapping: display-equiv
+    display: Ϟ
+  lArr:
+    unicode: U+21D0
+    mapping: unicode-exact
+    display: "⇐"
+  lacute:
+    unicode: U+013A
+    mapping: unicode-exact
+    display: ĺ
+  lagran:
+    unicode: U+2112
+    mapping: unicode-exact
+    display: ℒ
+  lamed:
+    unicode: U+05DC
+    mapping: unicode-exact
+    display: ל
+  lang:
+    unicode: U+3008
+    mapping: unicode-exact
+    display: "〈"
+  langle:
+    unicode: U+29A3
+    mapping: unicode-exact
+    display: "⦣"
+  laquo:
+    unicode: U+00AB
+    mapping: unicode-exact
+    display: "«"
+  larr:
+    unicode: U+2190
+    mapping: unicode-exact
+    display: "←"
+  latcross:
+    unicode: U+271D
+    mapping: unicode-exact
+    display: "✝"
+  lazyS:
+    unicode: U+223D
+    mapping: unicode-exact
+    display: "∽"
+  lb:
+    unicode: U+2114
+    mapping: unicode-exact
+    display: "℔"
+  lbar:
+    unicode: U+026B
+    mapping: unicode-exact
+    display: ɫ
+  lbrace:
+    unicode: U+007B
+    mapping: display-equiv
+    display: "❴"
+  lcaron:
+    unicode: U+013E
+    mapping: unicode-exact
+    display: ľ
+  lcedil:
+    unicode: U+013C
+    mapping: unicode-exact
+    display: ļ
+  lcy:
+    unicode: U+043B
+    mapping: unicode-exact
+    display: л
+  ldagger:
+    unicode: U+E085
+    mapping: display-equiv
+    display: "{left †}"
+  ldiple:
+    unicode: U+E0A5
+    mapping: display-equiv
+    display: "◅"
+  ldotb:
+    unicode: U+1E37
+    mapping: unicode-exact
+    display: ḷ
+  ldquo:
+    unicode: U+201C
+    mapping: unicode-exact
+    display: "“"
+  ldquor:
+    unicode: U+201E
+    mapping: unicode-exact
+    display: "„"
+  le:
+    unicode: U+2264
+    mapping: unicode-exact
+    display: "≤"
+  leaf:
+    unicode: U+E024
+    mapping: display-equiv
+    display: "❧"
+  leftblank:
+    unicode: U+E030
+    mapping: display-equiv
+    display: _____
+  lemnisc:
+    unicode: U+E091
+    mapping: display-equiv
+    display: "∻"
+  lessthan:
+    unicode: U+E04C
+    mapping: display-equiv
+    display: "⦓"
+  lgr:
+    unicode: U+03BB
+    mapping: unicode-exact
+    display: λ
+  lhblk:
+    unicode: U+2584
+    mapping: unicode-exact
+    display: "▄"
+  lindx:
+    unicode: U+261C
+    mapping: unicode-exact
+    display: "☜"
+  link:
+    unicode: U+1F517
+    mapping: unicode-exact
+    display: "\U0001F517︎"
+  livre:
+    unicode: U+E07C
+    mapping: display-equiv
+    display: "\U0001D4DB"
+  lkeraia:
+    unicode: U+0375
+    mapping: unicode-exact
+    display: "͵"
+  ll:
+    unicode: U+1EFB
+    mapping: unicode-exact
+    display: ỻ
+  lloop:
+    unicode: U+E095
+    mapping: display-equiv
+    display: lʾ
+  lmidot:
+    unicode: U+0140
+    mapping: unicode-exact
+    display: ŀ
+  logarithm:
+    unicode: U+E04D
+    mapping: display-equiv
+    display: "{logarithm}"
+  lowast:
+    unicode: U+2217
+    mapping: unicode-exact
+    display: "∗"
+  lowbar:
+    unicode: U+005F
+    mapping: unicode-exact
+    display: _
+  lowerterm:
+    unicode: U+E04E
+    mapping: display-equiv
+    display: "⍢"
+  lowerthan:
+    unicode: U+E04F
+    mapping: display-equiv
+    display: "∇"
+  loz:
+    unicode: U+25CA
+    mapping: unicode-exact
+    display: "◊"
+  lozf:
+    unicode: U+2726
+    mapping: unicode-exact
+    display: "✦"
+  lpar:
+    unicode: U+0028
+    mapping: unicode-exact
+    display: "("
+  lpara:
+    unicode: U+204B
+    mapping: unicode-exact
+    display: "⁋"
+  lpunctel:
+    unicode: U+2E35
+    mapping: unicode-exact
+    display: "⸵"
+  lquest:
+    unicode: U+2E2E
+    mapping: unicode-exact
+    display: "⸮"
+  lrepeat:
+    unicode: U+1D106
+    mapping: unicode-exact
+    display: "\U0001D106"
+  lsemicol:
+    unicode: U+204F
+    mapping: unicode-exact
+    display: "⁏"
+  lsqb:
+    unicode: U+005B
+    mapping: unicode-exact
+    display: "["
+  lsquo:
+    unicode: U+2018
+    mapping: unicode-exact
+    display: "‘"
+  lsquor:
+    unicode: U+201A
+    mapping: unicode-exact
+    display: "‚"
+  lstrok:
+    unicode: U+0142
+    mapping: unicode-exact
+    display: ł
+  ltri:
+    unicode: U+25C3
+    mapping: unicode-exact
+    display: "◃"
+  ltrif:
+    unicode: U+25C2
+    mapping: unicode-exact
+    display: "◂"
+  magnesia:
+    unicode: U+E098
+    mapping: display-equiv
+    display: "⟴"
+  mahapakh:
+    unicode: U+05A4
+    mapping: unicode-exact
+    display: ֤
+  male:
+    unicode: U+E03C
+    mapping: display-equiv
+    display: "♂"
+  malt:
+    unicode: U+2720
+    mapping: unicode-exact
+    display: "✠"
+  maqaf:
+    unicode: U+05BE
+    mapping: unicode-exact
+    display: "־"
+  maravedi:
+    unicode: U+E02A
+    mapping: display-equiv
+    display: ᵯᶡ
+  marker:
+    unicode: U+25AE
+    mapping: unicode-exact
+    display: "▮"
+  mcy:
+    unicode: U+043C
+    mapping: unicode-exact
+    display: м
+  mdash:
+    unicode: U+2014
+    mapping: unicode-exact
+    display: "—"
+  mem:
+    unicode: U+05DE
+    mapping: unicode-exact
+    display: מ
+  merkha:
+    unicode: U+05A5
+    mapping: unicode-exact
+    display: ֥
+  mgr:
+    unicode: U+03BC
+    mapping: unicode-exact
+    display: μ
+  mhellip:
+    unicode: U+22EF
+    mapping: unicode-exact
+    display: "⋯"
+  micro:
+    unicode: U+00B5
+    mapping: unicode-exact
+    display: µ
+  middot:
+    unicode: U+00B7
+    mapping: unicode-exact
+    display: "·"
+  minim:
+    unicode: U+E03A
+    mapping: display-equiv
+    display: "♏︎"
+  minim2:
+    unicode: U+E03D
+    mapping: display-equiv
+    display: "♍︎"
+  minus:
+    unicode: U+2212
+    mapping: unicode-exact
+    display: "−"
+  mnplus:
+    unicode: U+2213
+    mapping: unicode-exact
+    display: "∓"
+  mooneclipse:
+    unicode: U+1F319
+    mapping: unicode-exact
+    display: "\U0001F319︎"
+  morethan:
+    unicode: U+E050
+    mapping: display-equiv
+    display: "⦔"
+  multiplier:
+    unicode: U+E051
+    mapping: display-equiv
+    display: ᵯ
+  munah:
+    unicode: U+05A3
+    mapping: unicode-exact
+    display: ֣
+  musicBrace:
+    unicode: U+1D114
+    mapping: unicode-exact
+    display: "\U0001D114"
+  musicBracket:
+    unicode: U+1D115
+    mapping: unicode-exact
+    display: "\U0001D115"
+  musicNote:
+    unicode: U+E0B1
+    mapping: display-equiv
+    display: "♩"
+  nabla:
+    unicode: U+2207
+    mapping: unicode-exact
+    display: "∇"
+  nacute:
+    unicode: U+0144
+    mapping: unicode-exact
+    display: ń
+  napos:
+    unicode: U+0149
+    mapping: unicode-exact
+    display: ŉ
+  natur:
+    unicode: U+266E
+    mapping: unicode-exact
+    display: "♮"
+  nbsp:
+    unicode: U+00A0
+    mapping: unicode-exact
+    display: " "
+  ncaron:
+    unicode: U+0148
+    mapping: unicode-exact
+    display: ň
+  ncedil:
+    unicode: U+0146
+    mapping: unicode-exact
+    display: ņ
+  ncy:
+    unicode: U+043D
+    mapping: unicode-exact
+    display: н
+  ndash:
+    unicode: U+2013
+    mapping: unicode-exact
+    display: "–"
+  ne:
+    unicode: U+2260
+    mapping: unicode-exact
+    display: "≠"
+  ngr:
+    unicode: U+03BD
+    mapping: unicode-exact
+    display: ν
+  ni:
+    unicode: U+220D
+    mapping: unicode-exact
+    display: "∍"
+  night:
+    unicode: U+1F76F
+    mapping: unicode-exact
+    display: "\U0001F76F"
+  nitre:
+    unicode: U+1F715
+    mapping: unicode-exact
+    display: "\U0001F715"
+  nldr:
+    unicode: U+2025
+    mapping: unicode-exact
+    display: "‥"
+  northnode:
+    unicode: U+260A
+    mapping: unicode-exact
+    display: "☊"
+  not:
+    unicode: U+00AC
+    mapping: unicode-exact
+    display: "¬"
+  noteEighth:
+    unicode: U+1D160
+    mapping: unicode-exact
+    display: "\U0001D160"
+  noteHalf:
+    unicode: U+1D15E
+    mapping: unicode-exact
+    display: "\U0001D15E"
+  noteQuarter:
+    unicode: U+1D15F
+    mapping: unicode-exact
+    display: "\U0001D15F"
+  noteWhole:
+    unicode: U+1D15D
+    mapping: unicode-exact
+    display: "\U0001D15D"
+  notebreve:
+    unicode: U+1D1B8
+    mapping: unicode-exact
+    display: "\U0001D1B8"
+  notecrotchet:
+    unicode: U+1D1BC
+    mapping: unicode-exact
+    display: "\U0001D1BC"
+  notedemisemiquaver:
+    unicode: U+E069
+    mapping: unicode-exact
+    display: "\U0001D1BC\U0001D171"
+  notedot:
+    unicode: U+1D16D
+    mapping: unicode-exact
+    display: "\U0001D16D"
+  notelarge:
+    unicode: U+1D1B6
+    mapping: unicode-exact
+    display: "\U0001D1B6"
+  notelong:
+    unicode: U+1D1B7
+    mapping: unicode-exact
+    display: "\U0001D1B7"
+  noteminim:
+    unicode: U+1D1BB
+    mapping: unicode-exact
+    display: "\U0001D1BB"
+  notequaver:
+    unicode: U+1D1BE
+    mapping: unicode-exact
+    display: "\U0001D1BE"
+  notesemibreve:
+    unicode: U+1D1B9
+    mapping: unicode-exact
+    display: "\U0001D1B9"
+  notesemiquaver:
+    unicode: U+1D1C0
+    mapping: unicode-exact
+    display: "\U0001D1C0"
+  notin:
+    unicode: U+2209
+    mapping: unicode-exact
+    display: "∉"
+  ntilde:
+    unicode: U+00F1
+    mapping: unicode-exact
+    display: ñ
+  num:
+    unicode: U+0023
+    mapping: unicode-exact
+    display: "#"
+  numero:
+    unicode: U+2116
+    mapping: unicode-exact
+    display: "№"
+  numsp:
+    unicode: U+2007
+    mapping: unicode-exact
+    display: " "
+  nun:
+    unicode: U+05E0
+    mapping: unicode-exact
+    display: נ
+  oacugr:
+    unicode: U+1F79
+    mapping: unicode-exact
+    display: ό
+  oacute:
+    unicode: U+00F3
+    mapping: unicode-exact
+    display: ó
+  ob:
+    unicode: U+E047
+    mapping: display-equiv
+    display: ᵒᵇ
+  obelus:
+    unicode: U+2E13
+    mapping: unicode-exact
+    display: "⸓"
+  obreve:
+    unicode: U+014F
+    mapping: unicode-exact
+    display: ŏ
+  ocirc:
+    unicode: U+00F4
+    mapping: unicode-exact
+    display: ô
+  ocy:
+    unicode: U+043E
+    mapping: unicode-exact
+    display: о
+  odblac:
+    unicode: U+0151
+    mapping: unicode-exact
+    display: ő
+  oelig:
+    unicode: U+0153
+    mapping: unicode-exact
+    display: œ
+  ogr:
+    unicode: U+03BF
+    mapping: unicode-exact
+    display: ο
+  ogragr:
+    unicode: U+1F78
+    mapping: unicode-exact
+    display: ὸ
+  ograve:
+    unicode: U+00F2
+    mapping: unicode-exact
+    display: ò
+  ohacek:
+    unicode: U+01D2
+    mapping: unicode-exact
+    display: ǒ
+  ohacugr:
+    unicode: U+1F7D
+    mapping: unicode-exact
+    display: ώ
+  ohaigr:
+    unicode: U+1FF4
+    mapping: unicode-exact
+    display: ῴ
+  ohcigr:
+    unicode: U+1FF7
+    mapping: unicode-exact
+    display: ῷ
+  ohcirgr:
+    unicode: U+1FF6
+    mapping: unicode-exact
+    display: ῶ
+  ohgigr:
+    unicode: U+1FF2
+    mapping: unicode-exact
+    display: ῲ
+  ohgr:
+    unicode: U+03C9
+    mapping: unicode-exact
+    display: ω
+  ohgragr:
+    unicode: U+1F7C
+    mapping: unicode-exact
+    display: ὼ
+  ohigr:
+    unicode: U+1FF3
+    mapping: unicode-exact
+    display: ῳ
+  ohkact:
+    unicode: U+E003
+    mapping: unicode-exact
+    display: ǫ́
+  ohm:
+    unicode: U+2126
+    mapping: unicode-exact
+    display: Ω
+  ohragr:
+    unicode: U+1F65
+    mapping: unicode-exact
+    display: ὥ
+  ohraigr:
+    unicode: U+1FA5
+    mapping: unicode-exact
+    display: ᾥ
+  ohrcgr:
+    unicode: U+1F67
+    mapping: unicode-exact
+    display: ὧ
+  ohrcigr:
+    unicode: U+1FA7
+    mapping: unicode-exact
+    display: ᾧ
+  ohrggr:
+    unicode: U+1F63
+    mapping: unicode-exact
+    display: ὣ
+  ohrgigr:
+    unicode: U+1FA3
+    mapping: unicode-exact
+    display: ᾣ
+  ohrigr:
+    unicode: U+1FA1
+    mapping: unicode-exact
+    display: ᾡ
+  ohrougr:
+    unicode: U+1F61
+    mapping: unicode-exact
+    display: ὡ
+  ohsagr:
+    unicode: U+1F64
+    mapping: unicode-exact
+    display: ὤ
+  ohsaigr:
+    unicode: U+1FA4
+    mapping: unicode-exact
+    display: ᾤ
+  ohscgr:
+    unicode: U+1F66
+    mapping: unicode-exact
+    display: ὦ
+  ohscigr:
+    unicode: U+1FA6
+    mapping: unicode-exact
+    display: ᾦ
+  ohsggr:
+    unicode: U+1F62
+    mapping: unicode-exact
+    display: ὢ
+  ohsgigr:
+    unicode: U+1FA2
+    mapping: unicode-exact
+    display: ᾢ
+  ohsigr:
+    unicode: U+1FA0
+    mapping: unicode-exact
+    display: ᾠ
+  ohsmogr:
+    unicode: U+1F60
+    mapping: unicode-exact
+    display: ὠ
+  oil:
+    unicode: U+1F746
+    mapping: unicode-exact
+    display: "\U0001F746"
+  oil2:
+    unicode: U+E0AA
+    mapping: display-equiv
+    display: "⦾"
+  omacr:
+    unicode: U+014D
+    mapping: unicode-exact
+    display: ō
+  opposition:
+    unicode: U+260D
+    mapping: unicode-exact
+    display: "☍"
+  or:
+    unicode: U+2228
+    mapping: unicode-exact
+    display: "∨"
+  oragr:
+    unicode: U+1F45
+    mapping: unicode-exact
+    display: ὅ
+  order:
+    unicode: U+2134
+    mapping: unicode-exact
+    display: ℴ
+  ordf:
+    unicode: U+00AA
+    mapping: unicode-exact
+    display: ª
+  ordm:
+    unicode: U+00BA
+    mapping: unicode-exact
+    display: º
+  orggr:
+    unicode: U+1F43
+    mapping: unicode-exact
+    display: ὃ
+  orougr:
+    unicode: U+1F41
+    mapping: unicode-exact
+    display: ὁ
+  orpiment:
+    unicode: U+1F73D
+    mapping: unicode-exact
+    display: "\U0001F73D"
+  osagr:
+    unicode: U+1F44
+    mapping: unicode-exact
+    display: ὄ
+  osggr:
+    unicode: U+1F42
+    mapping: unicode-exact
+    display: ὂ
+  oslash:
+    unicode: U+00F8
+    mapping: unicode-exact
+    display: ø
+  osmogr:
+    unicode: U+1F40
+    mapping: unicode-exact
+    display: ὀ
+  otilde:
+    unicode: U+00F5
+    mapping: unicode-exact
+    display: õ
+  ougr:
+    unicode: U+0223
+    mapping: unicode-exact
+    display: ᴕ
+  ouml:
+    unicode: U+00F6
+    mapping: unicode-exact
+    display: ö
+  ounce:
+    unicode: U+2125
+    mapping: unicode-exact
+    display: "℥"
+  palmbranch:
+    unicode: U+2E19
+    mapping: unicode-exact
+    display: "⸙"
+  par:
+    unicode: U+2225
+    mapping: unicode-exact
+    display: "∥"
+  para:
+    unicode: U+00B6
+    mapping: unicode-exact
+    display: "¶"
+  part:
+    unicode: U+2202
+    mapping: unicode-exact
+    display: "∂"
+  pashta:
+    unicode: U+0599
+    mapping: unicode-exact
+    display: ֙
+  pashtayin:
+    unicode: U+E017
+    mapping: display-equiv
+    display: ֙ ֨
+  pcy:
+    unicode: U+043F
+    mapping: unicode-exact
+    display: п
+  pe:
+    unicode: U+05E4
+    mapping: unicode-exact
+    display: פ
+  percnt:
+    unicode: U+0025
+    mapping: unicode-exact
+    display: "%"
+  period:
+    unicode: U+002E
+    mapping: unicode-exact
+    display: "."
+  permil:
+    unicode: U+2030
+    mapping: unicode-exact
+    display: "‰"
+  perp:
+    unicode: U+22A5
+    mapping: unicode-exact
+    display: "⊥"
+  pgr:
+    unicode: U+03C0
+    mapping: unicode-exact
+    display: π
+  pgrave:
+    unicode: U+E001
+    mapping: unicode-exact
+    display: p̀
+  phgr:
+    unicode: U+03C6
+    mapping: unicode-exact
+    display: φ
+  phmmat:
+    unicode: U+2133
+    mapping: unicode-exact
+    display: ℳ
+  plus:
+    unicode: U+002B
+    mapping: unicode-exact
+    display: "+"
+  plusmn:
+    unicode: U+00B1
+    mapping: unicode-exact
+    display: "±"
+  potash:
+    unicode: U+1F758
+    mapping: unicode-exact
+    display: "\U0001F758"
+  potestas:
+    unicode: U+E052
+    mapping: display-equiv
+    display: "⭜"
+  pound:
+    unicode: U+00A3
+    mapping: unicode-exact
+    display: "£"
+  powerof1:
+    unicode: U+E053
+    mapping: display-equiv
+    display: "↗¹"
+  powerof2:
+    unicode: U+E054
+    mapping: display-equiv
+    display: "↗²"
+  powerof3:
+    unicode: U+E055
+    mapping: display-equiv
+    display: "↗³"
+  powerof4:
+    unicode: U+E056
+    mapping: display-equiv
+    display: "↗⁴"
+  powerof5:
+    unicode: U+E057
+    mapping: display-equiv
+    display: "↗⁵"
+  powerof6:
+    unicode: U+E058
+    mapping: display-equiv
+    display: "↗⁶"
+  powerof7:
+    unicode: U+E041
+    mapping: display-equiv
+    display: "↗⁷"
+  powerof8:
+    unicode: U+E076
+    mapping: display-equiv
+    display: "↗⁸"
+  powerof9:
+    unicode: U+E079
+    mapping: display-equiv
+    display: "↗⁹"
+  pprime:
+    unicode: U+E059
+    mapping: display-equiv
+    display: "′′′′′"
+  prime:
+    unicode: U+2032
+    mapping: unicode-exact
+    display: "′"
+  product:
+    unicode: U+E05A
+    mapping: display-equiv
+    display: m̾
+  prop:
+    unicode: U+221D
+    mapping: unicode-exact
+    display: "∝"
+  proportion:
+    unicode: U+2237
+    mapping: unicode-exact
+    display: "∷"
+  proportion2:
+    unicode: U+E05B
+    mapping: display-equiv
+    display: "∝"
+  psgr:
+    unicode: U+03C8
+    mapping: unicode-exact
+    display: ψ
+  punc:
+    unicode: U+E02D
+    mapping: display-equiv
+    display: "▪"
+  puncsp:
+    unicode: U+2008
+    mapping: unicode-exact
+    display: " "
+  punctel:
+    unicode: U+2E4E
+    mapping: unicode-exact
+    display: "⹎"
+  purify:
+    unicode: U+1F763
+    mapping: unicode-exact
+    display: "\U0001F763"
+  qacute:
+    unicode: U+E002
+    mapping: unicode-exact
+    display: q́
+  qbar:
+    unicode: U+A757
+    mapping: unicode-exact
+    display: ꝗ
+  qmgr:
+    unicode: U+037E
+    mapping: unicode-exact
+    display: ";"
+  qof:
+    unicode: U+05E7
+    mapping: unicode-exact
+    display: ק
+  qprime:
+    unicode: U+2057
+    mapping: unicode-exact
+    display: "⁗"
+  quaddot:
+    unicode: U+2E2C
+    mapping: unicode-exact
+    display: "⸬"
+  quaddotl:
+    unicode: U+E026
+    mapping: display-equiv
+    display: "˙.˙."
+  quaddotr:
+    unicode: U+E027
+    mapping: display-equiv
+    display: ".˙.˙"
+  quadrine:
+    unicode: U+E032
+    mapping: display-equiv
+    display: "⯐"
+  quarter:
+    unicode: U+E061
+    mapping: display-equiv
+    display: qʳᶵ
+  quest:
+    unicode: U+003F
+    mapping: unicode-exact
+    display: "?"
+  quicklime:
+    unicode: U+1F741
+    mapping: unicode-exact
+    display: "\U0001F741"
+  quotient:
+    unicode: U+E05D
+    mapping: display-equiv
+    display: "⫍͉"
+  r:
+    unicode: U+A75B
+    mapping: unicode-exact
+    display: ꝛ
+  rArr:
+    unicode: U+21D2
+    mapping: unicode-exact
+    display: "⇒"
+  racute:
+    unicode: U+0155
+    mapping: unicode-exact
+    display: ŕ
+  radic:
+    unicode: U+221A
+    mapping: unicode-exact
+    display: "√"
+  rainy:
+    unicode: U+1F327
+    mapping: unicode-exact
+    display: "\U0001F327"
+  rang:
+    unicode: U+3009
+    mapping: unicode-exact
+    display: "〉"
+  raquo:
+    unicode: U+00BB
+    mapping: unicode-exact
+    display: "»"
+  rarr:
+    unicode: U+2192
+    mapping: unicode-exact
+    display: "→"
+  ratio:
+    unicode: U+2236
+    mapping: unicode-exact
+    display: "∶"
+  ration:
+    unicode: U+E05E
+    mapping: display-equiv
+    display: Ꞧ
+  rayedSun:
+    unicode: U+263C
+    mapping: unicode-exact
+    display: "☼"
+  rbrace:
+    unicode: U+007D
+    mapping: display-equiv
+    display: "❵"
+  rcaron:
+    unicode: U+0159
+    mapping: unicode-exact
+    display: ř
+  rcedil:
+    unicode: U+0157
+    mapping: unicode-exact
+    display: ŗ
+  rcy:
+    unicode: U+0440
+    mapping: unicode-exact
+    display: р
+  rdagger:
+    unicode: U+E086
+    mapping: display-equiv
+    display: "{right †}"
+  rdiple:
+    unicode: U+E097
+    mapping: display-equiv
+    display: "▻"
+  rdquo:
+    unicode: U+201D
+    mapping: unicode-exact
+    display: "”"
+  received:
+    unicode: U+E07B
+    mapping: display-equiv
+    display: ℛᶵ
+  recorderBeat:
+    unicode: U+E00F
+    mapping: display-equiv
+    display: "\U0001F733"
+  recorderDblShake:
+    unicode: U+E018
+    mapping: display-equiv
+    display: "⍝⍝"
+  recorderShake:
+    unicode: U+1D16B
+    mapping: unicode-exact
+    display: "\U0001D16B"
+  rect:
+    unicode: U+25AD
+    mapping: unicode-exact
+    display: "▭"
+  reg:
+    unicode: U+00AE
+    mapping: unicode-exact
+    display: "®"
+  repeat:
+    unicode: U+E067
+    mapping: display-equiv
+    display: "\U0001D108\U0001D101\U0001D108"
+  resh:
+    unicode: U+05E8
+    mapping: unicode-exact
+    display: ר
+  resp:
+    unicode: U+211F
+    mapping: unicode-exact
+    display: "℟"
+  restbreve:
+    unicode: U+1D1C3
+    mapping: unicode-exact
+    display: "\U0001D1C3"
+  restcrotchet:
+    unicode: U+1D1C6
+    mapping: unicode-exact
+    display: "\U0001D1C6"
+  restdemisemiquaver:
+    unicode: U+E06C
+    mapping: display-equiv
+    display: "\U0001D140"
+  restlarge:
+    unicode: U+1D1C1
+    mapping: unicode-exact
+    display: "\U0001D1C1"
+  restlong:
+    unicode: U+1D1C2
+    mapping: unicode-exact
+    display: "\U0001D1C2"
+  restminim:
+    unicode: U+1D1C5
+    mapping: unicode-exact
+    display: "\U0001D1C5"
+  restquaver:
+    unicode: U+E06A
+    mapping: display-equiv
+    display: "\U0001D13E"
+  restsemibreve:
+    unicode: U+1D1C4
+    mapping: unicode-exact
+    display: "\U0001D1C4"
+  restsemiquaver:
+    unicode: U+E06B
+    mapping: display-equiv
+    display: "\U0001D13F"
+  retort:
+    unicode: U+1F76D
+    mapping: unicode-exact
+    display: "\U0001F76D"
+  revC:
+    unicode: U+2183
+    mapping: unicode-exact
+    display: Ↄ
+  revc:
+    unicode: U+2184
+    mapping: unicode-exact
+    display: ↄ
+  revia:
+    unicode: U+0597
+    mapping: unicode-exact
+    display: ֗
+  rgr:
+    unicode: U+03C1
+    mapping: unicode-exact
+    display: ρ
+  rhalfcross:
+    unicode: U+2E51
+    mapping: unicode-exact
+    display: ""
+  rindx:
+    unicode: U+261E
+    mapping: unicode-exact
+    display: "☞"
+  rn10000:
+    unicode: U+2182
+    mapping: unicode-exact
+    display: ↂ
+  rn100000:
+    unicode: U+2188
+    mapping: unicode-exact
+    display: ↈ
+  rn1000000:
+    unicode: U+E060
+    mapping: display-equiv
+    display: "{roman 1000000}"
+  rn5000:
+    unicode: U+2181
+    mapping: unicode-exact
+    display: ↁ
+  rn50000:
+    unicode: U+2187
+    mapping: unicode-exact
+    display: ↇ
+  rn500000:
+    unicode: U+E062
+    mapping: display-equiv
+    display: "{roman 500000}"
+  root:
+    unicode: U+E0B3
+    mapping: display-equiv
+    display: ꞧ
+  rpar:
+    unicode: U+0029
+    mapping: unicode-exact
+    display: ")"
+  rrepeat:
+    unicode: U+1D107
+    mapping: unicode-exact
+    display: "\U0001D107"
+  rrougr:
+    unicode: U+1FE5
+    mapping: unicode-exact
+    display: ῥ
+  rsect:
+    unicode: U+E074
+    mapping: display-equiv
+    display: "{reversed §}"
+  rsmogr:
+    unicode: U+1FE4
+    mapping: unicode-exact
+    display: ῤ
+  rsqb:
+    unicode: U+005D
+    mapping: unicode-exact
+    display: "]"
+  rsquo:
+    unicode: U+2019
+    mapping: unicode-exact
+    display: "’"
+  rtri:
+    unicode: U+25B9
+    mapping: unicode-exact
+    display: "▹"
+  rtrif:
+    unicode: U+25B8
+    mapping: unicode-exact
+    display: "▸"
+  rx:
+    unicode: U+211E
+    mapping: unicode-exact
+    display: "℞"
+  s:
+    unicode: U+017F
+    mapping: unicode-exact
+    display: ſ
+  sacute:
+    unicode: U+015B
+    mapping: unicode-exact
+    display: ś
+  salarmon:
+    unicode: U+1F739
+    mapping: unicode-exact
+    display: "\U0001F739"
+  salarmon2:
+    unicode: U+E0B4
+    mapping: display-equiv
+    display: "⊕"
+  salt:
+    unicode: U+1F714
+    mapping: unicode-exact
+    display: "\U0001F714"
+  saltgemme:
+    unicode: U+1F718
+    mapping: unicode-exact
+    display: "\U0001F718"
+  saltire:
+    unicode: U+2613
+    mapping: unicode-exact
+    display: "☓"
+  samekh:
+    unicode: U+05E1
+    mapping: unicode-exact
+    display: ס
+  samgr:
+    unicode: U+03E1
+    mapping: display-equiv
+    display: Ϡ
+  scaron:
+    unicode: U+0161
+    mapping: unicode-exact
+    display: š
+  scedil:
+    unicode: U+015F
+    mapping: unicode-exact
+    display: ş
+  schwa:
+    unicode: U+0259
+    mapping: unicode-exact
+    display: ə
+  scirc:
+    unicode: U+015D
+    mapping: unicode-exact
+    display: ŝ
+  scruple:
+    unicode: U+2108
+    mapping: unicode-exact
+    display: "℈"
+  scy:
+    unicode: U+0441
+    mapping: unicode-exact
+    display: с
+  sect:
+    unicode: U+00A7
+    mapping: unicode-exact
+    display: "§"
+  semi:
+    unicode: U+003B
+    mapping: unicode-exact
+    display: ";"
+  semisextile:
+    unicode: U+26BA
+    mapping: unicode-exact
+    display: "⚺"
+  sequiv:
+    unicode: U+2263
+    mapping: unicode-exact
+    display: "≣"
+  sext:
+    unicode: U+2736
+    mapping: unicode-exact
+    display: "✶"
+  sextile:
+    unicode: U+26B9
+    mapping: unicode-exact
+    display: "⚹"
+  sfgr:
+    unicode: U+03C2
+    mapping: unicode-exact
+    display: ς
+  sgr:
+    unicode: U+03C3
+    mapping: unicode-exact
+    display: σ
+  sharp:
+    unicode: U+266F
+    mapping: unicode-exact
+    display: "♯"
+  sharp2:
+    unicode: U+E065
+    mapping: display-equiv
+    display: "\U0001D12A"
+  sharpb:
+    unicode: U+E066
+    mapping: display-equiv
+    display: "\U0001D12E"
+  shchcy:
+    unicode: U+0449
+    mapping: unicode-exact
+    display: щ
+  shcy:
+    unicode: U+0448
+    mapping: unicode-exact
+    display: ш
+  shilling:
+    unicode: U+E01A
+    mapping: display-equiv
+    display: ꭍ
+  shin:
+    unicode: U+05E9
+    mapping: unicode-exact
+    display: ש
+  shy:
+    unicode: U+00AD
+    mapping: unicode-exact
+    display: "­"
+  sim:
+    unicode: U+223C
+    mapping: unicode-exact
+    display: "∼"
+  sime:
+    unicode: U+2243
+    mapping: unicode-exact
+    display: "≃"
+  skull:
+    unicode: U+1F480
+    mapping: unicode-exact
+    display: "\U0001F480"
+  sloop:
+    unicode: U+E0AD
+    mapping: display-equiv
+    display: ʆ
+  slungr:
+    unicode: U+03F2
+    mapping: unicode-exact
+    display: ϲ
+  slur:
+    unicode: U+1D177-U1D178
+    mapping: display-equiv
+    display: " ͜ "
+  softcy:
+    unicode: U+044C
+    mapping: unicode-exact
+    display: ь
+  sol:
+    unicode: U+002F
+    mapping: unicode-exact
+    display: "/"
+  southnode:
+    unicode: U+260B
+    mapping: unicode-exact
+    display: "☋"
+  spades:
+    unicode: U+2660
+    mapping: unicode-exact
+    display: "♠"
+  spcDash:
+    unicode: U+254C
+    mapping: unicode-exact
+    display: "╌"
+  spcacute:
+    unicode: U+00B4
+    mapping: unicode-exact
+    display: "´"
+  spcbreve:
+    unicode: U+02D8
+    mapping: unicode-exact
+    display: "˘"
+  spccaron:
+    unicode: U+02C7
+    mapping: unicode-exact
+    display: ˇ
+  spccedil:
+    unicode: U+00B8
+    mapping: unicode-exact
+    display: "¸"
+  spccirc:
+    unicode: U+005E
+    mapping: unicode-exact
+    display: "^"
+  spccommaa:
+    unicode: U+1FBF
+    mapping: unicode-exact
+    display: "᾿"
+  spcdblac:
+    unicode: U+02DD
+    mapping: unicode-exact
+    display: "˝"
+  spcdot:
+    unicode: U+02D9
+    mapping: unicode-exact
+    display: "˙"
+  spcdotb:
+    unicode: U+E01C
+    mapping: display-equiv
+    display: "․"
+  spcgrave:
+    unicode: U+0060
+    mapping: unicode-exact
+    display: "`"
+  spcibreve:
+    unicode: U+E096
+    mapping: display-equiv
+    display: " ̑"
+  spclowvertline:
+    unicode: U+02CC
+    mapping: unicode-exact
+    display: ˌ
+  spcmacr:
+    unicode: U+00AF
+    mapping: unicode-exact
+    display: "¯"
+  spcogon:
+    unicode: U+02DB
+    mapping: unicode-exact
+    display: "˛"
+  spcperispo:
+    unicode: U+1FC0
+    mapping: unicode-exact
+    display: "῀"
+  spcrcomma:
+    unicode: U+1FFE
+    mapping: unicode-exact
+    display: "῾"
+  spcring:
+    unicode: U+02DA
+    mapping: unicode-exact
+    display: "˚"
+  spctilde:
+    unicode: U+02DC
+    mapping: unicode-exact
+    display: "˜"
+  spcuml:
+    unicode: U+00A8
+    mapping: unicode-exact
+    display: "¨"
+  spcx:
+    unicode: U+02E3
+    mapping: unicode-exact
+    display: ˣ
+  square:
+    unicode: U+25A1
+    mapping: unicode-exact
+    display: "□"
+  squf:
+    unicode: U+25A0
+    mapping: unicode-exact
+    display: "■"
+  star:
+    unicode: U+22C6
+    mapping: unicode-exact
+    display: "⋆"
+  starf:
+    unicode: U+2605
+    mapping: unicode-exact
+    display: "★"
+  startq:
+    unicode: U+E02F
+    mapping: display-equiv
+    display: "❝"
+  starw:
+    unicode: U+2606
+    mapping: unicode-exact
+    display: "☆"
+  stella:
+    unicode: U+E036
+    mapping: display-equiv
+    display: "✴"
+  stgr:
+    unicode: U+03DB
+    mapping: display-equiv
+    display: Ϛ
+  sub:
+    unicode: U+2282
+    mapping: unicode-exact
+    display: "⊂"
+  sube:
+    unicode: U+2286
+    mapping: unicode-exact
+    display: "⊆"
+  subplus:
+    unicode: U+208A
+    mapping: unicode-exact
+    display: "₊"
+  sulphur:
+    unicode: U+1F70D
+    mapping: unicode-exact
+    display: "\U0001F70D"
+  sung:
+    unicode: U+2669
+    mapping: unicode-exact
+    display: "♩"
+  sup:
+    unicode: U+2283
+    mapping: unicode-exact
+    display: "⊃"
+  sup1:
+    unicode: U+00B9
+    mapping: unicode-exact
+    display: "¹"
+  sup2:
+    unicode: U+00B2
+    mapping: unicode-exact
+    display: "²"
+  sup3:
+    unicode: U+00B3
+    mapping: unicode-exact
+    display: "³"
+  supe:
+    unicode: U+2287
+    mapping: unicode-exact
+    display: "⊇"
+  syri-qaph:
+    unicode: U+0729
+    mapping: unicode-exact
+    display: ܩ
+  szlig:
+    unicode: U+00DF
+    mapping: unicode-exact
+    display: ß
+  talc:
+    unicode: U+E0A8
+    mapping: display-equiv
+    display: "\U0001F7AA"
+  target:
+    unicode: U+2316
+    mapping: unicode-exact
+    display: "⌖"
+  tartar:
+    unicode: U+1F73F
+    mapping: unicode-exact
+    display: "\U0001F73F"
+  tav:
+    unicode: U+05EA
+    mapping: unicode-exact
+    display: ת
+  tcaron:
+    unicode: U+0165
+    mapping: unicode-exact
+    display: ť
+  tcedil:
+    unicode: U+0163
+    mapping: unicode-exact
+    display: ţ
+  tcy:
+    unicode: U+0442
+    mapping: unicode-exact
+    display: т
+  tdagger:
+    unicode: U+2E4B
+    mapping: display-equiv
+    display: "≢"
+  telrec:
+    unicode: U+2315
+    mapping: unicode-exact
+    display: "⌕"
+  tet:
+    unicode: U+05D8
+    mapping: unicode-exact
+    display: ט
+  tgr:
+    unicode: U+03C4
+    mapping: unicode-exact
+    display: τ
+  that:
+    unicode: U+A767
+    mapping: unicode-exact
+    display: ꝧ
+  there4:
+    unicode: U+2234
+    mapping: unicode-exact
+    display: "∴"
+  thgr:
+    unicode: U+03B8
+    mapping: unicode-exact
+    display: θ
+  thinsp:
+    unicode: U+2009
+    mapping: unicode-exact
+    display: " "
+  thorn:
+    unicode: U+00FE
+    mapping: unicode-exact
+    display: þ
+  thousand:
+    unicode: U+E014
+    mapping: display-equiv
+    display: mᵉ
+  thscrgr:
+    unicode: U+03D1
+    mapping: unicode-exact
+    display: ϑ
+  timeimperf-prolatimperf:
+    unicode: U+1D1CB
+    mapping: unicode-exact
+    display: "\U0001D1CB"
+  timeimperf-prolatimperf-rev:
+    unicode: U+1D1CC
+    mapping: unicode-exact
+    display: "\U0001D1CC"
+  timeimperf-prolatimperf-rev-str:
+    unicode: U+1D1CE
+    mapping: unicode-exact
+    display: "\U0001D1CE"
+  timeimperf-prolatimperf-str:
+    unicode: U+1D1CD
+    mapping: unicode-exact
+    display: "\U0001D1CD"
+  timeimperf-prolatimperf-x:
+    unicode: U+E071
+    mapping: unicode-exact
+    display: "\U0001D1CB˟"
+  timeimperf-prolatperf:
+    unicode: U+1D1CA
+    mapping: unicode-exact
+    display: "\U0001D1CA"
+  timeimperf-prolatperf-rev:
+    unicode: U+E072
+    mapping: unicode-exact
+    display: "\U0001D1CC\U0001D16D"
+  timeimperf-prolatperf-rev-str:
+    unicode: U+E073
+    mapping: unicode-exact
+    display: "\U0001D1CE\U0001D16D"
+  timeimperf-prolatperf-str:
+    unicode: U+E06F
+    mapping: unicode-exact
+    display: "\U0001D1CD\U0001D16D"
+  timeperf-prolatimperf:
+    unicode: U+1D1C8
+    mapping: unicode-exact
+    display: "\U0001D1C8"
+  timeperf-prolatimperf-str:
+    unicode: U+1D1C9
+    mapping: unicode-exact
+    display: "\U0001D1C9"
+  timeperf-prolatimperf-x:
+    unicode: U+E070
+    mapping: unicode-exact
+    display: "\U0001D1C8˟"
+  timeperf-prolatperf:
+    unicode: U+1D1C7
+    mapping: unicode-exact
+    display: "\U0001D1C7"
+  timeperf-prolatperf-str:
+    unicode: U+E06E
+    mapping: unicode-exact
+    display: "\U0001D1C9\U0001D16D"
+  times:
+    unicode: U+00D7
+    mapping: unicode-exact
+    display: "×"
+  tipeha:
+    unicode: U+0596
+    mapping: unicode-exact
+    display: ֖
+  tprime:
+    unicode: U+2034
+    mapping: unicode-exact
+    display: "‴"
+  trade:
+    unicode: U+2122
+    mapping: unicode-exact
+    display: "™"
+  trefoil:
+    unicode: U+E08F
+    mapping: display-equiv
+    display: "♣"
+  triapost:
+    unicode: U+E029
+    mapping: display-equiv
+    display: "','"
+  tridot:
+    unicode: U+2E2B
+    mapping: unicode-exact
+    display: "⸫"
+  trine:
+    unicode: U+E034
+    mapping: display-equiv
+    display: "▵"
+  trine2:
+    unicode: U+E035
+    mapping: display-equiv
+    display: "⊦"
+  tristar:
+    unicode: U+2042
+    mapping: unicode-exact
+    display: "⁂"
+  triwdot:
+    unicode: U+25EC
+    mapping: unicode-exact
+    display: "◬"
+  tsadi:
+    unicode: U+05E6
+    mapping: unicode-exact
+    display: צ
+  tscy:
+    unicode: U+0446
+    mapping: unicode-exact
+    display: ц
+  tstrok:
+    unicode: U+0167
+    mapping: unicode-exact
+    display: ŧ
+  uacugr:
+    unicode: U+1F7B
+    mapping: unicode-exact
+    display: ύ
+  uacute:
+    unicode: U+00FA
+    mapping: unicode-exact
+    display: ú
+  uadgr:
+    unicode: U+1FE3
+    mapping: unicode-exact
+    display: ΰ
+  uarr:
+    unicode: U+2191
+    mapping: unicode-exact
+    display: "↑"
+  ubreve:
+    unicode: U+016D
+    mapping: unicode-exact
+    display: ŭ
+  ucdgr:
+    unicode: U+1FE7
+    mapping: unicode-exact
+    display: ῧ
+  ucirc:
+    unicode: U+00FB
+    mapping: unicode-exact
+    display: û
+  ucirgr:
+    unicode: U+1FE6
+    mapping: unicode-exact
+    display: ῦ
+  ucy:
+    unicode: U+0443
+    mapping: unicode-exact
+    display: у
+  udblac:
+    unicode: U+0171
+    mapping: unicode-exact
+    display: ű
+  udotb:
+    unicode: U+1EE5
+    mapping: unicode-exact
+    display: ụ
+  ugdgr:
+    unicode: U+1FE2
+    mapping: unicode-exact
+    display: ῢ
+  ugr:
+    unicode: U+03C5
+    mapping: unicode-exact
+    display: υ
+  ugragr:
+    unicode: U+1F7A
+    mapping: unicode-exact
+    display: ὺ
+  ugrave:
+    unicode: U+00F9
+    mapping: unicode-exact
+    display: ù
+  uhacek:
+    unicode: U+01D4
+    mapping: unicode-exact
+    display: ǔ
+  uhblk:
+    unicode: U+2580
+    mapping: unicode-exact
+    display: "▀"
+  uindx:
+    unicode: U+261D
+    mapping: unicode-exact
+    display: "☝︎"
+  ulcrop:
+    unicode: U+230F
+    mapping: unicode-exact
+    display: "⌏"
+  umacr:
+    unicode: U+016B
+    mapping: unicode-exact
+    display: ū
+  uogon:
+    unicode: U+0173
+    mapping: unicode-exact
+    display: ų
+  uragr:
+    unicode: U+1F55
+    mapping: unicode-exact
+    display: ὕ
+  urcgr:
+    unicode: U+1F57
+    mapping: unicode-exact
+    display: ὗ
+  urcrop:
+    unicode: U+230E
+    mapping: unicode-exact
+    display: "⌎"
+  urggr:
+    unicode: U+1F53
+    mapping: unicode-exact
+    display: ὓ
+  urine:
+    unicode: U+1F755
+    mapping: unicode-exact
+    display: "\U0001F755"
+  uring:
+    unicode: U+016F
+    mapping: unicode-exact
+    display: ů
+  urougr:
+    unicode: U+1F51
+    mapping: unicode-exact
+    display: ὑ
+  usagr:
+    unicode: U+1F54
+    mapping: unicode-exact
+    display: ὔ
+  uscgr:
+    unicode: U+1F56
+    mapping: unicode-exact
+    display: ὖ
+  usd5:
+    unicode: U+E004
+    mapping: display-equiv
+    display: "♷"
+  usggr:
+    unicode: U+1F52
+    mapping: unicode-exact
+    display: ὒ
+  usmogr:
+    unicode: U+1F50
+    mapping: unicode-exact
+    display: ὐ
+  utilde:
+    unicode: U+0169
+    mapping: unicode-exact
+    display: ũ
+  utri:
+    unicode: U+25B3
+    mapping: unicode-exact
+    display: "△"
+  utrif:
+    unicode: U+25B4
+    mapping: unicode-exact
+    display: "▴"
+  uuml:
+    unicode: U+00FC
+    mapping: unicode-exact
+    display: ü
+  vav:
+    unicode: U+05D5
+    mapping: unicode-exact
+    display: ו
+  vbreve:
+    unicode: U+E080
+    mapping: unicode-exact
+    display: v̆
+  vcy:
+    unicode: U+0432
+    mapping: unicode-exact
+    display: в
+  vellip:
+    unicode: U+22EE
+    mapping: unicode-exact
+    display: "⋮"
+  verbar:
+    unicode: U+007C
+    mapping: unicode-exact
+    display: "|"
+  verdigris:
+    unicode: U+E0B7
+    mapping: display-equiv
+    display: "❊"
+  vers:
+    unicode: U+2123
+    mapping: unicode-exact
+    display: "℣"
+  vinedist:
+    unicode: U+1F70B
+    mapping: unicode-exact
+    display: "\U0001F70B"
+  vinegar:
+    unicode: U+1F70A
+    mapping: unicode-exact
+    display: "\U0001F70A"
+  vitriol:
+    unicode: U+1F716
+    mapping: unicode-exact
+    display: "\U0001F716"
+  vitriol2:
+    unicode: U+E1A1
+    mapping: display-equiv
+    display: "{vitriol-2}"
+  vitriol3:
+    unicode: U+E1A2
+    mapping: display-equiv
+    display: "{vitriol-3}"
+  vocaljoin:
+    unicode: U+E068
+    mapping: display-equiv
+    display: "·¿·"
+  w:
+    unicode: U+1EFD
+    mapping: unicode-exact
+    display: ỽ
+  water:
+    unicode: U+1F704
+    mapping: unicode-exact
+    display: "\U0001F704"
+  wax:
+    unicode: U+1F74A
+    mapping: unicode-exact
+    display: "\U0001F74A"
+  wcirc:
+    unicode: U+0175
+    mapping: unicode-exact
+    display: ŵ
+  wedgeq:
+    unicode: U+2259
+    mapping: unicode-exact
+    display: "≙"
+  whbull:
+    unicode: U+25E6
+    mapping: unicode-exact
+    display: "◦"
+  windy:
+    unicode: U+1F32C
+    mapping: unicode-exact
+    display: "\U0001F32C"
+  wyn:
+    unicode: U+01BF
+    mapping: unicode-exact
+    display: ƿ
+  xgr:
+    unicode: U+03BE
+    mapping: unicode-exact
+    display: ξ
+  "y":
+    unicode: U+1EFF
+    mapping: unicode-exact
+    display: ỿ
+  yacute:
+    unicode: U+00FD
+    mapping: unicode-exact
+    display: ý
+  yacy:
+    unicode: U+044F
+    mapping: unicode-exact
+    display: я
+  ycirc:
+    unicode: U+0177
+    mapping: unicode-exact
+    display: ŷ
+  ycy:
+    unicode: U+044B
+    mapping: unicode-exact
+    display: ы
+  ydot:
+    unicode: U+1E8F
+    mapping: unicode-exact
+    display: ẏ
+  yen:
+    unicode: U+00A5
+    mapping: unicode-exact
+    display: "¥"
+  yhook:
+    unicode: U+01B4
+    mapping: unicode-exact
+    display: ƴ
+  yhwh:
+    unicode: U+E019
+    mapping: display-equiv
+    display: יהוה
+  ymacr:
+    unicode: U+0233
+    mapping: unicode-exact
+    display: ȳ
+  yod:
+    unicode: U+05D9
+    mapping: unicode-exact
+    display: י
+  yogh:
+    unicode: U+021D
+    mapping: unicode-exact
+    display: ȝ
+  yucy:
+    unicode: U+044E
+    mapping: unicode-exact
+    display: ю
+  yuml:
+    unicode: U+00FF
+    mapping: unicode-exact
+    display: ÿ
+  z:
+    unicode: U+A76B
+    mapping: unicode-exact
+    display: Ꝫ
+  zacute:
+    unicode: U+017A
+    mapping: unicode-exact
+    display: ź
+  zaqef-qatan:
+    unicode: U+0594
+    mapping: unicode-exact
+    display: ֔
+  zayin:
+    unicode: U+05D6
+    mapping: unicode-exact
+    display: ז
+  zcaron:
+    unicode: U+017E
+    mapping: unicode-exact
+    display: ž
+  zcy:
+    unicode: U+0437
+    mapping: unicode-exact
+    display: з
+  zdot:
+    unicode: U+017C
+    mapping: unicode-exact
+    display: ż
+  zgr:
+    unicode: U+03B6
+    mapping: unicode-exact
+    display: ζ
+  zhcy:
+    unicode: U+0436
+    mapping: unicode-exact
+    display: ж

@@ -17,6 +17,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   or network access.
 - `Superscript` and `NoteReference` inline Document elements.
 - `ParseError`.
+- TCP character table as data (`config/tcp_glyphs.yml`); the EEBO parser
+  gives empty glyphs their TCP display form (HTC-0017).
+- EEBO-TCP encoding reference (`03_EEBO_TCP_ENCODING.md`) and eight more
+  TCP fixtures for Milestone 4.
+- EEBO parser coverage of every element in a 2,300-text survey (HTC-0018):
+  `group` volumes and embedded texts, verse, letters, lists, tables,
+  figures, drama, inline quotations and citations, and block structures
+  inside running text.
+- Document elements `Line`, `Table`, `TableRow`, `TableCell`, `Figure`,
+  `Speech`, `Span`, and `Subscript`.
+- `artifact:` metadata on every non-authorial node, and
+  `Parser#parse_with_report` with `ParseReport`.
 
 - Semantic Document Model (`HistoricalTextConverter::Document`): `Book`,
   `Metadata`, `Node`, `Block`, `Inline`, `Section`, `Heading`, `Paragraph`,
@@ -24,6 +36,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   and `Emphasis`. Nodes are immutable and support traversal, text access,
   and copy-on-change with `with` and `rewrite` (HTC-0014).
 - `DocumentError` for invalid document structure.
+
+### Changed
+
+- Minimum Ruby version raised from 3.1 to 4.0.
 
 ## [0.1.0] - 2026-10-21
 

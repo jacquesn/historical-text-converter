@@ -10,22 +10,6 @@ module HistoricalTextConverter
           fixture = File.expand_path("../../../fixtures/eebo/A13556.xml", __dir__)
           book = described_class.new.parse(fixture)
 
-          # Words of the TEI <text> as transcribed. Duplicate-page placeholders
-          # are dropped (the parser folds them into page breaks); gaps and
-          # abbreviations are reduced to their text without the XML formatting
-          # inside them; then notes are separated from the words around them
-          # (the parser moves them after their paragraph).
-          source_words = lambda do
-            tei = Nokogiri::XML(File.read(fixture))
-            tei.remove_namespaces!
-            tei.xpath("//text//gap[@reason='duplicate']").each(&:remove)
-            as_text = ->(node, string) { node.replace(Nokogiri::XML::Text.new(string, tei)) }
-            tei.xpath("//text//gap").each { |gap| as_text.call(gap, gap.xpath("desc").text.strip) }
-            tei.xpath("//text//expan").each { |expan| as_text.call(expan, expan.xpath("ex").text) }
-            tei.xpath("//text//note").each { |note| as_text.call(note, " #{note.text} ") }
-            tei.at_xpath("//text").text.split.tally
-          end
-
           def nodes(book, type)
             book.grep(Document.const_get(type))
           end
@@ -71,7 +55,7 @@ module HistoricalTextConverter
           end
 
           it "keeps every word of the source" do
-            expect(book.text.delete("∣¦").split.tally).to eq(source_words.call)
+            expect(SourceWords.parsed(book)).to eq(SourceWords.tally(File.read(fixture)))
           end
 
           it "reads the title from the header" do

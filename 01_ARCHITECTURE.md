@@ -170,13 +170,22 @@ historical-text-converter/
 │   │   ├── text.rb
 │   │   ├── emphasis.rb
 │   │   ├── superscript.rb
-│   │   └── note_reference.rb
+│   │   ├── subscript.rb
+│   │   ├── span.rb
+│   │   ├── note_reference.rb
+│   │   ├── line.rb
+│   │   ├── table.rb
+│   │   ├── table_row.rb
+│   │   ├── table_cell.rb
+│   │   ├── figure.rb
+│   │   └── speech.rb
 │   │
 │   ├── parsers/
 │   │   ├── parser.rb
 │   │   └── eebo/
 │   │       ├── parser.rb
 │   │       ├── header_reader.rb
+│   │       ├── glyph_table.rb
 │   │       ├── block_builder.rb
 │   │       └── inline_builder.rb
 │   │
@@ -440,8 +449,14 @@ Heading
 Paragraph
 Quotation
 Poem
+Line             (HTC-0018)
 List
 ListItem
+Table            (HTC-0018)
+TableRow         (HTC-0018)
+TableCell        (HTC-0018)
+Figure           (HTC-0018)
+Speech           (HTC-0018)
 Footnote
 PageBreak
 ```
@@ -463,7 +478,9 @@ Initial inline concepts include:
 Text
 Emphasis
 Superscript      (HTC-0016)
+Subscript        (HTC-0018)
 NoteReference    (HTC-0016)
+Span             (HTC-0018; role such as :quotation, :citation, :date)
 ```
 
 Future inline elements may include:
@@ -471,9 +488,7 @@ Future inline elements may include:
 ```text
 Strong
 SmallCaps
-Subscript
 Link
-Citation
 ```
 
 Only introduce an element when a source or output requirement justifies it.
@@ -562,6 +577,18 @@ TCP encodes line-end word breaks as `<g ref="char:EOLhyphen"/>` and
 `<g ref="char:EOLunhyphen"/>`. The parser renders these as `∣` and `¦`,
 as the TCP display does, so that the divider and word-boundary
 transformations (§21–22) handle them.
+
+Other empty glyphs take their display form from the TCP character table,
+held as data in `config/tcp_glyphs.yml` (HTC-0017).
+
+## Encoding Reference
+
+`03_EEBO_TCP_ENCODING.md` lists what can appear in an EEBO-TCP TEI P5
+file: the TCP's own documentation (keying specification, DTD, Oxford
+encoding and transcription guides, character table), how SGML names map
+to P5, every element observed in a 2,300-text sample with its attributes
+and parents, and how the parser handles each. Consult it before changing
+the parser, and update it when the parser's handling changes.
 
 Those operations belong to later transformations.
 

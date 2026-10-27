@@ -98,10 +98,9 @@ module HistoricalTextConverter
 
         def page_break(element)
           metadata = {facs: element["facs"]}.compact
-          if element["rendition"] == "simple:additions"
-            metadata[:additions] = true
-            metadata[:artifact] = :transcriber_addition
-          end
+          # A page whose image has handwritten notes (TCP PB MS="Y"): a
+          # real page, not an artifact (HTC-0019 T5).
+          metadata[:handwritten_additions] = true if element["rendition"] == "simple:additions"
           Document::PageBreak.new(page: element["n"], metadata: metadata)
         end
 
@@ -175,7 +174,7 @@ module HistoricalTextConverter
 
         # An element on its own line between two printed lines is surrounded
         # by two newlines where the print has one. The newline after the
-        # element is dropped.
+        # element is dropped, with the indentation after it (HTC-0019 T6).
         def after_own_line_element(node)
           element = node.previous_sibling
           return node.content unless element&.element? && OWN_LINE_ELEMENTS.include?(element.name)
@@ -183,7 +182,7 @@ module HistoricalTextConverter
           before = element.previous_sibling
           return node.content unless before&.text? && clean(before.content).end_with?("\n")
 
-          node.content.sub(/\A\n/, "")
+          clean(node.content).sub(/\A\n/, "")
         end
 
         # A glyph keeps its own text. An empty glyph takes its display form

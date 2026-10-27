@@ -426,7 +426,6 @@ they should be removed:
 
 * illegible-text gaps;
 * duplicate-page placeholders;
-* transcriber additions (`rendition="simple:additions"`);
 * omitted non-Latin text;
 * unnumbered page breaks.
 
@@ -521,6 +520,10 @@ Whitespace Normalization
 ```
 
 Later transformations will follow these.
+
+Decision (HTC-0019): implemented as RemoveArtifacts → RemoveEmptyBlocks →
+RepairBrokenWords → RemoveDividerCharacters → NormalizeWhitespace; word
+repair must precede divider removal (`01_ARCHITECTURE.md` §20).
 
 ## Tests
 

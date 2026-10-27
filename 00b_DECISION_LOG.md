@@ -650,6 +650,88 @@ The Document Model gains `Line`, `Table`, `TableRow`, `TableCell`,
 Writers must handle `continued` pieces and artifacts; a transformation
 may rejoin or remove them.
 
+Note (2026-10-26): HTC-0019 T5 supersedes D11's `:transcriber_addition`
+kind and HTC-0016 decision 5's `additions: true`: a `simple:additions`
+page break is tagged `handwritten_additions: true` and is not an
+artifact.
+
+---
+
+## HTC-0019
+
+Date:
+2026-10-26
+
+Status:
+Accepted
+
+Decision:
+
+The transformation framework and the first cleanup transformations are
+built as proposed in `prompts/05_MILESTONE_5_TRANSFORMATION_PIPELINE.md`:
+
+- T1. `Transformation#apply(book, context)` returns a new Book. Each
+  transformation has a stable `name` (its class name) and is idempotent.
+- T2. `Transformations::Context` carries the configuration and a
+  `Review::ChangeLog`. One `Review::Change` (transformation, original,
+  replacement, location, rule) is recorded per changed or removed node.
+  A `Review::Location` is the node's path of child positions in the Book
+  the transformation received, plus the nearest preceding printed page
+  number.
+- T3. `Transformations::Pipeline` owns the order, as a constant in code.
+  Configuration (`transformations:` in YAML) only enables, disables, and
+  configures each transformation.
+- T4. The order is RemoveArtifacts (default kinds `duplicate_page`,
+  `milestone`, `forme_work`), RemoveEmptyBlocks, RepairBrokenWords,
+  RemoveDividerCharacters, NormalizeWhitespace. This changes the
+  conceptual order of architecture §20: word repair runs before divider
+  removal, because `∣` is the evidence of a broken word, and empty-block
+  removal follows artifact removal, which creates empty blocks.
+- T5. A page break with `rendition="simple:additions"` is tagged
+  `handwritten_additions: true`. This supersedes HTC-0016 decision 5's
+  `additions: true` and HTC-0018 D11's `:transcriber_addition` artifact
+  kind: the TCP keying specification defines the SGML original
+  (`PB MS="Y"`) as "any page that contains handwritten corrections,
+  deletions, glosses, etc.", so these are real pages.
+- T6. After a page break or note on its own line, the parser removes the
+  indentation as well as the newline (HTC-0016 decision 10).
+- T7. Paragraph pieces split around blocks (HTC-0018 D9) are left as
+  they are; presenting them is a writer decision.
+
+Supporting choices made in implementation:
+
+- Running text is the content of a `Paragraph`, `Line`, or `Heading`.
+  Within it, text tagged in metadata (gaps, expansions, glyphs) is never
+  edited and counts as content; page breaks, note references, and empty
+  spans are passed over.
+- RemoveEmptyBlocks removes paragraphs, lines, headings, and sections
+  with no content. It never removes the Book's three parts or a node
+  tagged `artifact:` (removing artifacts is RemoveArtifacts' choice), and
+  it never removes an empty table cell, which keeps the table's shape.
+- Each transformation's settings live under its snake-case name
+  (`remove_artifacts:`) with `enabled:`.
+
+Reason:
+
+In a 300-text sample, deleting `∣` alone repairs 161,927 of 162,803
+line-end word breaks; the other 876 have whitespace after the break,
+usually before a gap, and can be repaired only while the `∣` remains.
+6,069 of 10,043 `simple:additions` page breaks are the only break for
+their page image, so removing them as artifacts would delete page
+boundaries.
+
+Consequences:
+
+A parsed Book can be cleaned into running text with no line-end break
+characters, printed line breaks, or runs of spaces, while every change is
+named and located. Review reports and statistics remain Milestone 8.
+
+Over the 2,300-text sample, the pipeline leaves no line-end break
+markers, line breaks, or runs of spaces in running text, keeps every
+word (with line-end breaks joined) and every gap, and is idempotent. It
+records 2,525 duplicate pages and 10,742 milestones removed, 12 empty
+blocks removed, and 9,595 broken words repaired.
+
 ---
 
 # Amendment Procedure

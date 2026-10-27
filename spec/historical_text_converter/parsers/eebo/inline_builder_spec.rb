@@ -34,6 +34,11 @@ module HistoricalTextConverter
             expect(parse_tei("<p>sub Lege,\n   <note>N.</note>\nnot under</p>").body.children.first.text)
               .to eq("sub Lege,\nnot under")
           end
+
+          it "drops the indentation after a page break on its own line" do
+            # A13556: XML indentation followed the newline TCP adds.
+            expect(parse_tei("<p>foretold, that\n   <pb/>\n   though now</p>").body.text).to eq("foretold, that\nthough now")
+          end
         end
 
         describe "italics and superscripts" do
@@ -135,8 +140,8 @@ module HistoricalTextConverter
             expect(page.metadata.to_h).to eq(facs: "tcp:1:75", duplicate: true, artifact: :duplicate_page)
           end
 
-          it "marks transcriber-added page images as artifacts" do
-            expect(inline("a<pb rendition=\"simple:additions\"/>")[1].metadata[:artifact]).to eq(:transcriber_addition)
+          it "marks a page with handwritten additions as a real page, not an artifact" do
+            expect(inline("a<pb rendition=\"simple:additions\"/>")[1].metadata.to_h).to eq(handwritten_additions: true)
           end
         end
 

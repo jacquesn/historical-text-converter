@@ -128,9 +128,9 @@ module HistoricalTextConverter
             expect(parse_tei("<pb facs=\"tcp:1:1\"/>").body.children.first.page).to be_nil
           end
 
-          it "marks transcriber-added page images" do
+          it "marks pages whose image has handwritten additions" do
             pb = parse_tei('<pb facs="tcp:1:1" rendition="simple:additions"/>').body.children.first
-            expect(pb.metadata[:additions]).to be(true)
+            expect(pb.metadata[:handwritten_additions]).to be(true)
           end
         end
       end

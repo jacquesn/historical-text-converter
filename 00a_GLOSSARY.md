@@ -26,7 +26,10 @@ Examples include:
 • OCR confidence values
 • transcription metadata
 
-Artifacts are removed by transformations.
+Transformations decide which artifacts are removed; by default
+RemoveArtifacts removes duplicate pages, milestones, and forme work, and
+keeps gaps, expansions, glyphs, supplied text, and figure descriptions
+(HTC-0019).
 
 In the Document Model, every artifact node carries an `artifact:`
 metadata key naming its kind (HTC-0018).

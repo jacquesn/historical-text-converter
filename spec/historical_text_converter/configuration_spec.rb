@@ -12,8 +12,7 @@ RSpec.describe HistoricalTextConverter::Configuration do
     end
 
     it "loads the default transformation settings" do
-      expect(configuration.transformations)
-        .to eq("modernization" => true, "americanization" => false)
+      expect(configuration.transformations["americanization"]).to eq("enabled" => false)
     end
 
     it "supports string and symbol keys" do
@@ -21,9 +20,9 @@ RSpec.describe HistoricalTextConverter::Configuration do
     end
 
     it "returns a copy from #to_h that cannot alter the configuration" do
-      configuration.to_h["transformations"]["modernization"] = false
+      configuration.to_h["transformations"]["modernization"]["enabled"] = false
 
-      expect(configuration.transformations["modernization"]).to be(true)
+      expect(configuration.transformations["modernization"]["enabled"]).to be(true)
     end
   end
 
@@ -39,10 +38,10 @@ RSpec.describe HistoricalTextConverter::Configuration do
     end
 
     it "deep-merges custom settings over the defaults" do
-      path = write_yaml("transformations:\n  americanization: true\n")
+      path = write_yaml("transformations:\n  americanization:\n    enabled: true\n")
 
-      expect(described_class.new(path: path).transformations)
-        .to eq("modernization" => true, "americanization" => true)
+      expect(described_class.new(path: path).transformations.slice("modernization", "americanization"))
+        .to eq("modernization" => {"enabled" => true}, "americanization" => {"enabled" => true})
     end
 
     it "raises a helpful error when the file does not exist" do

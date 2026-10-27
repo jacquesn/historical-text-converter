@@ -37,9 +37,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   and copy-on-change with `with` and `rewrite` (HTC-0014).
 - `DocumentError` for invalid document structure.
 
+- Transformation framework (HTC-0019): `Transformations::Transformation`,
+  `Context`, and `Pipeline`, with a fixed order and per-transformation
+  settings under `transformations:` in configuration.
+- Cleanup transformations: `RemoveArtifacts`, `RemoveEmptyBlocks`,
+  `RepairBrokenWords`, `RemoveDividerCharacters`, `NormalizeWhitespace`.
+- `Review::Change`, `Review::ChangeLog`, and `Review::Location`; every
+  transformation records each change it makes.
+
 ### Changed
 
 - Minimum Ruby version raised from 3.1 to 4.0.
+- `transformations:` settings in configuration are mappings with
+  `enabled:` (was `modernization: true`).
+- A page break with `rendition="simple:additions"` is tagged
+  `handwritten_additions: true`, not as an artifact (HTC-0019 T5).
+
+### Fixed
+
+- The EEBO parser no longer leaves indentation after a page break or
+  note on its own line (HTC-0019 T6).
 
 ## [0.1.0] - 2026-10-21
 

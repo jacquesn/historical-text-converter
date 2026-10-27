@@ -55,7 +55,7 @@ D numbers refer to HTC-0018). Every element in the table is handled.
 |---|---:|---|---|---|
 | `body` | 2300 | `text`, `floatingText` |  | Book body (HTC-0015) |
 | `div` | 2300 | `div`, `body`, `front` | `type`, `lang`, `subtype`, `rend` | `Section(kind: type)` |
-| `pb` | 2299 | `p`, `div`, `l` | `rendition` | `PageBreak`; duplicate pages folded in (artifact) |
+| `pb` | 2299 | `p`, `div`, `l` | `rendition` | `PageBreak`; duplicate pages folded in (artifact); `simple:additions` → `handwritten_additions: true`, a real page (HTC-0019) |
 | `hi` | 2271 | `p`, `item`, `note` | `rend` | `Emphasis`; `Superscript`, `Subscript` (D7) |
 | `p` | 2257 | `div`, `sp`, `argument` | `rend` | `Paragraph` |
 | `head` | 2236 | `div`, `list`, `lg` | `type` | `Heading` (level from division depth) |
@@ -156,7 +156,7 @@ each deliberately and reports it when met (HTC-0018 D12, D13):
 | `cell/@cols`, `cell/@rows` | spans |
 | `seg/@rend` | decorInit, above |
 | `milestone/@unit` | unspecified, "Comment.", Moneths, year |
-| `pb/@rendition` | simple:additions |
+| `pb/@rendition` | simple:additions (page image has handwritten notes; TCP `PB MS="Y"`) |
 | `unclear/@reason` | blotted |
 
 ---

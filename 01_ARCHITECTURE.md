@@ -191,12 +191,16 @@ historical-text-converter/
 │   │
 │   ├── transformations/
 │   │   ├── transformation.rb
+│   │   ├── context.rb
 │   │   ├── pipeline.rb
+│   │   ├── running_text.rb
+│   │   ├── running_text_transformation.rb
 │   │   │
 │   │   ├── cleanup/
 │   │   │   ├── remove_artifacts.rb
+│   │   │   ├── remove_empty_blocks.rb
+│   │   │   ├── repair_broken_words.rb
 │   │   │   ├── remove_divider_characters.rb
-│   │   │   ├── repair_hyphenation.rb
 │   │   │   └── normalize_whitespace.rb
 │   │   │
 │   │   ├── modernization/
@@ -210,6 +214,7 @@ historical-text-converter/
 │   │       └── correct_printer_errors.rb
 │   │
 │   ├── review/
+│   │   ├── location.rb
 │   │   ├── change.rb
 │   │   ├── change_log.rb
 │   │   ├── statistics.rb
@@ -605,9 +610,12 @@ The TCP encoding does contain material that is not the author's text:
 page breaks and printed page numbers
 illegible-text gaps (<gap reason="illegible">)
 duplicate-page placeholders (<gap reason="duplicate">)
-transcriber additions (rendition="simple:additions")
 non-Latin text omitted by transcribers (<gap reason="foreign">)
 ```
+
+A page break with `rendition="simple:additions"` is not an artifact: it
+marks a real page whose image has handwritten notes, and is tagged
+`handwritten_additions: true` (HTC-0019 T5).
 
 The parser must identify such material as source artifacts rather than
 silently keeping or discarding it. Whether it appears in the output is a
@@ -692,6 +700,16 @@ book = pipeline.call(book)
 The pipeline should not contain the implementation of individual
 transformations.
 
+Decision (HTC-0019): `Transformations::Pipeline` holds the order as a
+constant (`Pipeline::ORDER`). Configuration, under `transformations:`,
+only enables, disables, and configures each transformation:
+
+```ruby
+context = Transformations::Context.new(configuration: configuration)
+book = Transformations::Pipeline.new(configuration: configuration).call(book, context)
+context.change_log.by_transformation
+```
+
 ---
 
 # 20. Transformation Ordering
@@ -711,6 +729,20 @@ The initial conceptual order is:
 ```
 
 The exact ordering shall be verified through tests.
+
+Decision (HTC-0019): the cleanup steps run as
+
+```text
+1. Artifact removal          RemoveArtifacts
+2. Structural cleanup        RemoveEmptyBlocks
+3. Word-boundary repair      RepairBrokenWords
+4. Character cleanup         RemoveDividerCharacters
+5. Whitespace normalization  NormalizeWhitespace
+```
+
+Empty-block removal follows artifact removal, which creates empty
+blocks. Word repair precedes divider removal, because `∣` and `¦` are
+the only evidence that a word was broken at a line end.
 
 A transformation that depends upon an earlier transformation must document
 that dependency.
@@ -762,6 +794,12 @@ The repair transformation must distinguish:
 The algorithm must be conservative.
 
 When uncertain, it should preserve the source rather than invent a reading.
+
+Decision (HTC-0019): TCP keeps the halves of a broken word together
+around the marker (`shy∣neth`), so RemoveDividerCharacters repairs most
+breaks. RepairBrokenWords handles the rest: it removes whitespace after
+`∣` or `¦` when more text follows in the same block (`in∣` + newline +
+`•…itable`). It never joins across blocks or at a printed hyphen.
 
 ---
 
@@ -1623,7 +1661,9 @@ page
 character offset
 ```
 
-The exact location model will be specified during implementation.
+Decision (HTC-0019): a `Review::Location` is the node's path of child
+positions from the Book root, in the Book the transformation received,
+plus the nearest preceding printed page number.
 
 Location tracking should not require writers to understand parser-specific
 coordinates.

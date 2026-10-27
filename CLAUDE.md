@@ -61,7 +61,7 @@ Milestone 2 (Document Model) — committed (`17e6ed6`). Design is recorded in
 HTC-0014: immutable nodes, no stored parent (use `each_with_ancestors`),
 `Document` is a namespace, Book body/front/back matter are `Section`s.
 
-Milestone 3 (EEBO Parser) — committed (`09863bc`). Input is EEBO-TCP TEI
+Milestone 3 (EEBO Parser) — committed (`09863bc`); Milestone 4 (TEI coverage) — committed (`2838c01`), HTC-0017/0018. Input is EEBO-TCP TEI
 XML, not HTML (HTC-0015); TEI→model mapping is HTC-0016. Fixture:
 `spec/fixtures/eebo/A13556.xml` (Taylor, *Regula vitæ*, 1631; CC0). The
 acceptance spec (`parser_parse_a13556_spec.rb`) checks counts and that
@@ -79,15 +79,23 @@ Conventions:
   `spec/support/tei_helper.rb` with snippets cut from real TCP texts.
 - In specs, replace Nokogiri nodes with `Nokogiri::XML::Text` nodes, not
   strings: `replace("&c.")` parses the string as markup and drops it.
+- Transformation specs build Books with `spec/support/document_helper.rb`
+  (`text`, `gap`, `paragraph`, `book`, `transform(book, settings)`);
+  `settings` replaces the whole `transformations:` config.
+
+Milestone 5 (Transformation Pipeline and Basic Cleanup) — implemented,
+**awaiting review and commit** (HTC-0019). `Transformations::Pipeline`
+runs RemoveArtifacts → RemoveEmptyBlocks → RepairBrokenWords →
+RemoveDividerCharacters → NormalizeWhitespace (order is a constant;
+config only enables/configures). Running-text transformations subclass
+`RunningTextTransformation` and edit `RunningText` leaves; every change
+is a `Review::Change` with a `Review::Location`. Acceptance:
+`transformations/pipeline_call_spec.rb`.
 
 Next steps:
 
-1. Milestone 4 — TEI Coverage and Source Artifacts: implemented and
-   verified, **not yet committed**. HTC-0017 (glyph table) and HTC-0018
-   (D1–D13). rspec 264 examples, rubocop clean. All 9 fixtures and the
-   2,300-text sample parse with no errors, empty parse report, every
-   word kept (`spec/support/source_words.rb`). Review and commit, then
-   Milestone 5 — Transformation Pipeline and Basic Cleanup.
+1. After commit: Milestone 6 (roadmap §9) — draft its prompt and plan
+   first.
 
 Ruby: the Gemfile requires Ruby >= 4.0, so 3.2+/4.0 APIs are fine.
 
@@ -116,7 +124,5 @@ Recorded in roadmap §9 (M6), §12 (M9), §13–14 (M10–11).
 Open loose ends: `profile: conservative` in config has no profile definition yet;
 `01_ARCHITECTURE.md` references a not-yet-written `05_MODERNIZATION_SPEC.md`;
 `01_ARCHITECTURE.md` §4's tree shows `spec/document/` and `docs/`, but specs
-mirror `lib/` and docs live at the repo root; two A13556 paragraphs keep a
-doubled line break from XML formatting (HTC-0016) for Milestone 5 to normalize;
-TCP glyph table license unconfirmed (HTC-0017 note: CC0 `tcpchars.xml` covers
+mirror `lib/` and docs live at the repo root; TCP glyph table license unconfirmed (HTC-0017 note: CC0 `tcpchars.xml` covers
 42 of 44 glyphs used).

@@ -2,6 +2,30 @@ version: 0.1.0
 
 profile: conservative
 
+# Each transformation's settings, under its name. The pipeline's order is
+# fixed in code (HTC-0019); enabled: false skips a transformation.
 transformations:
-  modernization: true
-  americanization: false
+  remove_artifacts:
+    enabled: true
+    # Artifact kinds removed (HTC-0018 D11). Kept by default because each
+    # stands for text or marks uncertainty: gap, expansion, glyph,
+    # supplied, description.
+    kinds:
+      - duplicate_page
+      - milestone
+      - forme_work
+  remove_empty_blocks:
+    enabled: true
+  repair_broken_words:
+    enabled: true
+    # Line-end break markers after which whitespace is removed.
+    markers: ["∣", "¦"]
+  remove_divider_characters:
+    enabled: true
+    characters: ["∣", "¦"]
+  normalize_whitespace:
+    enabled: true
+  modernization:
+    enabled: true
+  americanization:
+    enabled: false
